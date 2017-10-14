@@ -166,7 +166,7 @@ function initialize() {
             enableEventPropagation: false
         });
         infobox.addListener('domready', function () {
-            $('.infobox-close').on('click', function () {
+            $('.infobox-close').on('mouseout', function () {
                 infobox.close(map, this);
                 infobox.isOpen = false;
             });
@@ -212,9 +212,9 @@ function initialize() {
 
             // This event expects a click on a marker
             // When this event is fired the Info Window is opened.
-            google.maps.event.addListener(marker, 'click', function() {
+            google.maps.event.addListener(marker, 'mouseover', function() {
 
-                var content = '<div class="infobox-close"><i class="fa fa-close"></i></div>'+
+                var content = '<div class="infobox-close"></div>'+
                 '<div id="iw-container" style="background-image: url(' + marker.data.thumbnail + ');">' +
                 '<div class="iw-content">' +
                 '<ul class="list-inline rating">'+
