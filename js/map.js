@@ -209,7 +209,12 @@ function initialize() {
                 is_logged_in:value.is_logged_in
             });
             markers.push(marker);
-
+            google.maps.event.addListener(marker, 'click', function(e) {
+                $('#sectionToHide').css('display', 'block');
+                window.location.href = "#sectionToHide";
+                e.preventDefault();
+                e.stopPropagation();
+            });
             // This event expects a click on a marker
             // When this event is fired the Info Window is opened.
             google.maps.event.addListener(marker, 'mouseover', function() {

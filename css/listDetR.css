@@ -1,0 +1,33 @@
+#wish{
+    color: #2196f3;
+    border-color: #2196f3;
+    border: solid;
+    padding-left:9%!important;
+    padding-right:9%!important;
+}
+#tasted{
+    background-color: #2196f3;
+    opacity: 0.6;
+    border-color: #2196f3;
+    border: solid;
+    font-size: 65%!important;
+    padding-left:9%!important;
+    padding-right:9%!important;
+}
+#tasted:hover{
+    opacity: 1;
+}
+.CocktailTitle h3{
+    color: #848484!important;
+}
+.CocktailTitle h2 {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0 0 14px 0;
+    font-size: 35px;
+    line-height: 45px; }
+@media (min-width: 768px) {
+    .CocktailTitle h2 {
+        font-size: 40px; } }
+.CocktailTitle p {
+    margin: 0 0 10px 0; }
