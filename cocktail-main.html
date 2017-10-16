@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">  </script>
     <!-- SITE TITTLE -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,7 +85,7 @@
 
                         </ul>
                     </div>
-                    <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>utton>
+                    <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
                 </div>
             </nav>
         </div>
@@ -107,34 +108,8 @@
                 <h2>Categories </h2>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="categoryItem">
-                        <i class="icon-listy icon-car-1"></i>
-                        <h2><a href="cocktail-category.html">Beers &amp; Ciders</a></h2>
-
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="categoryItem">
-                        <i class="icon-listy icon-mobile-phone"></i>
-                        <h2><a href="cocktail-category.html">Coolers</a></h2>
-
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="categoryItem">
-                        <i class="icon-listy icon-neighborhood"></i>
-                        <h2><a href="cocktail-category.html">Spirits</a></h2>
-
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="categoryItem">
-                        <i class="icon-listy icon-coat-1"></i>
-                        <h2><a href="cocktail-category.html">Wine</a></h2>
-
-                    </div>
-                </div>
+                <ul id="SingleCategory"></ul>
+                <ul id="SingleCategorylast"></ul>
             </div>
         </div>
     </section>
@@ -238,6 +213,7 @@
 </div>
 
 <!-- JAVASCRIPTS -->
+<script src="js/cocktailscript.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -255,6 +231,7 @@
 <script src="plugins/map/js/infobox_packed.js"></script>
 <script src="js/map.js"></script>
 <script src="js/custom.js"></script>
+
 
 </body>
 

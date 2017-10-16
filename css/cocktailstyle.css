@@ -31,3 +31,7 @@
         font-size: 40px; } }
 .CocktailTitle p {
     margin: 0 0 10px 0; }
+
+#SingleCategory h2{
+    margin-left:20%!important;
+}
