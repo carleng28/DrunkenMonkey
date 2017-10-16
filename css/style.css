@@ -5026,10 +5026,10 @@ table.dataTable thead .sorting_desc_disabled:after {
       padding: 70px 0; } }
 
 .paddingAdjustTopBottom {
-  padding: 0 0 35px 0; }
+  padding: 0 0 0 0 !important; }
   @media (min-width: 768px) {
     .paddingAdjustTopBottom {
-      padding: 0 0 70px 0; } }
+      padding: 0 0 0 0 !important; } }
 
 .paddingAdjustTop {
   padding: 0 0 50px 0; }

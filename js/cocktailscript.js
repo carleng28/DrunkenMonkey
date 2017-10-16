@@ -19,7 +19,9 @@ $(document).ready(function () {
 
 function displayCategories(data){
 
-    //data.drinks.sort();
+    data.drinks.sort(function(a,b) {
+        return (a.strCategory > b.strCategory) ? 1 : ((b.strCategory > a.strCategory) ? -1 : 0);
+    } );
     for (var i = 0; i < data.drinks.length; i++) {
 
         $("#SingleCategory").append('<div class="col-md-3 col-sm-6 col-xs-12"><div class="categoryItem"> ' +
