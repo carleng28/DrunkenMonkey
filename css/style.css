@@ -5139,6 +5139,29 @@ table.dataTable thead .sorting_desc_disabled:after {
     text-transform: capitalize;
     margin: 0 0 30px 0; }
 
+.listDrinkSidebar {
+  padding: 25px 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+  display: block;
+  float: right;
+  width: 100%;
+  margin-bottom: 30px; }
+@media (min-width: 768px) {
+  .listDrinkSidebar {
+    width: 100%;
+    margin-bottom: 50px; } }
+@media (min-width: 992px) {
+  .listDrinkSidebar {
+    width: 90%;
+    margin-bottom: 50px; } }
+.listDrinkSidebar h1 {
+    font-weight: 400;
+    font-size: 36px;
+    text-transform: capitalize;
+    margin: 0 0 30px 0; }
+
+
 .sidebarList li {
   display: block;
   float: left;
