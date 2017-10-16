@@ -35,3 +35,14 @@
 #SingleCategory h2{
     margin-left:20%!important;
 }
+.thingsBox .thinsSpace{
+    padding-right: 0!important;
+}
+@media (min-width: 768px) {
+    #section {
+        padding: 0 0 !important;
+    }
+}
+#center h2{
+    margin-left: 25%!important;
+}
