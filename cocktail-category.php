@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">  </script>
   <!-- SITE TITTLE -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -105,115 +106,13 @@
 					<h2>We found <span>8</span> Results for you</h2>
 
 				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
+				<div id="cocktailList" class="row">
 
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
+				<?php
+                    include_once "php/sendmsg.php";
 
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
+				?>
 
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="http://www.thecocktaildb.com/images/media/drink/abcpwr1504817734.jpg" width="200" height="270" alt="Image things">
-								<div class="thingsMask">
-									<a href="cocktail-page.html"><h2>NAME goes here along with the link</h2></a>
-									<p>RECIPE goes here</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
 				</div>
 				<div class="paginationCommon blogPagination categoryPagination">
 					<nav aria-label="Page navigation">
@@ -360,6 +259,24 @@
   <script src="js/single-map.js"></script>
   <script src="js/map.js"></script>
   <script src="js/custom.js"></script>
+
+    <script>
+        function getCocktails(category){
+
+            var url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?c="+category;
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: JSON,
+                success: function (data) {
+
+                    displayCategories(data);
+
+                }
+            });
+
+        }
+        </script>
 
 </body>
 

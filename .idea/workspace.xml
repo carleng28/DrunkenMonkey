@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a257bf-27b4-471b-9638-4085a500c8ad" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/sendmsg.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cocktail-category.html" afterPath="$PROJECT_DIR$/cocktail-category.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocktail-main.html" afterPath="$PROJECT_DIR$/cocktail-main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drink-category-grid-full.html" afterPath="$PROJECT_DIR$/drink-category-grid-full.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cocktailscript.js" afterPath="$PROJECT_DIR$/js/cocktailscript.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +19,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="drink-category-grid-full.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drink-category-grid-full.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1904">
+              <caret line="112" column="50" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="154" column="39" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="39" />
+            <state relative-caret-position="2754">
+              <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
               <folding>
                 <element signature="e#4767#4772#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3723">
+              <caret line="219" column="13" lean-forward="false" selection-start-line="219" selection-start-column="13" selection-end-line="219" selection-end-column="13" />
+              <folding>
+                <marker date="1508121218947" expanded="true" signature="5793:5846" ph="..." />
               </folding>
             </state>
           </provider>
@@ -32,8 +56,8 @@
       <file leaf-file-name="cocktail-page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cocktail-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2556">
-              <caret line="156" column="88" lean-forward="false" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="88" />
+            <state relative-caret-position="1473">
+              <caret line="202" column="23" lean-forward="false" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -41,22 +65,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cocktail-main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cocktail-main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cocktail-main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="104" column="56" lean-forward="false" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="5028" column="29" lean-forward="false" selection-start-line="5028" selection-start-column="29" selection-end-line="5028" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="60">
+              <caret line="214" column="16" lean-forward="false" selection-start-line="214" selection-start-column="13" selection-end-line="214" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,21 +80,75 @@
       <file leaf-file-name="cocktailscript.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cocktailscript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="51">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
-                <marker date="1508182524860" expanded="true" signature="878:906" ph="..." />
+                <marker date="1508785521164" expanded="true" signature="878:906" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cocktailstyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/cocktailstyle.css">
+      <file leaf-file-name="cocktail-category.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cocktail-category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="108" column="51" lean-forward="true" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
+              <folding>
+                <marker date="1508786222283" expanded="true" signature="4303:4938" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4343:4927" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4373:4915" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4385:4402" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4385:4547" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4428:4534" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4744:4903" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="4783:4890" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5072:7093" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5135:6454" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5164:6443" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5188:6431" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5229:5915" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5262:5901" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5690:5886" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5955:6417" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="5993:6032" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6062:6403" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6098:6388" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6516:7080" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6545:7069" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6569:7057" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6600:7043" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6639:7029" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6666:7014" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6723:6741" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6798:6998" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="6837:6981" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7198:8496" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7229:8487" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7292:8475" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7327:7488" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7521:8335" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7556:8320" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7593:7763" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="7800:7970" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="8007:8112" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="8147:8301" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="8370:8462" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="9656:10047" ph="..." />
+                <marker date="1508786222283" expanded="true" signature="9697:10030" ph="{...}" />
+                <marker date="1508786222283" expanded="true" signature="9810:10017" ph="{&quot;type&quot;: &quot;POST&quot;...}" />
+                <marker date="1508786222283" expanded="true" signature="9937:10003" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="2696" column="22" lean-forward="false" selection-start-line="2696" selection-start-column="22" selection-end-line="2696" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -97,12 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>footer</find>
-      <find>tequi</find>
-      <find>10 Bay Street Toronto Ontario Canada</find>
-      <find>red</find>
-      <find>win</find>
-      <find>10 k</find>
       <find>by Area</find>
       <find>listin</find>
       <find>lis</find>
@@ -127,6 +191,12 @@
       <find>icon-mobile-phone</find>
       <find>btn btn-default navbar-btn</find>
       <find>dashboard listing details</find>
+      <find>col-sm-4 col-xs-12</find>
+      <find>data</find>
+      <find>.thingsImage img</find>
+      <find>cock</find>
+      <find>single</find>
+      <find>displayCategories</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\DrunkenMonkey\</dir>
@@ -148,7 +218,6 @@
         <option value="$PROJECT_DIR$/dashboard.html" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/about-us.html" />
-        <option value="$PROJECT_DIR$/cocktail-category.html" />
         <option value="$PROJECT_DIR$/cocktail-page.html" />
         <option value="$PROJECT_DIR$/drink-category-grid-full.html" />
         <option value="$PROJECT_DIR$/drink-page.html" />
@@ -160,9 +229,12 @@
         <option value="$PROJECT_DIR$/css/cockTailManu.css" />
         <option value="$PROJECT_DIR$/css/listDetR.css" />
         <option value="$PROJECT_DIR$/css/cocktailstyle.css" />
-        <option value="$PROJECT_DIR$/js/cocktailscript.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/cocktail-main.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/cocktail-category.html" />
+        <option value="$PROJECT_DIR$/js/cocktailscript.js" />
+        <option value="$PROJECT_DIR$/js/sendmsg.php" />
+        <option value="$PROJECT_DIR$/cocktail-category.php" />
       </list>
     </option>
   </component>
@@ -205,6 +277,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,44 +430,34 @@
       <workItem from="1508095656103" duration="3534000" />
       <workItem from="1508115765653" duration="4829000" />
       <workItem from="1508164138895" duration="1275000" />
+      <workItem from="1508772347814" duration="13280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33047000" />
+    <option name="totallyTimeSpent" value="49992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23426062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27760252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2539432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -410,17 +486,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/about-us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6480">
-          <caret line="216" column="71" lean-forward="false" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/_common.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
@@ -439,6 +510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4980">
           <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -459,7 +531,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cocktail-category.html">
+    <entry file="file://$PROJECT_DIR$/cocktail-category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
@@ -492,6 +564,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4890">
           <caret line="163" column="58" lean-forward="false" selection-start-line="163" selection-start-column="58" selection-end-line="163" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -512,7 +585,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cocktail-category.html">
+    <entry file="file://$PROJECT_DIR$/cocktail-category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
@@ -574,13 +647,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ProjectTest/lcbotest.html" />
     <entry file="file://$PROJECT_DIR$/../ProjectTest/lcbostores.html" />
-    <entry file="file://$PROJECT_DIR$/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6360">
-          <caret line="217" column="41" lean-forward="false" selection-start-line="217" selection-start-column="36" selection-end-line="217" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cocktails.html" />
     <entry file="file://$PROJECT_DIR$/listing-details-right.html" />
     <entry file="file://$PROJECT_DIR$/edit-listings.html" />
@@ -593,20 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="223" column="92" lean-forward="false" selection-start-line="223" selection-start-column="92" selection-end-line="223" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cocktail-category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8694">
-          <caret line="414" column="88" lean-forward="false" selection-start-line="414" selection-start-column="84" selection-end-line="414" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drink-category-grid-full.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8694">
-          <caret line="414" column="88" lean-forward="false" selection-start-line="414" selection-start-column="84" selection-end-line="414" selection-end-column="88" />
         </state>
       </provider>
     </entry>
@@ -652,39 +704,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cocktail-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2556">
-          <caret line="156" column="88" lean-forward="false" selection-start-line="156" selection-start-column="84" selection-end-line="156" selection-end-column="88" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/cockTailManu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cockTailManu.css" />
     <entry file="file://$PROJECT_DIR$/css/cocktailstyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="154" column="39" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="39" />
-          <folding>
-            <element signature="e#4767#4772#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,34 +716,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="0" column="20606" lean-forward="false" selection-start-line="0" selection-start-column="20606" selection-end-line="0" selection-end-column="20606" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drink-category-grid-full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="112" column="50" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cocktailscript.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="2754">
+          <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
           <folding>
-            <element signature="e#0#42#0" expanded="false" />
-            <marker date="1508182524860" expanded="true" signature="878:906" ph="..." />
+            <element signature="e#4767#4772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3723">
+          <caret line="219" column="13" lean-forward="false" selection-start-line="219" selection-start-column="13" selection-end-line="219" selection-end-column="13" />
+          <folding>
+            <marker date="1508121218947" expanded="true" signature="5793:5846" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="5028" column="29" lean-forward="false" selection-start-line="5028" selection-start-column="29" selection-end-line="5028" selection-end-column="29" />
+        <state relative-caret-position="134">
+          <caret line="2696" column="22" lean-forward="false" selection-start-line="2696" selection-start-column="22" selection-end-line="2696" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cocktail-main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="104" column="56" lean-forward="false" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
+        <state relative-caret-position="60">
+          <caret line="214" column="16" lean-forward="false" selection-start-line="214" selection-start-column="13" selection-end-line="214" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cocktail-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1473">
+          <caret line="202" column="23" lean-forward="false" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cocktailscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+            <marker date="1508785521164" expanded="true" signature="878:906" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sendmsg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cocktail-category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="108" column="51" lean-forward="true" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
+          <folding>
+            <marker date="1508786222283" expanded="true" signature="4303:4938" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4343:4927" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4373:4915" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4385:4402" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4385:4547" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4428:4534" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4744:4903" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="4783:4890" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5072:7093" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5135:6454" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5164:6443" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5188:6431" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5229:5915" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5262:5901" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5690:5886" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5955:6417" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="5993:6032" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6062:6403" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6098:6388" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6516:7080" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6545:7069" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6569:7057" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6600:7043" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6639:7029" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6666:7014" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6723:6741" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6798:6998" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="6837:6981" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7198:8496" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7229:8487" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7292:8475" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7327:7488" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7521:8335" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7556:8320" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7593:7763" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="7800:7970" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="8007:8112" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="8147:8301" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="8370:8462" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="9656:10047" ph="..." />
+            <marker date="1508786222283" expanded="true" signature="9697:10030" ph="{...}" />
+            <marker date="1508786222283" expanded="true" signature="9810:10017" ph="{&quot;type&quot;: &quot;POST&quot;...}" />
+            <marker date="1508786222283" expanded="true" signature="9937:10003" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

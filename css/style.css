@@ -2695,7 +2695,7 @@ footer {
     width: 100%; }
     @media (min-width: 768px) {
       .thingsImage img {
-        width: auto; } }
+        width: 100%; } }
 
 .thingsMask {
   width: 100%;

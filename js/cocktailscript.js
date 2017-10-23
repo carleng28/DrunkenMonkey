@@ -21,15 +21,23 @@ function displayCategories(data){
 
     data.drinks.sort(function(a,b) {
         return (a.strCategory > b.strCategory) ? 1 : ((b.strCategory > a.strCategory) ? -1 : 0);
-    } );
+    });
+
     for (var i = 0; i < data.drinks.length; i++) {
 
         $("#SingleCategory").append('<div class="col-md-3 col-sm-6 col-xs-12"><div class="categoryItem"> ' +
             '<center><img src="img/CocktailCategoriesPics/'+data.drinks[i].strCategory.split('/')[0].trim()+'-icon.png"' +
-            ' class="img-fluid img-responsive" width="100" height="100"/></center><h2 style="text-align: center!important"><a href="cocktail-category.html">' + data.drinks[i].strCategory +
+            ' class="img-fluid img-responsive" width="100" height="100"/></center><h2 style="text-align: center!important"><a href="#" ' +
+            'onclick="cocktailsDisplay(\''+data.drinks[i].strCategory+'\')">' + data.drinks[i].strCategory +
             '</a></h2> </div> </div>');
-    }
+    };
 
+}
+
+function cocktailsDisplay(category){
+
+    window.location.href = "cocktail-category.php?category="+category;
 
 
 }
+
