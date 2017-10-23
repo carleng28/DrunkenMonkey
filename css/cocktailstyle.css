@@ -1,20 +1,33 @@
 #wish{
-    color: #2196f3;
-    border-color: #2196f3;
-    border: solid;
+    border-color: lightgreen;
+    font-size: 80%!important;
     padding-left:9%!important;
     padding-right:9%!important;
+    margin-left: 19%!important;
+    color: black!important;
+    border-color: black;
+    border: solid;
+    opacity: 0.6;
 }
 #tasted{
-    background-color: #2196f3;
     opacity: 0.6;
-    border-color: #2196f3;
+    border-color: black;
     border: solid;
-    font-size: 65%!important;
-    padding-left:9%!important;
-    padding-right:9%!important;
+    font-size: 100%!important;
+    padding-left:19%!important;
+    padding-right:19%!important;
+    color: black!important;
 }
 #tasted:hover{
+    background-color: #2196f3;
+    border-color: #2196f3;
+    color: white!important;
+    opacity: 1;
+}
+#wish:hover{
+    background-color: lightgreen;
+    border-color: lightgreen;
+    color: white!important;
     opacity: 1;
 }
 .CocktailTitle h3{

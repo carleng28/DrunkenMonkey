@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">  </script>
   <!-- SITE TITTLE -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +87,7 @@
 
                           </ul>
                       </div>
-                      <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>n> </button>
+                      <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
                   </div>
               </nav>
           </div>
@@ -99,46 +99,24 @@
 	<div class="container">
 		<div class="row">
             <div class="col-xs-4">
-                <img src="img/cocktail/cocktail1.jpg" alt="Cocktail Image" class="img-responsive" width="400" height="400">
+                <div id="mainImage">
+
+                </div>
             </div>
             <div class="col-xs-4">
-				<div class="CocktailTitle">
-                    <div class="CocktailName">
-					<h2>DAIQUIRI </h2>
-                    </div>
-                    <div class="CoctailRecipe">
-                        <h3>Recipe: </h3><p>Add all ingredients into cocktail shaker filled with ice.
-                        Shake well and double strain into large cocktail glass.
-                        Garnish with lime wheel.</p>
-                    </div>
-                    <div class="ServeGlass">
-                        <h3>Serve: </h3><p>Collins glass</p>
-                    </div>
-					<div class="listingReview">
-						<ul class="list-inline rating">
-                            <a href="#" class="btn" id="tasted"><i class="fa fa-check" aria-hidden="true"></i>Tasted</a>
-						</ul>
-						<ul class="list-inline captionItem">
-                            <li><a href="#" class="btn btn-default" id="wish">Add to Wishlist</a></li>
-                            <!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-						</ul>
-					</div>
+				<div id="Cocktail">
+                    <?php
+                    include_once "php/getOneCocktail.php";
+
+                    ?>
 				</div>
             </div>
             <div class="col-xs-4">
                 <h3>Ingredients: </h3>
                 <div id="ingredientsIMAGES">
-                    <ul class="list-inline">
-                        <li><img src="img/picsOfCocktailIngredient/Champagne-Small.png" alt="Cocktail Image" class="img-responsive"></li>
-                        <li><img src="img/picsOfCocktailIngredient/Gin-Small.png" alt="Cocktail Image" class="img-responsive"></li>
-                        <li><img src="img/picsOfCocktailIngredient/Lemon%20juice-Small.png" alt="Cocktail Image" class="img-responsive"></li>
-                        <li><img src="img/picsOfCocktailIngredient/Maraschino%20cherry-Small.png" alt="Cocktail Image" class="img-responsive"></li>
-                        <li><img src="img/picsOfCocktailIngredient/Orange-Small.png" alt="Cocktail Image" class="img-responsive"></li>
-                        <li><img src="img/picsOfCocktailIngredient/Sugar-Small.png" alt="Cocktail Image" class="img-responsive"></li>
-                    </ul>
+
                 </div>
                 <div id="ingredients">
-                <p>1 1/2 oz Gin<br/>2 tsp superfine Sugar<br/>1 1/2 oz Lemon juice<br/>4 oz Chilled Champagne<br/>1 Orange<br/>1 Maraschino cherry</p>
             </div>
             </div>
 		</div>
