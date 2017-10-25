@@ -1,7 +1,10 @@
 var map, currentLat,currentLng;
 //Array with markers
 var markers = [];
-var mapStyles = [{
+var search = false;
+
+
+    var mapStyles = [{
     'elementType': 'geometry',
     'stylers': [{
         'color': '#f5f5f5'
@@ -128,6 +131,19 @@ var mapStyles = [{
 /*// map center
 var center = new google.maps.LatLng(-33.91722, 151.23064);*/
 
+$(document).ready(function(){
+    var infoWindow = new google.maps.InfoWindow({map: map});
+    var id = document.getElementById('map-canvas');
+
+    if (id) {
+        initialize();
+    }
+
+    //To initialize the function for autocomplete in the "Find restaurant" field
+    initAutocomplete();
+
+});
+
 //Map initialize function
 function initialize() {
     map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -174,165 +190,272 @@ function initialize() {
     else {
         handleLocationError(false, infoWindow, map.getCenter());
     }
+} // map initialize function ends
 
-    //Handling error in case of Location error
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-            'Error: The Geolocation service failed.' :
-            'Error: Your browser doesn\'t support geolocation.');
+
+//Format the hours to display in infobox
+function getHours(total){
+    var minutes, hours, period = "";
+    if (total%60 === 0){
+        minutes = "00";
     }
-
-    function getMarkerContent(value) {
-        var content = '<div id="marker-'+ value.id +'" class="flip-container">' +
-            '<div class="front">'+
-            '<img src="'+"img/map/markerStore.jpeg"+'">'+
-            '</div>'+
-            '</div>';
-        return content;
+    else{
+        minutes = total%60;
     }
-
-    function getHours(total){
-        var minutes, hours, period = "";
-        if (total%60 === 0){
-            minutes = "00";
-        }
-        else{
-            minutes = total%60;
-        }
-        if(total/60 > 12){
-            hours =(total/60)-12;
-            period = "pm";
-        }
-        else{
-            hours = total/60;
-            period = "am";
-        }
-        return hours+":"+minutes+" "+period;
+    if(total/60 > 12){
+        hours =(total/60)-12;
+        period = "pm";
     }
+    else{
+        hours = total/60;
+        period = "am";
+    }
+    return hours+":"+minutes+" "+period;
+}
 
-    //Populate map with markers for the LCBO stores
-    function createMarkers(results){
 
-        infoWindow = new google.maps.InfoWindow();
-        deleteMarkers();
+//Handling error in case of Location error
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+}
 
-        var infobox = new InfoBox({
-            content: 'empty',
-            disableAutoPan: false,
-            maxWidth: 0,
-            pixelOffset: new google.maps.Size(-250, -330),
-            zIndex: null,
-            closeBoxURL: "",
-            infoBoxClearance: new google.maps.Size(1, 1),
-            isHidden: false,
-            isOpen: false,
-            pane: "floatPane",
-            enableEventPropagation: false
+
+//Setting the content for the markers in the map
+function getMarkerContent(value) {
+    return content = '<div id="marker-'+ value.id +'" class="flip-container">' +
+        '<div class="front">'+
+        '<img src="'+"img/map/markerStore.jpeg"+'">'+
+        '</div>'+
+        '</div>';
+
+}
+
+
+//Populate map with markers for the LCBO stores
+function createMarkers(results){
+
+    infoWindow = new google.maps.InfoWindow();
+    deleteMarkers();
+
+    var infobox = new InfoBox({
+        content: 'empty',
+        disableAutoPan: false,
+        maxWidth: 0,
+        pixelOffset: new google.maps.Size(-250, -330),
+        zIndex: null,
+        closeBoxURL: "",
+        infoBoxClearance: new google.maps.Size(1, 1),
+        isHidden: false,
+        isOpen: false,
+        pane: "floatPane",
+        enableEventPropagation: false
+    });
+    infobox.addListener('domready', function () {
+        $('.infobox-close').on('mouseout', function () {
+            infobox.close(map, this);
+            infobox.isOpen = false;
         });
-        infobox.addListener('domready', function () {
-            $('.infobox-close').on('mouseout', function () {
-                infobox.close(map, this);
-                infobox.isOpen = false;
-            });
+    });
+
+    $.each(results.result, function(i,value){
+        var markerCenter = new google.maps.LatLng(value.latitude, value.longitude);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(value.latitude, value.longitude)
+
         });
 
-        $.each(results.result, function(i,value){
-            var markerCenter = new google.maps.LatLng(value.latitude, value.longitude);
-            var marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(value.latitude, value.longitude)
+        var markerContent = getMarkerContent(value);
 
-            });
+        marker = new RichMarker({
+            id: value.id,
+            data: value,
+            flat: true,
+            position: markerCenter,
+            map: map,
+            shadow: 0,
+            content: markerContent,
+            title: value.name
+        });
 
-            var markerContent = getMarkerContent(value);
+        marker.addListener('click', function (e) {
+            //marker.data.name;
+            $('#sectionToHide').css('display', 'block');
+            window.location.href = "#sectionToHide";
+            e.preventDefault();
+            e.stopPropagation();
+        });
+        // This event expects a mouse over on a marker
+        // When this event is fired the Info Window is opened.
+        marker.addListener('mouseover', function () {
 
-             marker = new RichMarker({
-                id: value.id,
-                data: value,
-                flat: true,
-                position: markerCenter,
-                map: map,
-                shadow: 0,
-                content: markerContent,
-                title: value.name
-            });
+            var content = '<div class="infobox-close"></div>' +
+                '<div id="iw-container">' +
+                '<div class="iw-content">' +
+                '<div class="iw-subTitle">' + marker.data.name + '</div>' +
+                '<p>' + marker.data.address_line_1 + '</p>';
 
-            marker.addListener('click', function (e) {
-                marker.data.name;
-                $('#sectionToHide').css('display', 'block');
-                window.location.href = "#sectionToHide";
-                e.preventDefault();
-                e.stopPropagation();
-            });
-            // This event expects a click on a marker
-            // When this event is fired the Info Window is opened.
-            marker.addListener('mouseover', function () {
+            if (marker.data.address_line_2 !== null){
+                content += '<p>' + marker.data.address_line_2 + '</p>';
+            }
+            content += '<p>' + marker.data.city + '</p>' +
+                '<p>Monday: '+getHours(marker.data.monday_open)+' - '+getHours(marker.data.monday_close)+'</p>'+
+                '<p>Tuesday: '+getHours(marker.data.tuesday_open)+' - '+getHours(marker.data.tuesday_close)+'</p>'+
+                '<p>Wednesday: '+getHours(marker.data.wednesday_open)+' - '+getHours(marker.data.wednesday_close)+'</p>'+
+                '<p>Thursday: '+getHours(marker.data.thursday_open)+' - '+getHours(marker.data.thursday_close)+'</p>'+
+                '<p>Friday: '+getHours(marker.data.friday_open)+' - '+getHours(marker.data.friday_close)+'</p>'+
+                '<p>Saturday: '+getHours(marker.data.saturday_open)+' - '+getHours(marker.data.saturday_close)+'</p>'+
+                '<p>Sunday: '+getHours(marker.data.sunday_open)+' - '+getHours(marker.data.sunday_close)+'</p>'+
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>';
 
-                var content = '<div class="infobox-close"></div>' +
-                    '<div id="iw-container">' +
-                    '<div class="iw-content">' +
-                    '<div class="iw-subTitle">' + marker.data.name + '</div>' +
-                    '<p>' + marker.data.address_line_1 + '</p>';
+            if (!infobox.isOpen) {
+                infobox.setContent(content);
+                infobox.open(map, this);
+                infobox.isOpen = true;
+                infobox.markerId = marker.id;
+            } else {
+                if (infobox.markerId === marker.id) {
+                    infobox.close(map, this);
+                    infobox.isOpen = false;
+                } else {
+                    infobox.close(map, this);
+                    infobox.isOpen = false;
 
-                if (marker.data.address_line_2 !== null){
-                    content += '<p>' + marker.data.address_line_2 + '</p>';
-                }
-                content += '<p>' + marker.data.city + '</p>' +/*
-                    '<p>Monday: '+getHours(marker.data.monday_open)+' - '+getHours(marker.data.monday_close)+'</p>'+
-                    '<p>Tuesday: '+getHours(marker.data.tuesday_open)+' - '+getHours(marker.data.tuesday_close)+'</p>'+
-                    '<p>Wednesday: '+getHours(marker.data.wednesday_open)+' - '+getHours(marker.data.wednesday_close)+'</p>'+
-                    '<p>Thursday: '+getHours(marker.data.thursday_open)+' - '+getHours(marker.data.thursday_close)+'</p>'+
-                    '<p>Friday: '+getHours(marker.data.friday_open)+' - '+getHours(marker.data.friday_close)+'</p>'+
-                    '<p>Saturday: '+getHours(marker.data.saturday_open)+' - '+getHours(marker.data.saturday_close)+'</p>'+
-                    '<p>Sunday: '+getHours(marker.data.sunday_open)+' - '+getHours(marker.data.sunday_close)+'</p>'+*/
-                    '<div class="iw-bottom-gradient"></div>' +
-                    '</div>';
-
-                if (!infobox.isOpen) {
                     infobox.setContent(content);
                     infobox.open(map, this);
                     infobox.isOpen = true;
                     infobox.markerId = marker.id;
-                } else {
-                    if (infobox.markerId === marker.id) {
-                        infobox.close(map, this);
-                        infobox.isOpen = false;
-                    } else {
-                        infobox.close(map, this);
-                        infobox.isOpen = false;
-
-                        infobox.setContent(content);
-                        infobox.open(map, this);
-                        infobox.isOpen = true;
-                        infobox.markerId = marker.id;
-                    }
                 }
-            });
-            markers.push(marker);
-
+            }
         });
-    }
-    //
-    function setMapOnAll(map) {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-        }
-    }
+        markers.push(marker);
 
-    function deleteMarkers() {
-        clearMarkers();
-        markers = [];
+    });
+}
+
+function setMapOnAll(map) {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
     }
+}
 
-    function clearMarkers() {
-        setMapOnAll(null);
-    }
+function deleteMarkers() {
+    clearMarkers();
+    markers = [];
+}
 
+function clearMarkers() {
+    setMapOnAll(null);
+}
 
-} // map initialize function ends
 var existId = document.getElementById("map-canvas");
 if (existId) {
     google.maps.event.addDomListener(window, 'load', initialize);
 }
+
+function initAutocomplete() {
+
+// Create the search box and link it to the UI element.
+    var input = document.getElementById('nearLocation');
+    var searchBox = new google.maps.places.SearchBox(input);
+
+    // Bias the SearchBox results towards current map's viewport.
+    map.addListener('bounds_changed', function() {
+        searchBox.setBounds(map.getBounds());
+    });
+
+    // Listen for the event fired when the user selects a prediction and retrieve
+    // more details for that place.
+    searchBox.addListener('places_changed', function() {
+        var places = searchBox.getPlaces();
+
+        if (places.length == 0) {
+            return;
+        }
+
+        deleteMarkers();
+
+        // For each place, get the icon, name and location.
+        var bounds = new google.maps.LatLngBounds();
+
+        places.forEach(function(place) {
+            if (!place.geometry) {
+                console.log("Returned place contains no geometry");
+                return;
+            }
+            var icon = {
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+                map: map,
+                icon: icon,
+                title: place.name,
+                position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+                // Only geocodes have viewport.
+                bounds.union(place.geometry.viewport);
+            } else {
+                bounds.extend(place.geometry.location);
+            }
+        });
+        map.fitBounds(bounds);
+    });
+}
+/*
+function geocodeAddress() {
+    if (search){
+        markers.push(newMarker);
+    }
+    deleteMarkers();
+    var geocoder = new google.maps.Geocoder();
+    var address = document.getElementById('nearLocation').value;
+    geocoder.geocode({'address': address}, function(results, status) {
+        if (status === 'OK') {
+            currentLat = results[0].geometry.location.lat();
+            currentLng = results[0].geometry.location.lng();
+            map.setCenter(results[0].geometry.location);
+            pos = {
+                lat: currentLat,
+                lng: currentLng
+            };
+
+            var image = 'img/map/active.png';
+            newMarker = new google.maps.Marker({
+                position: pos,
+                title: 'Searched location',
+                map: map,
+                icon: image
+            });
+            search = true;
+            map.setCenter(pos);
+            $.ajax({
+                url: 'http://lcboapi.com/stores?lat='+currentLat+'&lon='+currentLng,
+                dataType: 'jsonp',
+                headers: {
+                    Authorization: 'Token MDo2YWM0ZGRlNC1hYTExLTExZTctYTI5Yy1kYmQzMWQ4OTRlNDg6U0x4T3FZUFdhYmVsb0d5NXlRcnFLbGp1NHRNRDJkWkwzRzdO'
+                }
+            }).then(function(data) {
+                console.log(data);
+                createMarkers(data);
+            });
+            return false;
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+
+    });
+}
+*/
 
