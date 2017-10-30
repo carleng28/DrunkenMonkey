@@ -1,10 +1,9 @@
-var map, currentLat,currentLng;
+var map, currentLat,currentLng,currentMarker;
 //Array with markers
 var markers = [];
-var search = false;
+var storeId = "";
 
-
-    var mapStyles = [{
+var mapStyles = [{
     'elementType': 'geometry',
     'stylers': [{
         'color': '#f5f5f5'
@@ -132,6 +131,14 @@ var search = false;
 var center = new google.maps.LatLng(-33.91722, 151.23064);*/
 
 $(document).ready(function(){
+    //Prevent the form to be submitted when the enter key is pressed
+    document.getElementById("searchAddress").onkeypress = function(e) {
+        var key = e.charCode || e.keyCode || 0;
+        if (key == 13) {
+            e.preventDefault();
+        }
+    };
+
     var infoWindow = new google.maps.InfoWindow({map: map});
     var id = document.getElementById('map-canvas');
 
@@ -146,6 +153,7 @@ $(document).ready(function(){
 
 //Map initialize function
 function initialize() {
+
     map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: {lat: -34.397, lng: 150.644},
         styles:mapStyles,
@@ -164,7 +172,7 @@ function initialize() {
 
             var image = 'img/map/active.png';
 
-            var marker = new google.maps.Marker({
+            currentMarker = new google.maps.Marker({
                 position: pos,
                 title: 'You are here!',
                 map: map,
@@ -182,7 +190,7 @@ function initialize() {
                 console.log(data);
                 createMarkers(data);
             });
-
+            initAutocomplete();
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -238,6 +246,7 @@ function getMarkerContent(value) {
 function createMarkers(results){
 
     infoWindow = new google.maps.InfoWindow();
+
     deleteMarkers();
 
     var infobox = new InfoBox({
@@ -253,6 +262,7 @@ function createMarkers(results){
         pane: "floatPane",
         enableEventPropagation: false
     });
+
     infobox.addListener('domready', function () {
         $('.infobox-close').on('mouseout', function () {
             infobox.close(map, this);
@@ -262,15 +272,11 @@ function createMarkers(results){
 
     $.each(results.result, function(i,value){
         var markerCenter = new google.maps.LatLng(value.latitude, value.longitude);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(value.latitude, value.longitude)
 
-        });
 
         var markerContent = getMarkerContent(value);
 
-        marker = new RichMarker({
+        var marker = new RichMarker({
             id: value.id,
             data: value,
             flat: true,
@@ -282,9 +288,13 @@ function createMarkers(results){
         });
 
         marker.addListener('click', function (e) {
-            //marker.data.name;
+            console.log(marker.data.id);
             $('#sectionToHide').css('display', 'block');
             window.location.href = "#sectionToHide";
+
+            setCategoryLink(marker.data.id);
+
+
             e.preventDefault();
             e.stopPropagation();
         });
@@ -334,9 +344,21 @@ function createMarkers(results){
         });
         markers.push(marker);
 
+
+
+
+
     });
 }
+function setCategoryLink(storeId) {
+    $("#beersCiders").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#beersCiders").text());
+    $("#coolers").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#coolers").text());
+    $("#wine").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#wine").text());
+    $("#spirits").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#spirits").text());
+    $("#accessories").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#accessories").text());
+    $("#nonalcoholic").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#nonalcoholic").text());
 
+}
 function setMapOnAll(map) {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
@@ -352,11 +374,7 @@ function clearMarkers() {
     setMapOnAll(null);
 }
 
-var existId = document.getElementById("map-canvas");
-if (existId) {
-    google.maps.event.addDomListener(window, 'load', initialize);
-}
-
+//It will initialize the search box from Google API and center the map in the new address
 function initAutocomplete() {
 
 // Create the search box and link it to the UI element.
@@ -371,75 +389,36 @@ function initAutocomplete() {
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
     searchBox.addListener('places_changed', function() {
-        var places = searchBox.getPlaces();
+        var place = searchBox.getPlaces();
+        console.log(place);
 
-        if (places.length == 0) {
+        if (place.length == 0) {
             return;
         }
+        else {
 
-        deleteMarkers();
-
-        // For each place, get the icon, name and location.
-        var bounds = new google.maps.LatLngBounds();
-
-        places.forEach(function(place) {
-            if (!place.geometry) {
-                console.log("Returned place contains no geometry");
-                return;
-            }
-            var icon = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 34),
-                scaledSize: new google.maps.Size(25, 25)
-            };
-
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location
-            }));
-
-            if (place.geometry.viewport) {
-                // Only geocodes have viewport.
-                bounds.union(place.geometry.viewport);
-            } else {
-                bounds.extend(place.geometry.location);
-            }
-        });
-        map.fitBounds(bounds);
-    });
-}
-/*
-function geocodeAddress() {
-    if (search){
-        markers.push(newMarker);
-    }
-    deleteMarkers();
-    var geocoder = new google.maps.Geocoder();
-    var address = document.getElementById('nearLocation').value;
-    geocoder.geocode({'address': address}, function(results, status) {
-        if (status === 'OK') {
-            currentLat = results[0].geometry.location.lat();
-            currentLng = results[0].geometry.location.lng();
-            map.setCenter(results[0].geometry.location);
+            currentLat = place[0].geometry.location.lat();
+            currentLng = place[0].geometry.location.lng();
+            map.setCenter(place[0].geometry.location);
             pos = {
                 lat: currentLat,
                 lng: currentLng
             };
 
             var image = 'img/map/active.png';
-            newMarker = new google.maps.Marker({
+
+            //Erase current marker
+            currentMarker.setMap(null);
+            currentMarker = new google.maps.Marker({
                 position: pos,
                 title: 'Searched location',
                 map: map,
                 icon: image
             });
-            search = true;
+
+            console.log(currentMarker);
             map.setCenter(pos);
+
             $.ajax({
                 url: 'http://lcboapi.com/stores?lat='+currentLat+'&lon='+currentLng,
                 dataType: 'jsonp',
@@ -447,15 +426,13 @@ function geocodeAddress() {
                     Authorization: 'Token MDo2YWM0ZGRlNC1hYTExLTExZTctYTI5Yy1kYmQzMWQ4OTRlNDg6U0x4T3FZUFdhYmVsb0d5NXlRcnFLbGp1NHRNRDJkWkwzRzdO'
                 }
             }).then(function(data) {
-                console.log(data);
+               // console.log(data);
                 createMarkers(data);
             });
             return false;
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
         }
+
 
     });
 }
-*/
 

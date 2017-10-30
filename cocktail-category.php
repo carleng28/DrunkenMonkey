@@ -66,14 +66,14 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.html"><img src="img/logo-drunkenmonkey.png" alt="logo"></a>
+						<a class="navbar-brand" href="index.php"><img src="img/logo-drunkenmonkey.png" alt="logo"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="">
-								<a href="index.html">home </a>
+								<a href="index.php">home </a>
 
 							</li>
 							<li class="active"><a href="cocktail-main.html">Cocktails </a></li>
@@ -150,7 +150,7 @@
 				  <div class="row">
 					  <div class="col-sm-10 col-xs-12">
 						  <div class="footerText">
-							  <a href="index.html" class="footerLogo"><img src="img/logo-drunkenmonkey.png" alt="Footer Logo"></a>
+							  <a href="index.php" class="footerLogo"><img src="img/logo-drunkenmonkey.png" alt="Footer Logo"></a>
 							  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
 							  <ul class="list-styled list-contact">
 								  <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
@@ -164,7 +164,7 @@
 						  </div>
 						  <div class="useLink">
 							  <ul class="list-unstyled">
-								  <li><a href="index.html">Home</a></li>
+								  <li><a href="index.php">Home</a></li>
 								  <li><a href="cocktail-main.html">Cocktails</a></li>
 								  <li><a href="about-us.html">About us</a></li>
 								  <li><a href="sign-in.html">Sign in</a></li>

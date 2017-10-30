@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">  </script>
     <!-- SITE TITTLE -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cocktails | DrukenMonkey</title>
+    <title>DrunkenMonkey</title>
 
     <!-- PLUGINS CSS STYLE -->
     <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
@@ -71,18 +70,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li >
-                                <a href="index.php">home <!--<i class="fa fa-angle-down" aria-hidden="true"></i>--></a>
-                                <!--<ul class="dropdown-menu dropdown-menu-right">
-                                  <li><a href="index.php">Map Version</a></li>
-                                  <li><a href="index-2.html">Travel Version</a></li>
-                                  <li><a href="index-3.html">Automobile Version</a></li>
-                                </ul>-->
-                            </li>
-                            <li class="active"><a href="cocktail-main.html">Cocktails </a></li>
-
+                            <li class="active"><a href="#">home</a></li>
+                            <li class=""><a href="cocktail-main.html">Cocktails </a></li>
                             <li class=""><a href="about-us.html">about us </a></li>
-
                         </ul>
                     </div>
                     <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
@@ -91,30 +81,86 @@
         </div>
     </header>
 
-    <section class="clearfix paddingAdjustTopBottom">
-        <ul class="list-inline listingImage">
-            <li><img src="img/listing/alcohol-bar-party-cocktail.jpeg" alt="Image Listing" class="img-responsive"></li>
-            <li><img src="img/listing/black-and-white-alcohol-bar-drinks.jpeg" alt="Image Listing" class="img-responsive"></li>
-            <li><img src="img/listing/bar-1839361_960_720.jpeg" alt="Image Listing" class="img-responsive"></li>
-            <li><img src="img/listing/pexels-photo-110472.jpeg" alt="Image Listing" class="img-responsive"></li>
-        </ul>
+
+    <!-- MAP SECTION -->
+    <section class="clearfix p0">
+        <div id="map-canvas"></div>
     </section>
 
+    <!-- CATEGORY SEARCH SECTION -->
+    <section class="clearfix searchArea banerInfo">
+        <form id="searchAddress">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">Near</div>
+                                <input type="text" class="form-control" id="nearLocation" placeholder="Location">
+                                <div class="input-group-addon addon-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
 
     <!-- CATEGORY SECTION -->
-    <section class="clearfix bg-light" style="padding: 25px;">
+    <section class="clearfix bg-light" style="display:none;" id="sectionToHide">
         <div class="container">
             <div class="page-header text-center">
                 <h2>Categories </h2>
             </div>
-            <div id="SingleCategory">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="categoryItem">
+                        <img src="img/drinks-category/Beer-icon.png"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto"  width="100" height="100"/>
+                        <h2 style="text-align: center!important"><a id="beersCiders" href="drink-category-grid-full.html">Beers &amp; Ciders</a></h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="categoryItem">
+                        <img src="img/drinks-category/cooler.png"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                        <h2 style="text-align: center!important"><a id="coolers" href="drink-category-grid-full.html">Coolers</a></h2>
 
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="categoryItem">
+                        <img src="img/drinks-category/spirits.png"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                        <h2 style="text-align: center!important"><a id="spirits" href="drink-category-grid-full.html">Spirits</a></h2>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="categoryItem">
+                        <img src="img/drinks-category/wine-bottle.png"  class="img-fluid img-responsive" style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                        <h2 style="text-align: center!important"><a id="wine" href="drink-category-grid-full.html">Wine</a></h2>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="categoryItem">
+                        <img src="img/drinks-category/nonalcoholic.png"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                        <h2 style="text-align: center!important"><a id="nonalcoholic" href="drink-category-grid-full.html">Non-alcoholic</a></h2>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="categoryItem">
+                        <img src="img/drinks-category/accessories.png"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                        <h2 style="text-align: center!important"><a id="accessories" href="drink-category-grid-full.html">Accessories</a></h2>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer style="background-image: url(img/background/bg-footer.jpg);">
+    <footer class="footerWhite">
         <!-- FOOTER INFO -->
         <div class="clearfix footerInfo">
             <div class="container">
@@ -122,7 +168,7 @@
                     <div class="col-sm-10 col-xs-12">
                         <div class="footerText">
                             <a href="index.php" class="footerLogo"><img src="img/logo-drunkenmonkey.png" alt="Footer Logo"></a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+                            <p>Information about the team</p>
                             <ul class="list-styled list-contact">
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@listy.com</a></li>
@@ -160,7 +206,7 @@
                                 </div>
                                 <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                                     <div class="copyRightText">
-                                        <p>Copyright &copy; 2017. All Rights Reserved by <a href="http://www.iamabdus.com/" target="_blank">Abdus</a></p>
+                                        <p>Copyright &copy; 2017. All Rights Reserved by <a href="http://www.iamabdus.com/" target="_blank">Code4Life</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -198,13 +244,13 @@
                     </div>
                     <div class="checkbox">
                         <label><input type="checkbox"> Remember me</label>
-                        <a href="#" class="pull-right link">Fogot Password?</a>
+                        <a href="password.html" class="pull-right link">Forgot Password?</a>
                     </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <p>Don’t have an Account? <a href="#" class="link">Sign up</a></p>
+                <p>Don’t have an Account? <a href="sign-up.html" class="link">Sign up</a></p>
             </div>
         </div>
 
@@ -212,7 +258,6 @@
 </div>
 
 <!-- JAVASCRIPTS -->
-<script src="js/cocktailscript.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -225,12 +270,11 @@
 <script src="plugins/isotope/isotope.min.js"></script>
 <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
 <script src="plugins/isotope/isotope-triger.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw8CEXPvVQmPs-XQiik7YEwV5ITAw7Xg8&libraries=places"></script>
 <script src="plugins/map/js/rich-marker.js"></script>
 <script src="plugins/map/js/infobox_packed.js"></script>
-<script src="js/map.js"></script>
+<script src="js/index.js"></script>
 <script src="js/custom.js"></script>
-
 
 </body>
 
