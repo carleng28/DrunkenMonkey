@@ -2,310 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8520aae-4e9b-4970-ae00-9aa491f19c47" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/about-us.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/category-grid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/category-grid.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cocktail-category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cocktail-main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cocktail-page.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/cocktailstyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/style.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/drink-category-grid-full.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/drink-page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Beer-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Coffee-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Homemade Liqueur-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Milk-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Ordinary Drink-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Punch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Shot-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/Soft Drink-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/cocktail-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/cocoa-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/CocktailCategoriesPics/other-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/articles/article-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/articles/article-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/articles/article-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background/bg-countdown-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background/bg-countdown.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background/bg-download.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background/bg-footer-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background/bg-footer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/background/bg-page-title.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/banner/banner1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/banner/slider-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/blog/blog-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/blog/blog-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/brands/brand-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/brands/brand-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/brands/brand-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/brands/brand-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/brands/brand-5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/american-express.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/business-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/discover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/master-card.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/paypal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/recaptcha.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/business/visa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cars/car-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cars/car-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cars/car-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cars/car-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cars/car-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cars/car-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/cocktail/cocktail1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/blank.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/listing.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/recent-user-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/recent-user-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/recent-user-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/recent-user-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/user-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/dashboard/user.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drink/Hitachino.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drink/Hitachino.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/Beer-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/accessories.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/beer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/cooler.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/licor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/nonalcoholic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/spirits.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/tequila.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/vodka.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/wine-bottle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/drinks-category/wine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/alcohol-bar-party-cocktail.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/bar-1839361_960_720.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/black-and-white-alcohol-bar-drinks.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/list-user-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/list-user-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/list-user-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-details-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-details-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-details-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/listing-details-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/listing/pexels-photo-110472.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo-drunken.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo-drunkenmonkey.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/inactive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/marker-back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/marker-front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/markerStore.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/map/things-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/news/news-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/news/news-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/news/news-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/001.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/002.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/003.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/004.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/005.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/006.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/patterns/007.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/picsOfCocktailIngredient/Champagne-Small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/picsOfCocktailIngredient/Gin-Small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/picsOfCocktailIngredient/Lemon juice-Small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/picsOfCocktailIngredient/Maraschino cherry-Small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/picsOfCocktailIngredient/Orange-Small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/picsOfCocktailIngredient/Sugar-Small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/preloader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/things/things-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/things/things-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/things/things-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/carlitos.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/works-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/works-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/works-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/works-big-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/works-big-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/works/works-big-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/chart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/cocktailscript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/drink-category.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/listings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/searchmap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/single-map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/singlecocktail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap-rtl/bootstrap-rtl.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap-rtl/bootstrap-rtl.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap-rtl/bootstrap-rtl.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrap/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/bootstrapthumbnail/bootstrap-thumbnail.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/counter-up/jquery.counterup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/counter-up/jquery.counterup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/datepicker/bootstrap-datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/datepicker/bootstrap-datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/datepicker/datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/datepicker/datepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/images/fancybox_loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/images/fancybox_loading@2x.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/images/fancybox_overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/images/fancybox_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/images/fancybox_sprite@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/jquery.fancybox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/jquery.fancybox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/jquery.fancybox.pack.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/fancybox/jquery.fancybox.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/excanvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/excanvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.colorhelpers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.colorhelpers.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.canvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.canvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.categories.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.categories.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.crosshair.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.crosshair.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.errorbars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.errorbars.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.fillbetween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.fillbetween.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.image.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.navigate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.navigate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.pie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.resize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.selection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.selection.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.stack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.stack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.symbol.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.symbol.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.threshold.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.threshold.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.time.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.flot.time.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/flot/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/images/fancybox_loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/images/fancybox_loading@2x.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/images/fancybox_overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/images/fancybox_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/images/fancybox_sprite@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/isotope-triger.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/isotope-triger.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/isotope.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/isotope.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/isotope.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/isotope/isotope.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery-ui/jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery-ui/jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery-ui/jquery-ui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery-ui/jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/jquery/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/Read Me.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/demo-files/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/demo-files/demo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/fonts/thin-line-icons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/fonts/thin-line-icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/fonts/thin-line-icons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/fonts/thin-line-icons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/selection.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/listtyicons/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/css/map.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/images/active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/images/inactive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/images/marker-back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/images/marker-front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/images/things-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/js/infobox_packed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/map/js/rich-marker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/owl-carousel/images/left-arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/owl-carousel/images/right-arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/owl-carousel/owl.carousel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/owl-carousel/owl.carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/owl-carousel/owl.carousel.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/owl-carousel/owl.carousel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/rwdtable/css/docs.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/rwdtable/css/rwd-table.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/rwdtable/css/rwd-table.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/rwdtable/js/rwd-table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/rwdtable/js/rwd-table.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/arrow-down-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/arrow-down-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/arrow-gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/check-drop-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/check-drop-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/down-arrow-gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/down-arrow-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/drop-down-arrow.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/light-drop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/images/primary-drop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/jquery.selectbox-0.1.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/selectbox/select_option1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/smoothscroll/SmoothScroll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/smoothscroll/SmoothScroll.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/waypoints/waypoints.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/waypoints/waypoints.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_blog.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_business.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_common.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_dashboard.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_footer.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_home.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_reset.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_rtl.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_slider.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_terms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_ui-kit.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/_works.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/partials/_media-query.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/partials/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/partials/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sign-in.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sign-up.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DrunkenMonkey.iml" afterPath="$PROJECT_DIR$/.idea/DrunkenMonkey.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/public/js/cocktailscript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail-page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/getOneCocktail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/php/sendmsg.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/public/js/index.js" afterPath="$PROJECT_DIR$/laravel/public/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -320,61 +27,58 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            <state relative-caret-position="291">
+              <caret line="38" column="51" lean-forward="false" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CocktailCategoryController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CocktailCategoryController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="password.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/password.blade.php">
+      <file leaf-file-name="getOneCocktail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oldScripts/getOneCocktail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="95" column="21" lean-forward="false" selection-start-line="94" selection-start-column="2" selection-end-line="95" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="116" lean-forward="false" selection-start-line="4" selection-start-column="116" selection-end-line="4" selection-end-column="116" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js-load.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/js-load.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cocktail-category.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+            <state relative-caret-position="510">
+              <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <marker date="1508796955705" expanded="true" signature="131:7207" ph="..." />
+                <marker date="1508796955705" expanded="true" signature="327:7185" ph="{&quot;type&quot;: 'POST'...}" />
+                <marker date="1508796955705" expanded="true" signature="438:7175" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="1371:1665" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="1765:2060" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="2160:2456" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="2556:2851" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="2951:3245" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="3345:3639" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="3739:4034" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="4134:4428" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="4528:4823" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="4925:5212" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="5314:5601" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="5703:5994" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="6097:6388" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="6491:6778" ph="{...}" />
+                <marker date="1508796955705" expanded="true" signature="6880:7167" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cocktail-page.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-page.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -383,24 +87,53 @@
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="79" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="79" />
+              <caret line="5" column="103" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="103" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#2;n#div#1;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/public/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="353" column="59" lean-forward="false" selection-start-line="353" selection-start-column="59" selection-end-line="353" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendmsg.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/sendmsg.php">
+      <file leaf-file-name="drink-category-grid-full.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="7" column="105" lean-forward="false" selection-start-line="7" selection-start-column="105" selection-end-line="7" selection-end-column="105" />
               <folding>
-                <marker date="1512052553203" expanded="true" signature="51:1297" ph="..." />
-                <marker date="1512052553203" expanded="true" signature="164:1114" ph="{&quot;type&quot;: 'POST'...}" />
-                <marker date="1512052553203" expanded="true" signature="275:1104" ph="{...}" />
-                <marker date="1512052553203" expanded="true" signature="392:1031" ph="{...}" />
-                <marker date="1512052553203" expanded="true" signature="1174:1271" ph="{...}" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AjaxController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AjaxController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cocktail-category.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="119" lean-forward="false" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="119" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -408,22 +141,9 @@
       <file leaf-file-name="cocktail-main.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-386">
-              <caret line="27" column="114" lean-forward="false" selection-start-line="27" selection-start-column="114" selection-end-line="27" selection-end-column="114" />
+            <state relative-caret-position="-845">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cocktailscript.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/public/js/cocktailscript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="30" column="87" lean-forward="false" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
-              <folding>
-                <marker date="1512412929517" expanded="true" signature="832:868" ph="..." />
-                <marker date="1512412929517" expanded="true" signature="907:935" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -441,20 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>::</find>
-      <find>cocktails</find>
-      <find>img</find>
-      <find>href</find>
-      <find>g</find>
-      <find>ge</find>
-      <find>get</find>
-      <find>getCocktai</find>
-      <find>getCocktail</find>
-      <find>getCocktails</find>
-      <find>c</find>
-      <find>co</find>
-      <find>cock</find>
-      <find>cockt</find>
       <find>cocktaillIST</find>
       <find>cocktaillIS</find>
       <find>cocktaillI</find>
@@ -469,8 +175,22 @@
       <find>SENDM</find>
       <find>SENDMS</find>
       <find>SENDMSG</find>
-      <find>src</find>
       <find>loader</find>
+      <find>@i</find>
+      <find>\n  \@include\(\'login\'\)\n  \@include\(\'js\-load\'\)\n</find>
+      <find>@else if</find>
+      <find>@else i</find>
+      <find>@e</find>
+      <find>@ele</find>
+      <find>@el</find>
+      <find>@els</find>
+      <find>@else</find>
+      <find>@</find>
+      <find>@if</find>
+      <find>ingredients</find>
+      <find>src</find>
+      <find>href</find>
+      <find>setCategoryLink</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\DrunkenMonkey\</dir>
@@ -485,8 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/profile.html" />
-        <option value="$PROJECT_DIR$/drink-page.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/cocktail-main.html" />
         <option value="$PROJECT_DIR$/about-us.html" />
@@ -523,19 +241,21 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/js-load.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/footer.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/login.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/password.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/sign-in.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/sign-up.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/footer-img.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/about-us.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/header.blade.php" />
         <option value="$PROJECT_DIR$/laravel/public/js/cocktailscript.js" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail-page.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/public/js/index.js" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php" />
       </list>
     </option>
   </component>
@@ -549,7 +269,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -568,8 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -592,7 +310,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
+              <option name="myItemId" value="oldScripts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -607,24 +325,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="laravel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DrunkenMonkey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DrunkenMonkey" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -776,11 +476,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel/resources/views/js-load.blade.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../openSource/week9/sessioncookieupload/cookiesession/cookie/setcookie.php" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -902,7 +604,12 @@
       <workItem from="1512090360190" duration="390000" />
       <workItem from="1512355753077" duration="8464000" />
       <workItem from="1512392206930" duration="899000" />
-      <workItem from="1512408795596" duration="9214000" />
+      <workItem from="1512408795596" duration="10540000" />
+      <workItem from="1512430711305" duration="8424000" />
+      <workItem from="1512479108145" duration="6712000" />
+      <workItem from="1512498559292" duration="636000" />
+      <workItem from="1512506622647" duration="1087000" />
+      <workItem from="1512568883648" duration="3362000" />
     </task>
     <task id="LOCAL-00001" summary="Search autocomplete - nearLocation">
       <created>1508970502628</created>
@@ -915,22 +622,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136050000" />
+    <option name="totallyTimeSpent" value="157597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22099853" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2203514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25257143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.496875" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -938,7 +646,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -980,44 +687,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../openSource/quiz3/connect.php" />
-    <entry file="file://$PROJECT_DIR$/../openSource/quiz3/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openSource/week7AS/guitar_shop/product_manager/product_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openSource/week7AS/guitar_shop/model/product_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openSource/week7AS/guitar_shop/model/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="70" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openSource/week7AS/guitar_shop/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openSource/week7AS/phpPDO/ch04_product_manager/update_product.php" />
-    <entry file="file://$PROJECT_DIR$/../openSource/week7AS/phpPDO/ch04_product_manager/get_product_details.php" />
     <entry file="file://$PROJECT_DIR$/../openSource/week7AS/phpPDO/ch04_product_manager/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -1142,13 +811,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1581">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-page.php" />
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-569">
@@ -1177,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/sign-in.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1209,7 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="116" lean-forward="false" selection-start-line="4" selection-start-column="116" selection-end-line="4" selection-end-column="116" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,26 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1615">
           <caret line="95" column="21" lean-forward="false" selection-start-line="94" selection-start-column="2" selection-end-line="95" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/js/singlecocktail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <marker date="1511456240253" expanded="true" signature="855:891" ph="..." />
-            <marker date="1511456240253" expanded="true" signature="930:958" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,33 +879,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/php/sendmsg.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/public/js/cocktailscript.js" />
+    <entry file="file://$PROJECT_DIR$/laravel/public/js/drink-category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="79" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="79" />
-          <folding />
+        <state relative-caret-position="-918">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/js/cocktailscript.js">
+    <entry file="file://$PROJECT_DIR$/laravel/public/js/singlecocktail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="30" column="87" lean-forward="false" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
-          <folding>
-            <marker date="1512412929517" expanded="true" signature="832:868" ph="..." />
-            <marker date="1512412929517" expanded="true" signature="907:935" ph="..." />
-          </folding>
+        <state relative-caret-position="283">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/sendmsg.php">
+    <entry file="file://$PROJECT_DIR$/oldScripts/sendmsg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="-134">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1512052553203" expanded="true" signature="51:1297" ph="..." />
             <marker date="1512052553203" expanded="true" signature="164:1114" ph="{&quot;type&quot;: 'POST'...}" />
@@ -1281,37 +912,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/layouts/app.stub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+        <state relative-caret-position="202">
+          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Notifications/resources/views/email.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../openSource/week9/sessioncookieupload/cookiesession/cookie/setcookie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oldScripts/getOneCocktail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <marker date="1508796955705" expanded="true" signature="131:7207" ph="..." />
+            <marker date="1508796955705" expanded="true" signature="327:7185" ph="{&quot;type&quot;: 'POST'...}" />
+            <marker date="1508796955705" expanded="true" signature="438:7175" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="1371:1665" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="1765:2060" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="2160:2456" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="2556:2851" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="2951:3245" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="3345:3639" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="3739:4034" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="4134:4428" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="4528:4823" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="4925:5212" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="5314:5601" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="5703:5994" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="6097:6388" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="6491:6778" ph="{...}" />
+            <marker date="1508796955705" expanded="true" signature="6880:7167" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-386">
-          <caret line="27" column="114" lean-forward="false" selection-start-line="27" selection-start-column="114" selection-end-line="27" selection-end-column="114" />
+        <state relative-caret-position="510">
+          <caret line="30" column="119" lean-forward="false" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="119" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-page.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="546">
+          <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="17">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail-main.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-845">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AjaxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="38" column="51" lean-forward="false" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/public/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="353" column="59" lean-forward="false" selection-start-line="353" selection-start-column="59" selection-end-line="353" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="103" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#2;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="105" lean-forward="false" selection-start-line="7" selection-start-column="105" selection-end-line="7" selection-end-column="105" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

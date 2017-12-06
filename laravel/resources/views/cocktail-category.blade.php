@@ -28,19 +28,19 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.php"><img src="img/logo-drunkenmonkey.png" alt="logo"></a>
+						<a class="navbar-brand" href="{{ url('/') }}"><img src="{{ url('img/logo-drunkenmonkey.png') }}" alt="logo"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="">
-								<a href="index.php">home </a>
+								<a href="{{ url('/') }}">home </a>
 
 							</li>
-							<li class="active"><a href="cocktail-main.html">Cocktails </a></li>
+							<li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
 
-							<li class=""><a href="#">about us </a></li>
+							<li class=""><a href="{{ url('about-us') }}">about us </a></li>
 
 						</ul>
 					</div>
@@ -69,7 +69,7 @@
 						<div class="col-sm-4"><div class="thingsBox thinsSpace">
 								<div class="thingsImage"><img src="{{ $cocktail->strDrinkThumb }}" width="280" height="270"/>
 									<div class="thingsMask">
-										<a href="#">
+										<a href="{{ url('cocktail-page/'.$cocktail->idDrink) }}">
 											<h2> {{$cocktail->strDrink }}</h2>
 										</a>
 									</div>

@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('cocktail-main', function () {
-    return view('cocktail-main');
-});
+
+Route::get('cocktail-main',[
+    'uses' => 'CocktailCategoryController@getCocktailCategories'
+]);
 
 Route::get('about-us', function () {
     return view('about-us');
@@ -35,13 +36,17 @@ Route::get('password', function () {
     return view('password');
 });
 
-Route::get('drink-category-grid-full', function () {
+Route::get('drink-category-grid-full/{id}/{category}', function () {
     return view('drink-category-grid-full');
 });
 
 
 Route::get('cocktail-category/{category?}',[
-    'uses' => 'CocktailCategoryController@buildCocktailList'
+    'uses' => 'CocktailCategoryController@getCocktailList'
+]);
+
+Route::get('cocktail-page/{id}',[
+    'uses' => 'CocktailCategoryController@getCocktailInformation'
 ]);
 
 

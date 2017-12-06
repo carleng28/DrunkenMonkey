@@ -351,12 +351,12 @@ function createMarkers(results){
     });
 }
 function setCategoryLink(storeId) {
-    $("#beersCiders").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#beersCiders").text());
-    $("#coolers").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#coolers").text());
-    $("#wine").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#wine").text());
-    $("#spirits").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#spirits").text());
-    $("#accessories").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#accessories").text());
-    $("#nonalcoholic").attr("href","drink-category-grid-full.html?id="+storeId+"&category="+$("#nonalcoholic").text());
+    $("#beersCiders").attr("href","drink-category-grid-full/"+storeId+"/"+$("#beersCiders").text());
+    $("#coolers").attr("href","drink-category-grid-full/"+storeId+"/"+$("#coolers").text());
+    $("#wine").attr("href","drink-category-grid-full/"+storeId+"/"+$("#wine").text());
+    $("#spirits").attr("href","drink-category-grid-full/"+storeId+"/"+$("#spirits").text());
+    $("#accessories").attr("href","drink-category-grid-full/"+storeId+"/"+$("#accessories").text());
+    $("#nonalcoholic").attr("href","drink-category-grid-full/"+storeId+"/"+$("#nonalcoholic").text());
 
 }
 function setMapOnAll(map) {

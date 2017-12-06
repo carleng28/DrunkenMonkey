@@ -68,7 +68,18 @@
                 <h2>Categories </h2>
             </div>
             <div id="SingleCategory">
-
+                @foreach ($data['categories'] as $category)
+                    <div class="col-md-3 col-sm-6 col-xs-12"><div class="categoryItem">
+                            <img src="{{ url('img/CocktailCategoriesPics/'.trim(explode("/",$category->strCategory)[0]).'-icon.png')}}"
+                                 class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                                <h2 style="text-align: center!important">
+                                    <a href="{{ url('cocktail-category/'.implode("",explode("/",$category->strCategory))) }}">
+                                        {{$category->strCategory}}
+                                    </a>
+                                </h2>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -79,7 +90,6 @@
 
 @include('login')
 @include('js-load')
-<script src="js/cocktailscript.js"></script>
 
 </body>
 

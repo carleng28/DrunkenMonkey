@@ -5,7 +5,7 @@
 
 
 <body class="body-wrapper">
-  <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+  <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
   <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
@@ -43,7 +43,7 @@
 						  </li>
 						  <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
 
-						  <li class="active"><a href="{{ url('about-us') }}">about us </a></li>
+						  <li><a href="{{ url('about-us') }}">about us </a></li>
 
 					  </ul>
 				  </div>

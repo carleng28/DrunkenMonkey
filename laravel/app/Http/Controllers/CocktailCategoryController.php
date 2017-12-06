@@ -13,7 +13,7 @@ class CocktailCategoryController extends Controller
      * output            -> $data: array with the cocktails and the number
      *                              of cocktails
      * */
-    public function buildCocktailList(Request $request){
+    public function getCocktailList(Request $request){
 
         $cocktails = Array();
         //get the uri from the request
@@ -53,4 +53,64 @@ class CocktailCategoryController extends Controller
 
 
     }
+
+
+    /*
+     * getCocktailCategories -> method that builds the cocktail categories list by
+     *                      connecting to thecocktaildb API.
+     * output                   -> $data: array with the cocktail categories
+ * */
+    public function getCocktailCategories(Request $request){
+
+        $categories = Array();
+        //get the uri from the request
+
+        //echo $categoryName;
+        $json = file_get_contents('http://www.thecocktaildb.com/api/json/v1/1/list.php?c=list');
+        $obj = json_decode($json);
+
+        foreach ($obj->drinks as $category) {
+            array_push($categories,$category);
+        }
+
+        usort($categories, array($this, "cmp"));
+
+        $data=array('categories'=>$categories);
+        //print_r($data);
+
+        return \View::make("cocktail-main")->with(compact('data'));
+
+    }
+
+
+    /*
+     * getCocktailInformation -> method that builds the cocktail information by
+     *                          connecting to thecocktaildb API.
+     * output                   -> $data: array with the cocktail information
+ * */
+    public function getCocktailInformation(Request $request){
+
+        //get the uri from the request
+        $uri = $request->path();
+        //get only the id using explode (split)
+        $cocktailIdArray = explode("/", $uri);
+
+        $cocktailId = $cocktailIdArray[1];
+
+        $json = file_get_contents('http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='.$cocktailId);
+        $obj = json_decode($json);
+
+
+        $data=array('cocktail'=>$obj->drinks[0]);
+        //print_r($data);
+
+        return \View::make("cocktail-page", ['id' => $obj->drinks[0]->idDrink])->with(compact('data'));
+
+    }
+
+    public function cmp($a, $b){
+        return strcmp($a->strCategory, $b->strCategory);
+    }
+
+
 }
