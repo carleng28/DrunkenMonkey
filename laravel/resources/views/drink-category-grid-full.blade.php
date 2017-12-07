@@ -3,7 +3,7 @@
 	<title>Drinks Category | DrunkenMonkey</title>
 </head>
 
-
+<!--hello-->
 <body class="body-wrapper">
   <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
   <div class="main-wrapper">
