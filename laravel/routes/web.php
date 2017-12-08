@@ -49,4 +49,6 @@ Route::get('cocktail-page/{id}',[
     'uses' => 'CocktailCategoryController@getCocktailInformation'
 ]);
 
+Route::post('/loginme', 'loginController@login');
+
 
