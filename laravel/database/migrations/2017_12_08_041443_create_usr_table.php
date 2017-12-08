@@ -14,16 +14,16 @@ class CreateUsrTable extends Migration
     public function up()
     {
         Schema::create('usr', function (Blueprint $table) {
-            $table->increments('usr_id_user');
+            $table->increments('usr_id_user')->primary();
             $table->string('usr_st_fname', 45);
-            $table->string('usr_st_lname', 45);
-            $table->string('usr_dt_birth', 45);
-            $table->string('usr_st_email', 45);
+            $table->string('usr_st_lname', 45)->nullable();
+            $table->date('usr_dt_birth');
+            $table->string('usr_st_email')->unique();
             $table->string('usr_st_password', 45);
-            $table->string('usr_st_gender', 45);
-            $table->string('usr_dt_register', 45);
-            $table->string('usr_st_province', 45);
-            $table->string('usr_st_city', 45);
+            $table->char('usr_st_gender', 2)->nullable();
+            $table->datetime('usr_dt_register');
+            $table->char('usr_st_province', 2)->nullable();
+            $table->string('usr_st_city', 45)->nullable();
             $table->timestamps();
         });
     }
