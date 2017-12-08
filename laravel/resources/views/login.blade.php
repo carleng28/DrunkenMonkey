@@ -9,14 +9,15 @@
                 <h4 class="modal-title">Log In to your Account</h4>
             </div>
             <div class="modal-body">
-                <form class="loginForm">
+                <form action="/loginme" method="post" class="loginForm">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
                         <i class="fa fa-lock" aria-hidden="true"></i>
-                        <input type="password" class="form-control" id="pwd" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Log In</button>
