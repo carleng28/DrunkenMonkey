@@ -13,14 +13,16 @@ class CreateCktTable extends Migration
      */
     public function up()
     {
+        /*Cocktail Table - Must be created after the Category Table creation*/
         Schema::create('ckt', function (Blueprint $table) {
             $table->increments('ckt_id_cocktail');
             $table->string('ckt_st_name', 45);
             $table->string('ckt_st_recipe');
             $table->string('ckt_st_serve', 45);
-            $table->string('ckt_st_category', 45);
             $table->unsignedInteger('ckt_id_user');
+            $table->unsignedInteger('ckt_id_category');
             $table->foreign('ckt_id_user')->references('usr_id_user')->on('usr');
+            $table->foreign('ckt_id_category')->references('cgr_id_category')->on('cgr');
             $table->timestamps();
         });
     }
