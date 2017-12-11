@@ -13,6 +13,7 @@ class CreateCgrTable extends Migration
      */
     public function up()
     {
+        /* Category Table */
         Schema::create('cgr', function (Blueprint $table) {
             $table->increments('cgr_id_category');
             $table->string('cgr_st_name', 45);
