@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CocktailCategoryController extends Controller
 {
@@ -15,6 +16,10 @@ class CocktailCategoryController extends Controller
      * */
     public function getCocktailList(Request $request){
 
+        /*$users = DB::select('select * from usr');
+        foreach ($users as $usr) {
+            echo $usr->usr_st_fname;
+        }*/
         $cocktails = Array();
         //get the uri from the request
         $uri = $request->path();

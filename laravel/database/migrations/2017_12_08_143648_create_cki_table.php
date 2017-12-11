@@ -14,6 +14,8 @@ class CreateCkiTable extends Migration
     public function up()
     {
         Schema::create('cki', function (Blueprint $table) {
+            $table->integer('cki_id_cocktail')->unsigned();
+            $table->integer('cki_id_ingredient')->unsigned();
             $table->primary(['cki_id_cocktail', 'cki_id_ingredient']);
             $table->string('cki_st_measure', 45);
             $table->foreign('cki_id_cocktail')->references('ckt_id_cocktail')->on('ckt');

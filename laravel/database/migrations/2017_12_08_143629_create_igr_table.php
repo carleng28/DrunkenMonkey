@@ -14,7 +14,7 @@ class CreateIgrTable extends Migration
     public function up()
     {
         Schema::create('igr', function (Blueprint $table) {
-            $table->increments('igr_id_ingredient')->primary();
+            $table->increments('igr_id_ingredient');
             $table->string('igr_st_name', 70);
             $table->timestamps();
         });

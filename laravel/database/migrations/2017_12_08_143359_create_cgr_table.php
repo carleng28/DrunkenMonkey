@@ -14,7 +14,7 @@ class CreateCgrTable extends Migration
     public function up()
     {
         Schema::create('cgr', function (Blueprint $table) {
-            $table->increments('cgr_id_category')->primary();
+            $table->increments('cgr_id_category');
             $table->string('cgr_st_name', 45);
             $table->timestamps();
         });

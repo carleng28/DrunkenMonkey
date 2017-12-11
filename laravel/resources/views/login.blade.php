@@ -9,7 +9,7 @@
                 <h4 class="modal-title">Log In to your Account</h4>
             </div>
             <div class="modal-body">
-                <form action="/loginme" method="post" class="loginForm">
+                <form action="/login-me" method="post" class="loginForm">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
