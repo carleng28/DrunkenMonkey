@@ -17,5 +17,10 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="sessioncookieupload" />
+    <orderEntry type="module" module-name="phpmail" />
+    <orderEntry type="module" module-name="21-11" />
+    <orderEntry type="module" module-name="CreateCocktail" />
+    <orderEntry type="module" module-name="Valyusha" />
   </component>
 </module>

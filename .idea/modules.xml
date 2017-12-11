@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../php.proj/lab6(MVC.classes)/.idea/21-11.iml" filepath="$PROJECT_DIR$/../php.proj/lab6(MVC.classes)/.idea/21-11.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/xml and js/progs/XAMPP/htdocs/php.proj/CreateCocktail/.idea/CreateCocktail.iml" filepath="$USER_HOME$/Desktop/xml and js/progs/XAMPP/htdocs/php.proj/CreateCocktail/.idea/CreateCocktail.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DrunkenMonkey.iml" filepath="$PROJECT_DIR$/.idea/DrunkenMonkey.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Valyusha/.idea/Valyusha.iml" filepath="$PROJECT_DIR$/../Valyusha/.idea/Valyusha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../php.proj/phpmail/.idea/phpmail.iml" filepath="$PROJECT_DIR$/../php.proj/phpmail/.idea/phpmail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../php.proj/sessioncookieupload/.idea/sessioncookieupload.iml" filepath="$PROJECT_DIR$/../php.proj/sessioncookieupload/.idea/sessioncookieupload.iml" />
     </modules>
   </component>
 </project>
