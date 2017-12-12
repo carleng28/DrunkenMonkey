@@ -67,86 +67,83 @@
 						<p>Please fill out the fields below to create your account. We will send your account information to the email address you enter. Your email address and information will NOT be sold or shared with any 3rd party. If you already have an account, please, <a href="{{ url('sign-in') }}">click here</a>.</p>
 					</div>
 					<div class="signUpForm">
-						<form action="#">
+						<form action="/sign-up" method="post">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 							<div class="formSection">
 								<h3>Contact Information</h3>
 								<div class="row">
-                  <div class="form-group col-xs-12">
-                    <div class="profileImage">
-                      <img src="{{ url('img/dashboard/blank.jpg') }}" alt="Image User" class="img-circle">
-                      <div class="file-upload profileImageUpload">
-                        <div class="upload-area">
-                          <input type="file" name="img[]" class="file">
-                          <button class="browse" type="button">Upload a Picture <i class="icon-listy icon-upload"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-									<div class="form-group col-sm-6 col-xs-12">
-										<label for="firstName" class="control-label">First Name*</label>
-										<input type="text" class="form-control" id="firstName">
-									</div>
-									<div class="form-group col-sm-6 col-xs-12">
-										<label for="lastName" class="control-label">Last Name*</label>
-										<input type="text" class="form-control" id="lastName">
-									</div>
-									<div class="form-group col-sm-6 col-xs-12">
-										<label for="emailAdress" class="control-label">Email Address*</label>
-										<input type="email" class="form-control" id="emailAdress">
-									</div>
-                  <div class="form-group col-sm-6 col-xs-12">
-                    <label for="emailAdress" class="control-label">Confirm Email Address*</label>
-                    <input type="email" class="form-control" id="emailAdress" placeholder="info@example.com">
-                  </div>
-                  <div class="form-group col-sm-6 col-xs-12">
-                    <label for="datepicker" class="control-label">Date of Birth*</label>
-                    <input type="date" class="form-control" id="dateBirth" placeholder="mm/dd/yyyy">
-                  </div>
-                  <div class="form-group col-sm-6 col-xs-12">
-                    <label for="gender" class="control-label">Gender</label>
-                    <select class="form-control">
-                      <option></option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Prefer to not inform</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-sm-6 col-xs-12">
-                    <label for="province" class="control-label">Province*</label>
-                    <select class="form-control" id="province">
-                      <option></option>
-                      <option>Alberta</option>
-                      <option>British Columbia</option>
-                      <option>Manitoba</option>
-                      <option>New Brunswick</option>
-                      <option>Newfoundland and Labrador</option>
-                      <option>Nova Scotia</option>
-                      <option>Ontario</option>
-                      <option>Prince Edward Island</option>
-                      <option>Quebec</option>
-                      <option>Saskatchewan</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-sm-6 col-xs-12">
-                    <label for="city" class="control-label">City*</label>
-                    <input type="text" class="form-control" id="city">
-                  </div>
+                                    <div class="form-group col-xs-12">
+                                        <div class="profileImage">
+                                            <img src="{{ url('img/dashboard/blank.jpg') }}" alt="Image User" class="img-circle">
+                                            <div class="file-upload profileImageUpload">
+                                                <div class="upload-area">
+                                                    <input type="file" name="img[]" class="file">
+                                                    <button class="browse" type="button">Upload a Picture <i class="icon-listy icon-upload"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="firstName" class="control-label">First Name*</label>
+                                        <input type="text" class="form-control" name="firstName">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="lastName" class="control-label">Last Name*</label>
+                                        <input type="text" class="form-control" name="lastName">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="emailAdress" class="control-label">Email Address*</label>
+                                        <input type="email" class="form-control" name="emailAdress">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="emailAdress" class="control-label">Confirm Email Address*</label>
+                                        <input type="email" class="form-control" id="emailAdress" placeholder="info@example.com">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="datepicker" class="control-label">Date of Birth*</label>
+                                        <input type="date" class="form-control" name="dateBirth" placeholder="mm/dd/yyyy">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="gender" class="control-label">Gender</label>
+                                        <select class="form-control" name="gender" id="gender">
+                                            <option disabled selected> -- select an option -- </option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                            <option value="N">Prefer to not inform</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="province" class="control-label">Province*</label>
+                                        <select class="form-control" name="province" id="province">
+                                            <option disabled selected> -- select an option -- </option>
+                                            <option value="AB">AB</option>
+                                            <option value="BC">BC</option>
+                                            <option value="MB">MB</option>
+                                            <option value="NB">NB</option>
+                                            <option value="NL">NL</option>
+                                            <option value="NS">NS</option>
+                                            <option value="ON">ON</option>
+                                            <option value="PE">PE</option>
+                                            <option value="QC">QC</option>
+                                            <option value="SK">SK</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                        <label for="city" class="control-label">City*</label>
+                                        <input type="text" class="form-control" name="city">
+                                    </div>
 								</div>
 							</div>
 							<div class="formSection">
 								<h3>Account Information</h3>
 								<div class="row">
-									<div class="form-group col-xs-12">
-										<label for="usernames" class="control-label">Username*</label>
-										<input type="text" class="form-control" id="usernames">
-									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="passwordFirst" class="control-label">Password*</label>
 										<input type="password" class="form-control" id="password">
 									</div>
 									<div class="form-group col-sm-6 col-xs-12">
 										<label for="passwordAgain" class="control-label">Password (re-type)*</label>
-										<input type="password" class="form-control" id="passwordAgain">
+										<input type="password" class="form-control" name="passwordAgain">
 									</div>
 								</div>
 							</div>
