@@ -51,4 +51,6 @@ Route::get('cocktail-page/{id}',[
 
 Route::post('/login-me', 'loginController@login');
 
+Route::post('/sign-up', 'loginController@sign');
+
 
