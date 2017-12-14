@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8520aae-4e9b-4970-ae00-9aa491f19c47" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/model/cocktail.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/cocktail-category.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
     </list>
     <list id="ff1e7912-9554-4d23-9d2b-f0b38b510230" name="Revert: " comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +18,11 @@
       <file leaf-file-name="CocktailCategoryController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+            <state relative-caret-position="136">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
-                <marker date="1513260878556" expanded="true" signature="642:659" ph="select * fro... usr" />
-                <marker date="1513260878556" expanded="true" signature="642:661" ph="select * fro... usr" />
+                <marker date="1513261026305" expanded="true" signature="656:673" ph="select * fro... usr" />
+                <marker date="1513261026305" expanded="true" signature="656:675" ph="select * fro... usr" />
               </folding>
             </state>
           </provider>
@@ -441,7 +437,7 @@
       <workItem from="1513008947780" duration="5604000" />
       <workItem from="1513123726836" duration="1317000" />
       <workItem from="1513174363007" duration="17473000" />
-      <workItem from="1513260773605" duration="120000" />
+      <workItem from="1513260773605" duration="247000" />
     </task>
     <task id="LOCAL-00001" summary="Search autocomplete - nearLocation">
       <created>1508970502628</created>
@@ -454,7 +450,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191561000" />
+    <option name="totallyTimeSpent" value="191688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -818,11 +814,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        <state relative-caret-position="136">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
-            <marker date="1513260878556" expanded="true" signature="642:659" ph="select * fro... usr" />
-            <marker date="1513260878556" expanded="true" signature="642:661" ph="select * fro... usr" />
+            <marker date="1513261026305" expanded="true" signature="656:673" ph="select * fro... usr" />
+            <marker date="1513261026305" expanded="true" signature="656:675" ph="select * fro... usr" />
           </folding>
         </state>
       </provider>

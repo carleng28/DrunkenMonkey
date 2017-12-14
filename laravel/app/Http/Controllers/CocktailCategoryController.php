@@ -11,6 +11,7 @@ use App\Ingredient;
 
 class CocktailCategoryController extends Controller
 {
+    //comment
     /*
      * showCocktailList -> method that builds the cocktail list by
      *                      connecting to thecocktaildb API, using
