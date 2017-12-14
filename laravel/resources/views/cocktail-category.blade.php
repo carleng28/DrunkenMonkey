@@ -63,6 +63,12 @@
 				<div class="resultBar">
 					<h2>We found <span>{{ $data['size'] }}</span> Results for you</h2>
 
+					<span class="pull-right">
+						Still want more? &nbsp;
+						<a href="{{ url('user-cocktails/'.implode("-",explode("/",str_replace(' ','',$data['categoryName'])))) }}" >
+						Check other user-created cocktails in this category
+					</a>
+
 				</div>
 				<div id="cocktailList" class="row">
 					@foreach ($data['cocktails'] as $cocktail)

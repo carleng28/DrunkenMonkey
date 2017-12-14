@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('cocktail-main',[
-    'uses' => 'CocktailCategoryController@getCocktailCategories'
+    'uses' => 'CocktailCategoryController@showCocktailCategories'
 ]);
 
 Route::get('about-us', function () {
@@ -42,11 +42,19 @@ Route::get('drink-category-grid-full/{id}/{category}', function () {
 
 
 Route::get('cocktail-category/{category?}',[
-    'uses' => 'CocktailCategoryController@getCocktailList'
+    'uses' => 'CocktailCategoryController@showCocktailList'
 ]);
 
 Route::get('cocktail-page/{id}',[
-    'uses' => 'CocktailCategoryController@getCocktailInformation'
+    'uses' => 'CocktailCategoryController@showCocktailInformation'
+]);
+
+Route::get('user-cocktails/{category?}',[
+    'uses' => 'CocktailCategoryController@ShowUserCocktailsByCategory'
+]);
+
+Route::get('user-cocktail-page/{id}',[
+    'uses' => 'CocktailCategoryController@showUserCocktailInformation'
 ]);
 
 Route::post('/login-me', 'loginController@login');
