@@ -68,15 +68,29 @@
               <a class="navbar-brand" href="index.php"><img src="img/logo-drunkenmonkey.png" alt="logo"></a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="index.php">home</a></li>
-                  <li class=""><a href="cocktail-main.html">Cocktails </a></li>
-                  <li class=""><a href="about-us.html">about us </a></li>
-                </ul>
-            </div>
-            <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+          @if(Session::has('email'))
+              <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li class=""><a href="{{ url('/') }}">home</a></li>
+                          <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                          <li class="active"><a href="{{ url('about-us') }}">about us </a></li>
+                          <li class=""><a href="{{ url('profile') }}">Profile </a></li>
+                      </ul>
+                  {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
+          @else
+              <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li class=""><a href="#">home</a></li>
+                          <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                          <li class="active"><a href="{{ url('about-us') }}">about us </a></li>
+                      </ul>
+
+                  </div>
+                  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal"
+                          data-target="#loginModal"><span>Sign In</span></button>
+              @endif
           </div>
         </nav>
       </div>
@@ -247,11 +261,20 @@
                           </div>
                           <div class="useLink">
                               <ul class="list-unstyled">
-                                  <li><a href="index.php">Home</a></li>
-                                  <li><a href="cocktail-main.html">Cocktails</a></li>
-                                  <li><a href="about-us.html">About us</a></li>
-                                  <li><a href="sign-in.html">Sign in</a></li>
-                                  <li><a href="sign-up.html">Sign up</a></li>
+                                  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                      <ul class="nav navbar-nav navbar-right">
+                                          <li class=""><a href="{{ url('/') }}">home</a></li>
+                                          <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                          <li class=""><a href="{{ url('about-us') }}">about us </a></li>
+                                          <li class=" dropdown singleDrop">
+                                              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                              <ul class="active dropdown-menu dropdown-menu-right">
+                                                  <li><a href="{{ url('profile') }}">Profile</a></li>
+                                                  <li><a href="#">Wish List</a></li>
+                                                  <li><a href="{{route('logout')}}">Log out</a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
                               </ul>
                           </div>
                       </div>

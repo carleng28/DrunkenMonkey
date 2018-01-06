@@ -24,6 +24,7 @@ class CreateUsrTable extends Migration
             $table->datetime('usr_dt_register');
             $table->char('usr_st_province', 2)->nullable();
             $table->string('usr_st_city', 45)->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

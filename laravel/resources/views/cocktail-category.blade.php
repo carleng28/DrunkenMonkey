@@ -31,20 +31,35 @@
 						<a class="navbar-brand" href="{{ url('/') }}"><img src="{{ url('img/logo-drunkenmonkey.png') }}" alt="logo"></a>
 					</div>
 
+				@if(Session::has('email'))
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse navbar-ex1-collapse">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="">
-								<a href="{{ url('/') }}">home </a>
+						<div class="collapse navbar-collapse navbar-ex1-collapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li class=""><a href="#">home</a></li>
+								<li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+								<li class=""><a href="{{ url('about-us') }}">about us </a></li>
+								<li class=" dropdown singleDrop">
+									<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="{{ url('profile') }}">Profile</a></li>
+										<li><a href="#">Wish List</a></li>
+										<li><a href="{{route('logout')}}">Log out</a></li>
+									</ul>
+								</li>
+							</ul>
+						{{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
+						@else
+							<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse navbar-ex1-collapse">
+									<ul class="nav navbar-nav navbar-right">
+										<li class=""><a href="#">home</a></li>
+										<li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+										<li class=""><a href="{{ url('about-us') }}">about us </a></li>
+									</ul>
 
-							</li>
-							<li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
-
-							<li class=""><a href="{{ url('about-us') }}">about us </a></li>
-
-						</ul>
-					</div>
-					<button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+								</div>
+								<button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+							@endif
 				</div>
 			</nav>
 		</div>
@@ -116,7 +131,7 @@
   </div>
 
 
-  @include('login')
+  @include('auth.login')
   @include('js-load')
 
 

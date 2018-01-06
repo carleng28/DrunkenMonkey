@@ -71,10 +71,10 @@
 							<div class="formSection">
 								<div class="row">
                 <div class="form-group col-xs-12">
-                  <label for="emailAdress" class="control-label">Email Address*</label>
+                  <label for="email" class="control-label">Email Address*</label>
                   </div>
 									<div class="form-group col-sm-6 col-xs-12">
-										<input type="email" class="form-control" id="emailAdress">
+										<input type="email" class="form-control" id="email">
 									</div>
                   <div class="form-group col-sm-6 col-xs-12">
                     <button type="submit" class="btn btn-primary">Send E-mail</button>
@@ -92,7 +92,7 @@
     @include('footer-img')
 </div>
 
-  @include('login')
+  @include('auth.login')
   @include('js-load')
 </body>
 
