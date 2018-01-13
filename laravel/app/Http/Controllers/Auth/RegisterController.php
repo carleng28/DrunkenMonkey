@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
+use Session;
 use App\User;
 
 class RegisterController extends Controller
@@ -28,7 +29,7 @@ class RegisterController extends Controller
     }
 
     public function register(Request $req) {
-//Validate the form
+    //Validate the form
         $this->validate(request(),[
             'firstName'=>'required|max:40',
             'lastName'=>'required|max:40',
@@ -65,6 +66,7 @@ class RegisterController extends Controller
 
         if (count($checkEmail) > 0) {
             return redirect()->route('register');
+            //TODO include error messages
         }
 
         else
@@ -84,60 +86,19 @@ class RegisterController extends Controller
                 ]
             );
 
-            Session::put('email', $email);
-            Session::put('fname', $fname);
-            Session::put('lname', $lname);
-            return redirect()->home();
+            $newUser = DB::table('USR')->where(['usr_st_email'=>$email, 'usr_st_password'=>$password])->get();
+
+
+
+                $userArray = json_decode($newUser, true);
+                Session::put('id', $userArray[0]['usr_id_user']);
+                Session::put('email', $email);
+                Session::put('fname',$userArray[0]['usr_st_fname']);
+                Session::put('lname',$userArray[0]['usr_st_lname']);
+                return view('index');
+
+
 
         }
     }
-
-   /* public function register(Request $req)
-    {
-        //Validate the form
-        $this->validate(request(),[
-            'firstName'=>'required|max:40',
-            'lastName'=>'required|max:40',
-            'email'=>'required|email|confirmed',
-            'dateBirth'=>'required',
-            'gender'=>'required',
-            'province'=>'required',
-            'city'=>'required',
-            'password'=>'required|confirmed',
-        ]);
-
-        $gender = $req->input('gender');
-        $regDate = date('Y-m-d H:i:s');
-
-        if ($gender == 'Male') {
-            $gender = 'M';
-        }
-        else if ($gender == 'Female') {
-            $gender = 'F';
-        }
-        else {
-            $gender = 'N';
-        }
-
-        //Create and save the user
-        $user = User::create([
-            'usr_st_fname' => request('firstName'),
-            'usr_st_lname' => request('lastName'),
-            'usr_dt_birth' => request('dateBirth'),
-            'email' => request('email'),
-            'password' => request('password'),
-            'usr_st_gender' => $gender,
-            'usr_dt_register' => $regDate,
-            'usr_st_province' => request('province'),
-            'usr_st_city' => request('city'),
-        ]);
-        //$user = User::create(request(['name','email','password']));
-
-        //Sign them in
-        //\Auth::login();
-        auth()->login($user);
-
-        //Redirect to the home page
-        return redirect()->home();
-    }*/
 }
