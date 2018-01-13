@@ -78,3 +78,9 @@ Route::post('/register','Auth\RegisterController@register')->name('register.subm
 
 
 
+
+Route::get('ajax',function(){
+    return view('cocktail-category');
+});
+Route::get('/getpage/{category}/{page}','AjaxController@index');
+

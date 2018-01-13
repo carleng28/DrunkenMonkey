@@ -60,7 +60,7 @@ class CocktailCategoryController extends Controller
         $categoryName= str_replace("%20"," / ", $categoryName);
         $categoryName= str_replace("/ / /"," / ", $categoryName);
 
-        $data=array('cocktails'=>$cocktails, 'size'=>count($cocktails), 'categoryName' => $categoryName);
+        $data=array('cocktails'=>array_slice($cocktails,0, 9), 'size'=>count($cocktails), 'categoryName' => $categoryName, "originalCategory" => $category);
         //print_r($data);
 
         return \View::make("cocktail-category", ['category' => $categoryName])->with(compact('data'));
@@ -129,6 +129,7 @@ class CocktailCategoryController extends Controller
  * */
     public function ShowUserCocktailsByCategory(Request $request){
 
+        $categorys = Category::all();
         //get the uri from the request
         $uri = $request->path();
         //get only the category using explode (split)
