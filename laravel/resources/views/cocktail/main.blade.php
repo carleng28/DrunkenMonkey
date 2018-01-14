@@ -92,6 +92,15 @@
                         </div>
                     </div>
                 @endforeach
+                    <div class="col-md-3 col-sm-6 col-xs-12"><div class="categoryItem">
+                            <img src="{{ url('img/CocktailCategoriesPics/plus.png')}}"
+                                 class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
+                            <h2 style="text-align: center!important">
+                                <a href="{{ url('/add-cocktail') }}">Add Your own Recipe
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>

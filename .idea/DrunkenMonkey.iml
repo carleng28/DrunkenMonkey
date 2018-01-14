@@ -22,5 +22,7 @@
     <orderEntry type="module" module-name="21-11" />
     <orderEntry type="module" module-name="CreateCocktail" />
     <orderEntry type="module" module-name="Valyusha" />
+    <orderEntry type="module" module-name="phpPDO" />
+    <orderEntry type="module" module-name="blogtest" />
   </component>
 </module>

@@ -3,36 +3,130 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cocktail;
+use App\Category;
+use App\CocktailIngredient;
+use App\Ingredient;
+use App\Picture;
 
 class CocktailsByUsersController extends Controller
 {
-    /*
-    public static function addCocktailByUser($cocktail) {
-        $db = Database::getDB();
+    public function loadCocktailCategories (Request $req)
+    {
+        $categories = Category::all();
 
-        $ckt_st_name = $cocktail->getCktStName();
-        $ckt_st_recipe = $cocktail->getCktStRecipe();
-        $ckt_st_serve = $cocktail->getCktStServe();
-        $ckt_st_category = $cocktail->getCktStCategory();
-        $ckt_id_user = $cocktail->getCktIdUser();
-        $created_at = $cocktail->getCreatedAt();
+        return view("add-cocktail")->with('categories', $categories);
+    }
+
+    public function addCocktailByUser(Request $req) {
+
+        $cocktailName = $req->input('cocktailName');
+        $ingr1 = $req->input('ingr1');
+        $ingr2 = $req->input('ingr2');
+        $ingr3 = $req->input('ingr3');
+        $ingr4 = $req->input('ingr4');
+        $ingr5 = $req->input('ingr5');
+        $msr1 = $req->input('msr1');
+        $msr2 = $req->input('msr2');
+        $msr3 = $req->input('msr3');
+        $msr4 = $req->input('msr4');
+        $msr5 = $req->input('msr5');
+        $recipe = $req->input('recipe');
+        $serve = $req->input('serve');
+        $category = (int) $req->input('category');
+        $created_at = date('Y-m-d H:i:s');
 
 
+        //  PIC
 
-        ///////////////
-        $query = 'INSERT INTO cocktailsAddedByUsers
-                     (ckt_st_name, ckt_st_recipe, ckt_st_serve, ckt_st_category, ckt_id_user, created_at)
-                  VALUES
-                     (:ckt_st_name, :ckt_st_recipe, :ckt_st_serve, :ckt_st_category, :ckt_id_user, :created_at)';
-        $statement = $db->prepare($query);
-        $statement->bindValue(':ckt_st_name', $ckt_st_name);
-        $statement->bindValue(':ckt_st_recipe', $ckt_st_recipe);
-        $statement->bindValue(':ckt_st_serve', $ckt_st_serve);
-        $statement->bindValue(':ckt_st_category', $ckt_st_category);
-        $statement->bindValue(':ckt_id_user', $ckt_id_user);
-        $statement->bindValue(':created_at', $created_at);
-        $statement->execute();
-        $statement->closeCursor();
-    }*/
+        $cocktailId= Cocktail::create([
+                    'ckt_st_name' => $cocktailName,
+                    'ckt_st_recipe' => $recipe,
+                    'ckt_st_serve' => $serve,
+                    'ckt_id_user' => 1,
+                    'ckt_id_category' => $category,
+                    'created_at' => $created_at
+        ])->ckt_id_cocktail;
+
+        if($ingr1!=null || $ingr1!="") {
+            $ingredientId1 = Ingredient::create([
+                'igr_st_name' => $ingr1
+            ])->igr_id_ingredient;
+
+            CocktailIngredient::create([
+               'cki_id_cocktail' => $cocktailId,
+               'cki_id_ingredient' =>  $ingredientId1,
+                'cki_st_measure' => $msr1,
+            ]);
+        }
+
+        if($ingr2!=null ||$ingr2!="") {
+            $ingredientId2 = Ingredient::create([
+                'igr_st_name' => $ingr2
+            ])->igr_id_ingredient;
+
+            CocktailIngredient::create([
+                'cki_id_cocktail' => $cocktailId,
+                'cki_id_ingredient' =>  $ingredientId2,
+                'cki_st_measure' => $msr2,
+            ]);
+        }
+
+        if($ingr3!=null ||$ingr3!="") {
+            $ingredientId3 = Ingredient::create([
+                'igr_st_name' => $ingr3
+            ])->igr_id_ingredient;
+
+            CocktailIngredient::create([
+                'cki_id_cocktail' => $cocktailId,
+                'cki_id_ingredient' =>  $ingredientId3,
+                'cki_st_measure' => $msr3,
+            ]);
+        }
+
+        if($ingr4!=null ||$ingr4!="") {
+            $ingredientId4 = Ingredient::create([
+                'igr_st_name' => $ingr4
+            ])->igr_id_ingredient;
+
+            CocktailIngredient::create([
+                'cki_id_cocktail' => $cocktailId,
+                'cki_id_ingredient' =>  $ingredientId4,
+                'cki_st_measure' => $msr4,
+            ]);
+        }
+
+        if($ingr5!=null ||$ingr5!="") {
+            $ingredientId5 = Ingredient::create([
+                'igr_st_name' => $ingr5
+            ])->igr_id_ingredient;
+
+            CocktailIngredient::create([
+                'cki_id_cocktail' => $cocktailId,
+                'cki_id_ingredient' =>  $ingredientId5,
+                'cki_st_measure' => $msr5,
+            ]);
+        }
+/*
+        $table->integer('cki_id_cocktail')->unsigned();
+        $table->integer('cki_id_ingredient')->unsigned();
+        $table->primary(['cki_id_cocktail', 'cki_id_ingredient']);
+        $table->string('cki_st_measure', 45);
+        $table->foreign('cki_id_cocktail')->references('ckt_id_cocktail')->on('ckt');
+        $table->foreign('cki_id_ingredient')->references('igr_id_ingredient')->on('igr');
+
+//            $id = DB::table('CKT')->insertGetId(
+//                ['ckt_st_name' => $cocktailName,
+//                    'ckt_st_recipe' => $recipe,
+//                    'ckt_st_serve' => $serve,
+//                    'created_at' => $created_at
+//
+//                ]
+//            );
+*/
+            return \View::make("index"); //Incomplete
+
+        }
+
 }
 

@@ -14,6 +14,7 @@ class Cocktail extends Model
      * @var string
      */
     protected $table = 'ckt';
+    protected $fillable = ['ckt_id_cocktail','ckt_st_name', 'ckt_st_recipe', 'ckt_st_serve', 'ckt_id_user', 'ckt_id_category'];
 
     /**
      * The ingredients that belong to the Cocktail.

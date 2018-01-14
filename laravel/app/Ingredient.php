@@ -12,6 +12,7 @@ class Ingredient extends Model
      *
      * @var string
      */
+    protected $fillable = ['igr_id_ingredient', 'igr_st_name'];
     protected $table = 'igr';
 
     /**

@@ -12,4 +12,5 @@ class Category extends Model
      * @var string
      */
     protected $table = 'cgr';
+    protected $fillable = ['cgr_id_category', 'cgr_st_name'];
 }

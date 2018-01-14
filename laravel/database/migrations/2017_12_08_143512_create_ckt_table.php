@@ -21,7 +21,7 @@ class CreateCktTable extends Migration
             $table->string('ckt_st_serve', 45);
             $table->unsignedInteger('ckt_id_user');
             $table->unsignedInteger('ckt_id_category');
-            $table->foreign('ckt_id_user')->references('usr_id_user')->on('usr');
+            $table->foreign('ckt_id_user')->references('id')->on('users');
             $table->foreign('ckt_id_category')->references('cgr_id_category')->on('cgr');
             $table->timestamps();
         });

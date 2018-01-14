@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CgrTableSeeder::class,
+            UsersTableSeeder::class,
             //add here for more table seeders
         ]);
     }

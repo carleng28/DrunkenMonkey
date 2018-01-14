@@ -1,13 +1,15 @@
 #wish{
     border-color: lightgreen;
     font-size: 80%!important;
-    padding-left:9%!important;
-    padding-right:9%!important;
-    margin-left: 19%!important;
+    padding-left:1%!important;
+    padding-right:1%!important;
     color: black!important;
     border-color: black;
     border: solid;
     opacity: 0.6;
+    width: 135px!important;
+    height: 20px!important;
+    padding-top:2px!important;
 }
 #tasted{
     opacity: 0.6;
