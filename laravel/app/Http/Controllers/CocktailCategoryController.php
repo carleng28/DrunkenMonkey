@@ -11,39 +11,23 @@ use App\Ingredient;
 
 class CocktailCategoryController extends Controller
 {
+
+
     //comment
     /*
      * showCocktailList -> method that builds the cocktail list by
      *                      connecting to thecocktaildb API, using
      *                      the category passed as the request
-     * output            -> $data: array with the cocktails and the number
-     *                              of cocktails
+     * output            -> $data: array with the cocktail and the number
+     *                              of cocktail
      * */
-    public function showCocktailList(Request $request){
-
-        /*$users = DB::select('select * from usr');
-        foreach ($users as $usr) {
-            echo $usr->usr_st_fname;
-        }*/
-
+    public function showCocktailList($category = null){
         $cocktails = Array();
-        //get the uri from the request
-        $uri = $request->path();
-        //get only the category using explode (split)
-        $categoryArray = explode("/", $uri);
-
         //Default category if the URI does not have one
-        if (count($categoryArray)<2){
+        if ($category==null){
             $category = "Beer";
-        }else {
-            $category =  $categoryArray[1];
         }
-
-        //for categories that have /, it is reestructured to do the search
-        $categoryName= str_replace("%20%20","%20/%20", $category);
-
-        //fix the issue with the other/unknown category
-        $categoryName= str_replace("Unk","/Unk", $categoryName);
+        $categoryName= $this->hashApiSearch($category);
 
         //echo $categoryName; USE CURL_EXEC
         $url = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?c='. $categoryName;
@@ -63,7 +47,7 @@ class CocktailCategoryController extends Controller
         $data=array('cocktails'=>array_slice($cocktails,0, 9), 'size'=>count($cocktails), 'categoryName' => $categoryName, "originalCategory" => $category);
         //print_r($data);
 
-        return \View::make("cocktail-category", ['category' => $categoryName])->with(compact('data'));
+        return \View::make("cocktail/category", ['category' => $categoryName])->with(compact('data'));
 
 
     }
@@ -92,7 +76,7 @@ class CocktailCategoryController extends Controller
         $data=array('categories'=>$categories);
         //print_r($data);
 
-        return \View::make("cocktail-main")->with(compact('data'));
+        return \View::make("cocktail/main")->with(compact('data'));
 
     }
 
@@ -102,54 +86,34 @@ class CocktailCategoryController extends Controller
      *                          connecting to thecocktaildb API.
      * output                   -> $data: array with the cocktail information
  * */
-    public function showCocktailInformation(Request $request){
+    public function showCocktailInformation($id){
 
-        //get the uri from the request
-        $uri = $request->path();
-        //get only the id using explode (split)
-        $cocktailIdArray = explode("/", $uri);
-
-        $cocktailId = $cocktailIdArray[1];
-
-        $json = file_get_contents('http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='.$cocktailId);
+        $url = 'http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='. $id;
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $json = curl_exec($curl);
         $obj = json_decode($json);
-
-
         $data=array('cocktail'=>$obj->drinks[0]);
-        //print_r($data);
-
-        return \View::make("cocktail-page", ['id' => $obj->drinks[0]->idDrink])->with(compact('data'));
+        return \View::make("cocktail/view", ['id' => $obj->drinks[0]->idDrink])->with(compact('data'));
 
     }
 
     /*
-     * ShowUserCocktailsByCategory -> method that builds the user-created cocktails list given
-     *                                a category. The user-created cocktails are obtained from the database
+     * ShowUserCocktailsByCategory -> method that builds the user-created cocktail list given
+     *                                a category. The user-created cocktail are obtained from the database
      * output                   -> $data: array with the cocktail categories
  * */
-    public function ShowUserCocktailsByCategory(Request $request){
-
-        $categorys = Category::all();
-        //get the uri from the request
-        $uri = $request->path();
-        //get only the category using explode (split)
-        $categoryArray = explode("/", $uri);
+    public function ShowUserCocktailsByCategory($category=null){
 
         //Default category if the URI does not have one
-        if (count($categoryArray)<2){
+        if ($category==null) {
             $category = "Beer";
-        }else {
-            $category =  $categoryArray[1];
         }
-
         //for categories that have /, it is reestructured to do the search
         $categoryName= str_replace("%20%20","/", $category);
-
         //fix the issue with the other/unknown category
         $categoryName= str_replace("/Unk","-Unk", $categoryName);
-
         $categoryName= str_replace("-Drink"," Drink", $categoryName);
-
         $categoryQuery=$categoryId = Category::where('cgr_st_name', $categoryName)->get();
         if(count($categoryQuery)>0){
 
@@ -159,10 +123,8 @@ class CocktailCategoryController extends Controller
         }else {
             $cocktails = Array();
         }
-
-        $data=array('cocktails'=>$cocktails, 'size'=>count($cocktails), 'categoryName' => $categoryName);
-
-        return \View::make("user-cocktails", ['category' => $categoryName])->with(compact('data'));
+        $data=array('cocktail'=>$cocktails, 'size'=>count($cocktails), 'categoryName' => $categoryName);
+        return \View::make("cocktail/user-cocktails", ['category' => $categoryName])->with(compact('data'));
 
     }
 
@@ -177,19 +139,29 @@ class CocktailCategoryController extends Controller
         $uri = $request->path();
         //get only the id using explode (split)
         $cocktailIdArray = explode("/", $uri);
-
         $cocktailId = $cocktailIdArray[1];
-
         $cocktail= Cocktail::where('ckt_id_cocktail', $cocktailId)->first();
-
         $data=array('cocktail'=>$cocktail);
-
         return \View::make("user-cocktail-page", ['id' => $cocktail->ckt_id_cocktail])->with(compact('data'));
 
     }
 
     public function cmp($a, $b){
         return strcmp($a->strCategory, $b->strCategory);
+    }
+
+    public function hashApiSearch($category){
+
+        $categoryApi=$category;
+
+        if($category=="Coffee"){$categoryApi="Coffee%20/%20Tea";}
+        if($category=="Homemade"){$categoryApi="Homemade%20Liqueur";}
+        if($category=="Milk"){$categoryApi="Milk%20/%20Float%20/%20Shake";}
+        if($category=="Ordinary"){$categoryApi="Ordinary%20Drink";}
+        if($category=="Other"){$categoryApi="Other/Unknown";}
+        if($category=="Punch"){$categoryApi="Punch%20/%20Party%20Drink";}
+        if($category=="Soft"){$categoryApi="Soft%20Drink%20/%20Soda";}
+        return $categoryApi;
     }
 
 

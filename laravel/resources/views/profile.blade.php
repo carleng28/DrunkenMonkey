@@ -33,7 +33,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class=""><a href="{{ url('/') }}">home</a></li>
-                                <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                                 <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                                 <li class=" dropdown singleDrop">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -51,7 +51,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="active"><a href="{{ url('/') }}">home</a></li>
-                                <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                                 <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                             </ul>
 
@@ -241,14 +241,14 @@
                             <ul class="list-unstyled">
                                 @if(Session::has('email'))
                                     <li><a href="{{ url('/') }}">Home</a></li>
-                                    <li><a href="{{ url('cocktail-main') }}">Cocktails</a></li>
+                                    <li><a href="{{ url('cocktail/main') }}">Cocktails</a></li>
                                     <li><a href="{{ url('about-us') }}">About us</a></li>
                                     <li><a href="{{ url('profile') }}">Profile</a></li>
                                     <li><a href="{{ url('profile') }}">Wish List</a></li>
                                     <li><a href="{{route('logout')}}">Logout</a></li>
                                 @else
                                     <li><a href="{{ url('/') }}">Home</a></li>
-                                    <li><a href="{{ url('cocktail-main') }}">Cocktails</a></li>
+                                    <li><a href="{{ url('cocktail/main') }}">Cocktails</a></li>
                                     <li><a href="{{ url('about-us') }}">About us</a></li>
                                     <li><a href="{{ route('login') }}">Sign in</a></li>
                                     <li><a href="{{ route('register') }}">Sign up</a></li>

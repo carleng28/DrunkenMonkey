@@ -29,6 +29,9 @@ class AjaxController extends Controller
         if ($categoryName=="Punch"){
             $categoryName="Punch%20/%20Party%20Drink";
         }
+        if ($categoryName=="Soft"){
+            $categoryName="Soft%20Drink%20/%20Soda";
+        }
 
         //echo $categoryName; USE CURL_EXEC
         $url = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?c='. $categoryName;

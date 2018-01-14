@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="{{ url('/') }}">home</a></li>
-                  <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                  <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                   <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                 </ul>
             </div>

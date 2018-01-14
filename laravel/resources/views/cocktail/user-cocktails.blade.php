@@ -38,7 +38,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class=""><a href="{{ url('/') }}">home</a></li>
-                                <li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                <li class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                                 <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                                 <li class=" dropdown singleDrop">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
@@ -58,7 +58,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class=""><a href="#">home</a></li>
-                                <li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                <li class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                                 <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                             </ul>
 
@@ -87,7 +87,7 @@
 
                     </div>
                     <div id="cocktailList" class="row">
-                        @foreach ($data['cocktails'] as $cocktail)
+                        @foreach ($data['cocktail'] as $cocktail)
                             <div class="col-sm-4">
                                 <div class="thingsBox thinsSpace">
                                     <div class="thingsImage"><img

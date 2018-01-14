@@ -33,10 +33,10 @@
                   <div class="collapse navbar-collapse navbar-ex1-collapse">
                       <ul class="nav navbar-nav navbar-right">
                           <li class="active"><a href="{{ url('/') }}">home</a></li>
-                          <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                          <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                           <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                           <li class=" dropdown singleDrop">
-                              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                               <ul class="dropdown-menu dropdown-menu-right">
                                   <li><a href="{{ url('profile') }}">Profile</a></li>
                                   <li><a href="#">Wish List</a></li>
@@ -51,7 +51,7 @@
                       <div class="collapse navbar-collapse navbar-ex1-collapse">
                           <ul class="nav navbar-nav navbar-right">
                               <li class="active"><a href="{{ url('/') }}">home</a></li>
-                              <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                              <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                               <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                           </ul>
 

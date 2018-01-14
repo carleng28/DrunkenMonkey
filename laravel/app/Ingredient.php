@@ -15,7 +15,7 @@ class Ingredient extends Model
     protected $table = 'igr';
 
     /**
-     * The cocktails that belong to the ingredient.
+     * The cocktail that belong to the ingredient.
      */
     public function cocktails()
     {

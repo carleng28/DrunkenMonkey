@@ -33,7 +33,7 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class=""><a href="{{ url('/') }}">home</a></li>
-                                <li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                <li class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                                 <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                                 <li class=" dropdown singleDrop">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -51,7 +51,7 @@
                                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class=""><a href="{{route('home')}}">home</a></li>
-                                        <li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                                        <li class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                                         <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                                     </ul>
 
@@ -85,7 +85,7 @@
                             <img src="{{ url('img/CocktailCategoriesPics/'.trim(explode("/",$category->strCategory)[0]).'-icon.png')}}"
                                  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
                                 <h2 style="text-align: center!important">
-                                    <a href="{{ url('cocktail-category/'.implode("",explode("/",$category->strCategory))) }}">
+                                    <a href="{{ url('cocktail/category/'.explode("/",explode(" ",$category->strCategory)[0])[0]) }}">
                                         {{$category->strCategory}}
                                     </a>
                                 </h2>

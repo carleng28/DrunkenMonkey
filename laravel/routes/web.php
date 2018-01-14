@@ -20,7 +20,7 @@ Route::get('/','HomeController@index')->name('home');
 
 Route::get('/home','HomeController@index')->name('home');
 
-Route::get('cocktail-main',[
+Route::get('cocktail/main',[
     'uses' => 'CocktailCategoryController@showCocktailCategories'
 ]);
 
@@ -33,19 +33,19 @@ Route::get('drink-category-grid-full/{id}/{category}', function () {
 });
 
 
-Route::get('cocktail-category/{category?}',[
+Route::get('cocktail/category/{category?}',[
     'uses' => 'CocktailCategoryController@showCocktailList'
 ]);
 
-Route::get('cocktail-page/{id}',[
+Route::get('cocktail/view/{id}',[
     'uses' => 'CocktailCategoryController@showCocktailInformation'
 ]);
 
-Route::get('user-cocktails/{category?}',[
+Route::get('cocktail/user-cocktails/{category?}',[
     'uses' => 'CocktailCategoryController@ShowUserCocktailsByCategory'
 ]);
 
-Route::get('user-cocktail-page/{id}',[
+Route::get('cocktail/user-cocktail-page/{id}',[
     'uses' => 'CocktailCategoryController@showUserCocktailInformation'
 ]);
 
@@ -63,7 +63,7 @@ Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->nam
 
 
 Route::get('ajax',function(){
-    return view('cocktail-category');
+    return view('cocktail/category');
 });
 Route::get('/getpage/{category}/{page}','AjaxController@index');
 

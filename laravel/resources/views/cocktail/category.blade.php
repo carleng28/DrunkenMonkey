@@ -6,31 +6,6 @@
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
 </script>
 
-<script>
-    function changePage(category){
-        var selectBox = document.getElementById("selectPageBox");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        var category = category.split('%20')[0];
-        $.ajax({
-            type:'GET',
-            url: '/getpage/'+category+'/'+selectedValue,
-            data:'_token = <?php echo csrf_token() ?>',
-            success:function(data){
-                //$("#msg").html(data.msg);
-				$("#cocktailList").html(data.data.cocktails);
-                for (i = 0; i < data.data.cocktails.length; i++) {
-
-                    $("#cocktailList").append('<div class="col-sm-4"><div class="thingsBox thinsSpace">' +
-						'<div class="thingsImage"><img src="'+data.data.cocktails[i].strDrinkThumb+'" width="280" height="270"/>' +
-						'<div class="thingsMask"> <a href=../cocktail-page/'+data.data.cocktails[i].idDrink+' >' +
-						'<h2>'+ data.data.cocktails[i].strDrink+'</h2></a></div> </div> </div> </div>');
-
-				}
-
-            }
-        });
-    }
-</script>
 
 <body class="body-wrapper">
   <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
@@ -63,7 +38,7 @@
 						<div class="collapse navbar-collapse navbar-ex1-collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li class=""><a href="#">home</a></li>
-								<li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+								<li class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
 								<li class=""><a href="{{ url('about-us') }}">about us </a></li>
 								<li class=" dropdown singleDrop">
 									<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -81,13 +56,14 @@
 								<div class="collapse navbar-collapse navbar-ex1-collapse">
 									<ul class="nav navbar-nav navbar-right">
 										<li class=""><a href="#">home</a></li>
-										<li class="active"><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+										<li class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
 										<li class=""><a href="{{ url('about-us') }}">about us </a></li>
 									</ul>
 
 								</div>
 								<button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
 							@endif
+				</div>
 				</div>
 			</nav>
 		</div>
@@ -108,7 +84,7 @@
 
 					<span class="pull-right">
 						Still want more? &nbsp;
-						<a href="{{ url('user-cocktails/'.implode("-",explode("/",str_replace(' ','',$data['categoryName'])))) }}" >
+						<a href="{{ url('cocktail/user-cocktails/'.implode("-",explode("/",str_replace(' ','',$data['categoryName'])))) }}" >
 						Check other user-created cocktails in this category
 						</a>
 					</span>
@@ -118,11 +94,10 @@
 							<nav aria-label="Page navigation">
 								<ul class="pagination">
 									<li>
-										<a href="#" aria-label="Previous">
+										<a href="#" aria-label="Previous" onclick="onClickPrevious('{{$data['originalCategory']}}')" style="line-height: 32px !important;height: auto;">
 											<span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
 										</a>
 									</li>
-								<li>Page<li>
 									<li>
 										<select id="selectPageBox" onchange="changePage('{{$data['originalCategory']}}');" class="form-control"
 												style="width:auto;height:auto;display: inline;">
@@ -130,6 +105,11 @@
 												<option value="{{ $i }}">{{ $i }}</option>
 											@endfor
 										</select>
+									</li>
+									<li>
+										<a href="#" aria-label="Next" onclick="onClickNext('{{$data['originalCategory']}}')" style="line-height: 32px !important;height: auto;">
+											<span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+										</a>
 									</li>
 								</ul>
 
@@ -142,7 +122,7 @@
 						<div class="col-sm-4"><div class="thingsBox thinsSpace">
 								<div class="thingsImage"><img src="{{ $cocktail->strDrinkThumb }}" width="280" height="270"/>
 									<div class="thingsMask">
-										<a href="{{ url('cocktail-page/'.$cocktail->idDrink) }}">
+										<a href="{{ url('cocktail/view/'.$cocktail->idDrink) }}">
 											<h2> {{$cocktail->strDrink }}</h2>
 										</a>
 									</div>
@@ -164,6 +144,7 @@
 
   @include('auth.login')
   @include('js-load')
+  @include('pagination', ['url' => "/getpage/", 'divElement' => "#cocktailList"]);
 
 
 

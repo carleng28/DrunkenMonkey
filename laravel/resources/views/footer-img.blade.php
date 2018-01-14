@@ -23,14 +23,14 @@
                         <ul class="list-unstyled">
                             @if(Session::has('email'))
                                 <li><a href="{{ url('/') }}">Home</a></li>
-                                <li><a href="{{ url('cocktail-main') }}">Cocktails</a></li>
+                                <li><a href="{{ url('cocktail/main') }}">Cocktails</a></li>
                                 <li><a href="{{ url('about-us') }}">About us</a></li>
                                 <li><a href="{{ url('profile') }}">Profile</a></li>
                                 <li><a href="{{ url('profile') }}">Wish List</a></li>
                                 <li><a href="{{route('logout')}}">Logout</a></li>
                             @else
                                 <li><a href="{{ url('/') }}">Home</a></li>
-                                <li><a href="{{ url('cocktail-main') }}">Cocktails</a></li>
+                                <li><a href="{{ url('cocktail/main') }}">Cocktails</a></li>
                                 <li><a href="{{ url('about-us') }}">About us</a></li>
                                 <li><a href="{{ route('login') }}">Sign in</a></li>
                                 <li><a href="{{ route('register') }}">Sign up</a></li>

@@ -25,7 +25,7 @@ class Cocktail extends Model
     }
 
     /**
-     * Get the categories for the cocktails.
+     * Get the categories for the cocktail.
      */
     public function category()
     {
