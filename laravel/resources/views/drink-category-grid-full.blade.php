@@ -47,6 +47,7 @@
 								  </ul>
 							  </li>
 						  </ul>
+					  </div>
 					  {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
 					  @else
 						  <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,7 +59,7 @@
 								  </ul>
 
 							  </div>
-							  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+							  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
 						  @endif
 
 					  </div>

@@ -28,22 +28,6 @@ Route::get('about-us', function () {
     return view('about-us');
 });
 
-Route::get('profile', function () {
-    return view('profile');
-});
-/*
-Route::get('sign-in', function () {
-    return view('sign-in');
-});*/
-
-/*Route::get('/sign-up', function () {
-    return view('sign-up');
-});*/
-
-/*Route::get('password', function () {
-    return view('password');
-});*/
-
 Route::get('drink-category-grid-full/{id}/{category}', function () {
     return view('drink-category-grid-full');
 });
@@ -64,9 +48,6 @@ Route::get('user-cocktails/{category?}',[
 Route::get('user-cocktail-page/{id}',[
     'uses' => 'CocktailCategoryController@showUserCocktailInformation'
 ]);
-/*Route::post('/sign-up', 'loginController@sign');
-Route::post('/login-me', 'loginController@login');*/
-
 
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
@@ -75,7 +56,9 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('/register','Auth\RegisterController@register')->name('register.submit');
 
-
+Route::get('/profile', 'ProfileController@create');
+Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
+Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
 
 
 

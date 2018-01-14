@@ -37,7 +37,8 @@
                                     <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
                                     <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                                     <li class=" dropdown singleDrop">
-                                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
+                                           role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                         <ul class="dropdown-menu dropdown-menu-right">
                                             <li><a href="{{ url('profile') }}">Profile</a></li>
                                             <li><a href="#">Wish List</a></li>
@@ -45,6 +46,7 @@
                                         </ul>
                                     </li>
                                 </ul>
+                            </div>
                         {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
                     @else
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +58,7 @@
                                 </ul>
 
                             </div>
-                        <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+                        <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
                     @endif
 
 

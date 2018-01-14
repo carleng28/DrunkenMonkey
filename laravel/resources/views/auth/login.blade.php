@@ -13,7 +13,7 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email"  value="{{ old('email') }}">
                         {{--Check comment--}}
                         @if ($errors->has('email'))
                             <span class="help-block">

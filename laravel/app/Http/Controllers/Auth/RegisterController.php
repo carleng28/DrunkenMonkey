@@ -29,7 +29,7 @@ class RegisterController extends Controller
     }
 
     public function register(Request $req) {
-    //Validate the form
+        //Validate the form
         $this->validate(request(),[
             'firstName'=>'required|max:40',
             'lastName'=>'required|max:40',
@@ -38,7 +38,7 @@ class RegisterController extends Controller
             'gender'=>'required',
             'province'=>'required',
             'city'=>'required',
-            'password'=>'required|confirmed',
+            'password'=>'required|confirmed'
         ]);
 
 
@@ -71,7 +71,6 @@ class RegisterController extends Controller
 
         else
         {
-
             $id = DB::table('USR')->insertGetId(
                 [
                     'usr_st_fname' => $fname,
@@ -88,16 +87,12 @@ class RegisterController extends Controller
 
             $newUser = DB::table('USR')->where(['usr_st_email'=>$email, 'usr_st_password'=>$password])->get();
 
-
-
-                $userArray = json_decode($newUser, true);
-                Session::put('id', $userArray[0]['usr_id_user']);
-                Session::put('email', $email);
-                Session::put('fname',$userArray[0]['usr_st_fname']);
-                Session::put('lname',$userArray[0]['usr_st_lname']);
-                return view('index');
-
-
+            $userArray = json_decode($newUser, true);
+            Session::put('id', $userArray[0]['usr_id_user']);
+            Session::put('email', $email);
+            Session::put('fname',$userArray[0]['usr_st_fname']);
+            Session::put('lname',$userArray[0]['usr_st_lname']);
+            return Redirect('/');
 
         }
     }

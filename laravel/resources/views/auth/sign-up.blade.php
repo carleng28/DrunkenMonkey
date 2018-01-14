@@ -4,7 +4,7 @@
 </head>
 
 <body class="body-wrapper">
-  <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+  <div class="page-loader" style="background:url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
   <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
@@ -36,7 +36,7 @@
                           <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
                           <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                           <li class=" dropdown singleDrop">
-                              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                               <ul class="dropdown-menu dropdown-menu-right">
                                   <li><a href="{{ url('profile') }}">Profile</a></li>
                                   <li><a href="#">Wish List</a></li>
@@ -44,18 +44,19 @@
                               </ul>
                           </li>
                       </ul>
+                  </div>
                   {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
               @else
                   <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse navbar-ex1-collapse">
                           <ul class="nav navbar-nav navbar-right">
-                              <li class="active"><a href="#">home</a></li>
+                              <li class="active"><a href="{{ url('/') }}">home</a></li>
                               <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
                               <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                           </ul>
 
                       </div>
-                      <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+                      <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
               @endif
           </div>
         </nav>
@@ -64,7 +65,7 @@
 
 
 <!-- PAGE TITLE SECTION -->
-<section class="clearfix pageTitleSection" style="background-image: url();">
+<section class="clearfix pageTitleSection">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -141,16 +142,16 @@
                                         <label for="province" class="control-label">Province*</label>
                                         <select class="form-control" name="province" id="province" required>
                                             <option disabled selected> -- select an option -- </option>
-                                            <option value="AB">AB</option>
-                                            <option value="BC">BC</option>
-                                            <option value="MB">MB</option>
-                                            <option value="NB">NB</option>
-                                            <option value="NL">NL</option>
-                                            <option value="NS">NS</option>
-                                            <option value="ON">ON</option>
-                                            <option value="PE">PE</option>
-                                            <option value="QC">QC</option>
-                                            <option value="SK">SK</option>
+                                            <option value="AB">Alberta</option>
+                                            <option value="BC">British Columbia</option>
+                                            <option value="MB">Manitoba</option>
+                                            <option value="NB">New Brunswick</option>
+                                            <option value="NL">Newfoundland and Labrador</option>
+                                            <option value="NS">Nova Scotia</option>
+                                            <option value="ON">Ontario</option>
+                                            <option value="PE">Prince Edward Island</option>
+                                            <option value="QC">Quebec</option>
+                                            <option value="SK">Saskatchewan</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">

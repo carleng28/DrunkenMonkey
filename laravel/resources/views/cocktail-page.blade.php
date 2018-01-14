@@ -5,7 +5,7 @@
 </head>
 
 <body class="body-wrapper">
-  <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+  <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
   <div class="main-wrapper">
       <!-- HEADER -->
       <header id="pageTop" class="header">
@@ -45,6 +45,7 @@
                                       </ul>
                                   </li>
                               </ul>
+                          </div>
                           {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
                           @else
                               <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +57,7 @@
                                       </ul>
 
                                   </div>
-                                  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+                                  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
                               @endif
 
                           </div>

@@ -5,7 +5,7 @@
 
 
 <body class="body-wrapper">
-  <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+  <div class="page-loader" style="background:  url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
   <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
@@ -45,6 +45,7 @@
                               </ul>
                           </li>
                       </ul>
+                  </div>
                   {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
              @else
               <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +57,7 @@
                       </ul>
 
                   </div>
-                  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+                  <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
              @endif
           </div>
         </nav>
@@ -76,7 +77,7 @@
                             {{ csrf_field() }}
 							<div class="form-group">
 								<label for="email">E-Mail Address</label>
-								<input type="email" class="form-control" id="email" value="{{ old('email') }}">
+								<input type="email" class="form-control" id="email" name="email"  value="{{ old('email') }}">
 								<p class="help-block">Enter your E-Mail Address.</p>
                                 {{--Check comment--}}
                                 @if ($errors->has('email'))

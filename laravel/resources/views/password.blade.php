@@ -4,7 +4,7 @@
 </head>
 
 <body class="body-wrapper">
-  <div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+  <div class="page-loader" style="background:  url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
   <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
@@ -36,7 +36,7 @@
                   <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                 </ul>
             </div>
-            <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>
+            <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
           </div>
         </nav>
       </div>
@@ -44,7 +44,7 @@
 
 
 <!-- PAGE TITLE SECTION -->
-<section class="clearfix pageTitleSection" style="background-image: url();">
+<section class="clearfix pageTitleSection">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">

@@ -45,9 +45,11 @@ class LoginController extends Controller
 
         $checkLogin = DB::table('USR')->where(['usr_st_email'=>$email, 'usr_st_password'=>$password])->get();
 
+
         if (count($checkLogin) > 0) {
 
             $userArray = json_decode($checkLogin, true);
+            Session::put('id', $userArray[0]['usr_id_user']);
             Session::put('email', $email);
             Session::put('fname',$userArray[0]['usr_st_fname']);
             Session::put('lname',$userArray[0]['usr_st_lname']);
