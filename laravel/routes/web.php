@@ -44,6 +44,9 @@ Route::get('cocktail/view/{id}',[
 Route::get('cocktail/user-cocktails/{category?}',[
     'uses' => 'CocktailCategoryController@ShowUserCocktailsByCategory'
 ]);
+Route::get('cocktail/add-cocktail/',[
+    'uses' => 'CocktailsByUsersController@loadCocktailCategories'
+]);
 
 Route::get('cocktail/user-cocktail-page/{id}',[
     'uses' => 'CocktailCategoryController@showUserCocktailInformation'
@@ -60,6 +63,7 @@ Route::get('/profile', 'ProfileController@create');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
 Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
 
+Route::post('/add-my-cocktail', '\CocktailsByUsersController@addCocktailByUser');
 
 
 Route::get('ajax',function(){
