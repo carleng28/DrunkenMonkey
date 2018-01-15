@@ -47,6 +47,7 @@ class ForgotPasswordController extends Controller
         if (count($checkEmail) > 0) {
             $userArray = json_decode($checkEmail, true);
             $userName = $userArray[0]['usr_st_fname'];
+//            dd($userName);
             Mail::to($email)->send(new ForgotPassword($userName));
             return redirect()->route('forgot');
         }

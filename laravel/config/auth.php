@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'usr' => [
+            'driver' => 'token',
+            'provider' => 'usrs',
+        ],
     ],
 
     /*
@@ -74,6 +79,10 @@ return [
             'driver' => 'database',
             'table' => 'users',
         ],
+        'usrs' => [
+            'driver' => 'database',
+            'table' => 'usr',
+        ],
     ],
 
     /*
@@ -93,6 +102,11 @@ return [
 
     'passwords' => [
         'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'usrs' => [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,

@@ -90,7 +90,9 @@
                   <div class="col-sm-8 col-sm-pull-4 col-xs-12">
                     <div class="howWorksInfo text-left">
                       <h3>Drunken Monkey Project</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                      <p>This is a project for Open Source course, ITS program, for Humber College.</p>
+                      <p>The technologies used are HTML, CSS, Bootstrap, PHP. Framework used is Laravel.</p>
+                      <p>The APIs used are LCBO, Google Maps, and TheCocktailDB . </p>
                     </div>
                   </div>
                 </div>
@@ -105,7 +107,6 @@
 
                     <h3>Carlos Gomez</h3>
                     <p>carleng28@gmail.com</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
                   </div>
                 </div>
               </div>
@@ -113,13 +114,13 @@
               <div class="howWorksInner">
                 <div class="row">
                   <div class="col-sm-4 col-xs-12">
-                    <div class="howWorksImage text-left"><img src="{{ url('img/works/works-big-2.png') }}" alt="Image Works"></div>
+                    <div class="howWorksImage text-left"><img src="{{ url('img/works/cesar.png') }}" alt="Image Works"></div>
                   </div>
                   <div class="col-sm-8 col-xs-12">
                     <div class="howWorksInfo text-right">
                       <h3>Cesar Sarmiento</h3>
                       <p>sarmiento_cesar@hotmail.com</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                      <p> </p>
                     </div>
                   </div>
                 </div>
@@ -127,13 +128,12 @@
               <div class="howWorksInner">
                 <div class="row">
                   <div class="col-sm-4 col-sm-push-8 col-xs-12">
-                    <div class="howWorksImage text-right"><img src="{{ url('img/works/works-big-3.png') }}" alt="Image Works"></div>
+                    <div class="howWorksImage text-right"><img src="{{ url('img/works/cintia.png') }}" alt="Image Works"></div>
                   </div>
                   <div class="col-sm-8 col-sm-pull-4 col-xs-12">
                     <div class="howWorksInfo text-left">
                       <h3>Cintia Yorinori</h3>
-                      <p>Step 3</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                      <p>cintiayurika@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -142,13 +142,12 @@
               <div class="howWorksInner">
                 <div class="row">
                   <div class="col-sm-4 col-xs-12">
-                    <div class="howWorksImage text-left"><img src="{{ url('img/works/works-big-2.png') }}" alt="Image Works"></div>
+                    <div class="howWorksImage text-left"><img src="{{ url('img/works/erika.png') }}" alt="Image Works"></div>
                   </div>
                   <div class="col-sm-8 col-xs-12">
                     <div class="howWorksInfo text-right">
                       <h3>Erika Pepe</h3>
-                      <p>Step 2</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                      <p>erikapepes@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -156,13 +155,12 @@
               <div class="howWorksInner">
                 <div class="row">
                   <div class="col-sm-4 col-sm-push-8 col-xs-12">
-                    <div class="howWorksImage text-right"><img src="{{ url('img/works/works-big3.png') }}" alt="Image Works"></div>
+                    <div class="howWorksImage text-right"><img src="{{ url('img/works/kristina.png') }}" alt="Image Works"></div>
                   </div>
                   <div class="col-sm-8 col-sm-pull-4 col-xs-12">
                     <div class="howWorksInfo text-left">
                       <h3>Kristina Kirpichnikova</h3>
-                      <p>Step 3</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                      <p>kristkirp@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -170,13 +168,12 @@
               <div class="howWorksInner">
                 <div class="row">
                   <div class="col-sm-4 col-xs-12">
-                    <div class="howWorksImage text-left"><img src="{{ url('img/works/works-big-2.png') }}" alt="Image Works"></div>
+                    <div class="howWorksImage text-left"><img src="{{ url('img/works/sada.png') }}" alt="Image Works"></div>
                   </div>
                   <div class="col-sm-8 col-xs-12">
                     <div class="howWorksInfo text-right">
                       <h3>Sadanand Rao</h3>
-                      <p>Step 2</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+                      <p>sadanand.srinivasan@gmail.com </p>
                     </div>
                   </div>
                 </div>

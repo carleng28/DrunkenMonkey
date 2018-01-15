@@ -84,3 +84,4 @@ Route::get('ajax',function(){
 });
 Route::get('/getpage/{category}/{page}','AjaxController@index');
 
+
