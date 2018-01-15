@@ -352,7 +352,7 @@ function createMarkers(results){
 }
 function setCategoryLink(storeId) {
     $("#beers").attr("href","drink-category-grid-full/"+storeId+"/"+$("#beers").text());
-    $("#coolers").attr("href","drink-category-grid-full/"+storeId+"/"+$("#coolers").text());
+    $("#coolers").attr("href","drink-category-grid-full/"+storeId+"/"+"Ready-to-drink&#47Coolers");
     $("#wine").attr("href","drink-category-grid-full/"+storeId+"/"+$("#wine").text());
     $("#spirits").attr("href","drink-category-grid-full/"+storeId+"/"+$("#spirits").text());
     $("#ciders").attr("href","drink-category-grid-full/"+storeId+"/"+$("#ciders").text());

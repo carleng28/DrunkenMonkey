@@ -28,9 +28,19 @@ Route::get('about-us', function () {
     return view('about-us');
 });
 
-Route::get('drink-category-grid-full/{id}/{category}', function () {
-    return view('drink-category-grid-full');
-});
+
+
+Route::get('drink-category-grid-full/{id}/{category}/{page?}', [
+    'uses'=>'DrinkCategoryGridFullController@showSubCategories'
+]);
+
+Route::get('drink-page/{idproduct}',[
+   'uses'=>'DrinkPageController@showProduct'
+]);
+
+Route::get('test',[
+    'uses'=>'DrinkCategoryGridFullController@showCategories'
+]);
 
 
 Route::get('cocktail/category/{category?}',[

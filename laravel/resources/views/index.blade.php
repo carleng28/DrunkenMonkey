@@ -102,13 +102,13 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="categoryItem">
                         <img src="{{ url('img/drinks-category/Beer-icon.png') }}"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto"  width="100" height="100"/>
-                        <h2 style="text-align: center!important"><a id="beers" href="{{ url('drink-category-grid-full') }}">Beers</a></h2>
+                        <h2 style="text-align: center!important"><a id="beers" href="{{ url('drink-category-grid-full') }}">Beer</a></h2>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="categoryItem">
                         <img src="{{ url('img/drinks-category/cooler.png') }}"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
-                        <h2 style="text-align: center!important"><a id="coolers" href="{{ url('drink-category-grid-full') }}">Ready-to-drink & Coolers</a></h2>
+                        <h2 style="text-align: center!important"><a id="coolers" href="{{ url('drink-category-grid-full') }}">Ready-to-drink/Coolers</a></h2>
 
                     </div>
                 </div>

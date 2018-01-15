@@ -1,4 +1,4 @@
-@include('header')
+	@include('header')
 <head>
 	<title>Drinks Category | DrunkenMonkey</title>
 </head>
@@ -79,27 +79,22 @@
 		<div class="row">
 			<div class="col-sm-12 col-xs-12">
 				<div class="resultBar">
-					<h2>We found <span>8</span> Results for you</h2>
+					<h2>We found <span>{{$data['size']}}</span> Results for you</h2>
 					<ul class="list-inline">
 						<li class="active"><a href="{{ url('drink-category-grid-full') }}"><i class="fa fa-th" aria-hidden="true"></i></a></li>
 						<li><a href="cocktail-category.php"><i class="fa fa-th-list" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
+
 				<div class="row">
+					@foreach ($data['drinks'] as $drink)
 					<div class="col-sm-4 col-xs-12">
 						<div class="thingsBox thinsSpace">
 							<div class="thingsImage">
-								<img src="{{ url('img/drinks-category/tequila.png') }}" alt="Image things">
+								<img src="{{ url($drink['image_thumb_url']) }}" alt="Image things">
 								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description of the drink</p>
+									<a href={{url('drink-page/'.$drink['id'])}}><h2>{{$drink['name']}} <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+									<p>{{$drink['description']}}</p>
 								</div>
 							</div>
 							<div class="thingsCaption ">
@@ -110,199 +105,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="{{ url('img/drinks-category/beer.png') }}" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef Description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="{{ url('img/drinks-category/vodka.png') }}" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="{{ url('img/drinks-category/wine.png') }}" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="{{ url('img/drinks-category/vodka.png') }}" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="{{ url('img/drinks-category/licor.png') }}" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>breef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-12">
-						<div class="thingsBox thinsSpace">
-							<div class="thingsImage">
-								<img src="i" alt="Image things">
-								<div class="thingsMask">
-									<ul class="list-inline rating">
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-										<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									</ul>
-									<a href="drink-page.html"><h2>The City Theater <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-									<p>reef description</p>
-								</div>
-							</div>
-							<div class="thingsCaption ">
-								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
+
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
 						<div class="sidebarInner sidebarCategory mt20 pull-left">
@@ -361,11 +165,12 @@
 									<span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
 								</a>
 							</li>
-							<li class="active"><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
+
+
+							@for($i=1;$i<=$data['total_pages'];$i++)
+									<li id="active"><a href="{{$category}}/{{$i}}">{{$i}}</a></li>
+							@endfor
+
 							<li>
 								<a href="#" aria-label="Next">
 									<span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
