@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8520aae-4e9b-4970-ae00-9aa491f19c47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel/resources/views/drink-page.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DrunkenMonkey.iml" afterPath="$PROJECT_DIR$/.idea/DrunkenMonkey.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/DrinkCategoryGridFullController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/DrinkPageController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/composer.lock" afterPath="$PROJECT_DIR$/laravel/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/public/js/index.js" afterPath="$PROJECT_DIR$/laravel/public/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/drink-category-grid-full.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
     </list>
     <list id="ff1e7912-9554-4d23-9d2b-f0b38b510230" name="Revert: " comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -744,11 +739,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508970502628</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Display Category by store and drink page">
+      <created>1516042348791</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1516042348791</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252846000" />
+    <option name="totallyTimeSpent" value="253057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="1" width="1836" height="1086" extended-state="0" />
@@ -791,7 +793,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Search autocomplete - nearLocation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search autocomplete - nearLocation" />
+    <MESSAGE value="Display Category by store and drink page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display Category by store and drink page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
