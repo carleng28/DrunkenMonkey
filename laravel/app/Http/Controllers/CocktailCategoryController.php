@@ -133,16 +133,12 @@ class CocktailCategoryController extends Controller
     *                          connecting to the drunkenmonkey database.
     * output                   -> $data: array with the cocktail information
 * */
-    public function showUserCocktailInformation(Request $request){
+    public function showUserCocktailInformation($id){
 
         //get the uri from the request
-        $uri = $request->path();
-        //get only the id using explode (split)
-        $cocktailIdArray = explode("/", $uri);
-        $cocktailId = $cocktailIdArray[1];
-        $cocktail= Cocktail::where('ckt_id_cocktail', $cocktailId)->first();
+        $cocktail= Cocktail::where('ckt_id_cocktail', $id)->first();
         $data=array('cocktail'=>$cocktail);
-        return \View::make("user-cocktail-page", ['id' => $cocktail->ckt_id_cocktail])->with(compact('data'));
+        return \View::make("cocktail/user-cocktail-page", ['id' => $cocktail->ckt_id_cocktail])->with(compact('data'));
 
     }
 

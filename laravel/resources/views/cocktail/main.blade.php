@@ -96,7 +96,7 @@
                             <img src="{{ url('img/CocktailCategoriesPics/plus.png')}}"
                                  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
                             <h2 style="text-align: center!important">
-                                <a href="{{ url('/add-cocktail') }}">Add Your own Recipe
+                                <a href="{{ url('cocktail/add-cocktail') }}">Add Your own Recipe
                                 </a>
                             </h2>
                         </div>

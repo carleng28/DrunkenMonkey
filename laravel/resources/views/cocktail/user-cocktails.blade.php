@@ -94,7 +94,7 @@
                                                 src="{{ ($cocktail->strDrinkThumb != null ? $cocktail->strDrinkThumb : url('img/cocktail/img_not_available.png'))}}"
                                                 width="280" height="270"/>
                                         <div class="thingsMask">
-                                            <a href="{{ url('user-cocktail-page/'.$cocktail->ckt_id_cocktail) }}">
+                                            <a href="{{ url('cocktail/user-cocktail-page/'.$cocktail->ckt_id_cocktail) }}">
                                                 <h2> {{$cocktail->ckt_st_name }}</h2>
                                             </a>
                                         </div>

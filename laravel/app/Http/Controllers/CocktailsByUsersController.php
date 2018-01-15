@@ -11,11 +11,12 @@ use App\Picture;
 
 class CocktailsByUsersController extends Controller
 {
-    public function loadCocktailCategories (Request $req)
+    public function loadCocktailCategories ($response = 0)
     {
         $categories = Category::all();
 
-        return view("add-cocktail")->with('categories', $categories);
+        $data = Array('categories' => $categories, 'response' =>$response);
+        return view("cocktail/add-cocktail")->with($data);
     }
 
     public function addCocktailByUser(Request $req) {
@@ -107,24 +108,8 @@ class CocktailsByUsersController extends Controller
                 'cki_st_measure' => $msr5,
             ]);
         }
-/*
-        $table->integer('cki_id_cocktail')->unsigned();
-        $table->integer('cki_id_ingredient')->unsigned();
-        $table->primary(['cki_id_cocktail', 'cki_id_ingredient']);
-        $table->string('cki_st_measure', 45);
-        $table->foreign('cki_id_cocktail')->references('ckt_id_cocktail')->on('ckt');
-        $table->foreign('cki_id_ingredient')->references('igr_id_ingredient')->on('igr');
-
-//            $id = DB::table('CKT')->insertGetId(
-//                ['ckt_st_name' => $cocktailName,
-//                    'ckt_st_recipe' => $recipe,
-//                    'ckt_st_serve' => $serve,
-//                    'created_at' => $created_at
-//
-//                ]
-//            );
-*/
-            return \View::make("index"); //Incomplete
+            $response = 1;
+            return redirect('cocktail/add-cocktail/'.$response);
 
         }
 

@@ -54,7 +54,7 @@ Route::get('cocktail/view/{id}',[
 Route::get('cocktail/user-cocktails/{category?}',[
     'uses' => 'CocktailCategoryController@ShowUserCocktailsByCategory'
 ]);
-Route::get('cocktail/add-cocktail/',[
+Route::get('cocktail/add-cocktail/{response?}',[
     'uses' => 'CocktailsByUsersController@loadCocktailCategories'
 ]);
 
@@ -73,7 +73,7 @@ Route::get('/profile', 'ProfileController@create');
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
 Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
 
-Route::post('/add-my-cocktail', '\CocktailsByUsersController@addCocktailByUser');
+Route::post('cocktail/add-my-cocktail', 'CocktailsByUsersController@addCocktailByUser');
 
 
 Route::get('/password', 'Auth\ForgotPasswordController@create')->name('forgot');

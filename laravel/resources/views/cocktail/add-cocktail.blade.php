@@ -1,7 +1,7 @@
 @include('header')
 <head>
     <title>Add Cocktail | DrukenMonkey</title>
-    <link rel="stylesheet" type="text/css" href="css/cocktailstyle.css">
+<link rel="stylesheet" type="text/css" href="{{ url('/css/cocktailstyle.css') }}">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -23,7 +23,7 @@
 
 </script>
 <body class="body-wrapper">
-<div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+<div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
 <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
@@ -50,8 +50,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="{{ url('/') }}">home</a></li>
-                            <li class=""><a href="{{ url('cocktail-main') }}">Cocktails </a></li>
+                            <li ><a href="{{ url('/') }}">home</a></li>
+                            <li  class="active"><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
                             <li class=""><a href="{{ url('about-us') }}">about us </a></li>
                         </ul>
                     </div>
@@ -75,6 +75,11 @@
     <!-- ADD COCKTAIL SECTION -->
     <section class="clearfix signUpSection">
         <div class="container">
+            @if ($response==1)
+                <div class="alert alert-success" style="text-align:center;">
+                    <strong>Your cocktail has been created successfully!</strong>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <div class="signUpFormArea">
@@ -83,7 +88,7 @@
                             <p>Please fill out the fields below to add your cocktail.</p>
                         </div>
                         <div class="signUpForm">
-                            <form action="{{ url('add-my-cocktail') }}" method="post">
+                            <form action="{{ url('cocktail/add-my-cocktail') }}" method="post">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="formSection">
                                     <div class="row">
