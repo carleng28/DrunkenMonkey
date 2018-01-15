@@ -68,8 +68,14 @@
 <!-- LOGIN SECTION -->
 <section class="clearfix loginSection">
 	<div class="container">
+
 		<div class="row">
 			<div class="center-block col-md-5 col-sm-6 col-xs-12">
+                @if ($response==1)
+                    <div class="alert alert-danger" style="text-align:center;">
+                        <strong>You need to sign in first</strong>
+                    </div>
+                @endif
 				<div class="panel panel-default loginPanel">
 					<div class="panel-heading text-center">Members log in</div>
 					<div class="panel-body">

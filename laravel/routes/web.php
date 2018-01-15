@@ -62,7 +62,7 @@ Route::get('cocktail/user-cocktail-page/{id}',[
     'uses' => 'CocktailCategoryController@showUserCocktailInformation'
 ]);
 
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::get('/login/{response?}', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 

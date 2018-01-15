@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8520aae-4e9b-4970-ae00-9aa491f19c47" name="Default" comment="Search autocomplete - nearLocation">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143512_create_ckt_table.php" afterPath="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143512_create_ckt_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/database/seeds/UsersTableSeeder.php" afterPath="$PROJECT_DIR$/laravel/database/seeds/UsersTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/auth/sign-in.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/auth/sign-in.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/cocktail/user-cocktails.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/cocktail/user-cocktails.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
     </list>
     <list id="ff1e7912-9554-4d23-9d2b-f0b38b510230" name="Revert: " comment="" />
@@ -23,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CocktailCategoryController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CocktailCategoryController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1246">
-              <caret line="140" column="37" lean-forward="false" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+            <state relative-caret-position="90">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -45,21 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CgrTableSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/database/seeds/CgrTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="11" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UsersTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/database/seeds/UsersTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="216">
+              <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -80,8 +67,8 @@
       <file leaf-file-name="CocktailsByUsersController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="111" column="64" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
+            <state relative-caret-position="590">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -89,34 +76,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-cocktail.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add-cocktail.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="78" column="74" lean-forward="false" selection-start-line="78" selection-start-column="74" selection-end-line="78" selection-end-column="74" />
+            <state relative-caret-position="250">
+              <caret line="104" column="50" lean-forward="false" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#1;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/database/seeds/DatabaseSeeder.php">
+      <file leaf-file-name="main.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017_12_08_041443_create_usr_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2017_12_08_041443_create_usr_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="192">
+              <caret line="102" column="65" lean-forward="false" selection-start-line="102" selection-start-column="65" selection-end-line="102" selection-end-column="65" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,20 +105,32 @@
         <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="148">
-              <caret line="61" column="69" lean-forward="false" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="69" />
+              <caret line="65" column="52" lean-forward="true" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="false" />
-                <marker date="1516044270218" expanded="true" signature="1093:1188" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1126:1187" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1203:1294" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1225:1293" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1309:1421" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1348:1420" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1435:1540" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1472:1539" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1555:1664" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="1591:1663" ph="..." />
-                <marker date="1516044270218" expanded="true" signature="2391:2617" ph="..." />
+                <marker date="1516044992502" expanded="true" signature="2403:2629" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-in.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/sign-in.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#1;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,11 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pul</find>
-      <find>pull</find>
-      <find>pull-</find>
-      <find>pull-r</find>
-      <find>pull-ri</find>
       <find>pull-right</find>
       <find>align</find>
       <find>create</find>
@@ -184,9 +171,14 @@
       <find>@if</find>
       <find>cate</find>
       <find>load</find>
-      <find>$categories</find>
-      <find>showUserCocktailInformation</find>
       <find>user-cocktail-page</find>
+      <find>showUserCocktailInformation</find>
+      <find>$categories</find>
+      <find>showLoginForm</find>
+      <find>respo</find>
+      <find>auth.sign-in</find>
+      <find>else</find>
+      <find>login</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\DrunkenMonkey\</dir>
@@ -201,8 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_041443_create_usr_table.php" />
-        <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143359_create_cgr_table.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143629_create_igr_table.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143602_create_pic_table.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143614_create_rvw_table.php" />
@@ -244,14 +234,16 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/add-cocktail.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/CocktailIngredient.php" />
         <option value="$PROJECT_DIR$/laravel/app/Ingredient.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143512_create_ckt_table.php" />
         <option value="$PROJECT_DIR$/laravel/database/seeds/UsersTableSeeder.php" />
-        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/cocktail/user-cocktails.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" />
+        <option value="$PROJECT_DIR$/laravel/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/auth/sign-in.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php" />
       </list>
     </option>
   </component>
@@ -393,6 +385,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DrunkenMonkey" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -775,10 +833,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249653000" />
+    <option name="totallyTimeSpent" value="251994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31771597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -786,7 +845,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25236592" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25236592" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -849,8 +908,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../php.proj/laravelcds/routes/web.php" />
-    <entry file="file://$PROJECT_DIR$/../php.proj/laravelcds/app/Http/Controllers/CdController.php" />
     <entry file="file://$PROJECT_DIR$/../php.proj/laravelcds/resources/views/cds/index.blade.php" />
     <entry file="file://$PROJECT_DIR$/../php.proj/laravelcds/resources/views/cds/create.blade.php" />
     <entry file="file://$PROJECT_DIR$/../php.proj/laravelcds/resources/views/cds/edit.blade.php" />
@@ -963,14 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="80" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1095,34 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/database/seeds/UsersTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" column="64" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="78" column="74" lean-forward="false" selection-start-line="78" selection-start-column="74" selection-end-line="78" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/user-cocktail-page.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-901">
@@ -1141,33 +1162,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="61" column="69" lean-forward="false" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="69" />
+        <state relative-caret-position="90">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="e#7#389#0#PHP" expanded="false" />
-            <marker date="1516044270218" expanded="true" signature="1093:1188" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1126:1187" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1203:1294" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1225:1293" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1309:1421" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1348:1420" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1435:1540" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1472:1539" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1555:1664" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="1591:1663" ph="..." />
-            <marker date="1516044270218" expanded="true" signature="2391:2617" ph="..." />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php">
+    <entry file="file://$PROJECT_DIR$/laravel/database/seeds/UsersTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1246">
-          <caret line="140" column="37" lean-forward="false" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+        <state relative-caret-position="216">
+          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/main.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="102" column="65" lean-forward="false" selection-start-line="102" selection-start-column="65" selection-end-line="102" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="65" column="52" lean-forward="true" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="false" />
+            <marker date="1516044992502" expanded="true" signature="2403:2629" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/sign-in.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/cocktail/add-cocktail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="104" column="50" lean-forward="false" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#1;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,6 +21,16 @@ class CocktailsByUsersController extends Controller
 
     public function addCocktailByUser(Request $req) {
 
+        $this->validate($req,
+            [
+                'cocktailName' => 'required',
+                'recipe' => 'required',
+                'serve' =>'required',
+                'category' =>'required',
+
+            ]
+        );
+
         $cocktailName = $req->input('cocktailName');
         $ingr1 = $req->input('ingr1');
         $ingr2 = $req->input('ingr2');
