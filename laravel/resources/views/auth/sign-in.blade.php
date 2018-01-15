@@ -99,7 +99,7 @@
 							</div>
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary pull-left">Log In</button>
-								<a href="#" class="pull-right link">Forgot Password?</a>
+								<a href="{{route('forgot')}}" class="pull-right link">Forgot Password?</a>
 							</div>
 						</form>
 					</div>

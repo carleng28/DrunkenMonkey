@@ -31,8 +31,8 @@ class RegisterController extends Controller
     public function register(Request $req) {
         //Validate the form
         $this->validate(request(),[
-            'firstName'=>'required|max:40',
-            'lastName'=>'required|max:40',
+            'firstName'=>'required|string|max:40',
+            'lastName'=>'required|string|max:40',
             'email'=>'required|email|confirmed',
             'dateBirth'=>'required',
             'gender'=>'required',

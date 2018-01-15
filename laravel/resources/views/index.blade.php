@@ -102,13 +102,13 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="categoryItem">
                         <img src="{{ url('img/drinks-category/Beer-icon.png') }}"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto"  width="100" height="100"/>
-                        <h2 style="text-align: center!important"><a id="beersCiders" href="{{ url('drink-category-grid-full') }}">Beers &amp; Ciders</a></h2>
+                        <h2 style="text-align: center!important"><a id="beers" href="{{ url('drink-category-grid-full') }}">Beers</a></h2>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="categoryItem">
                         <img src="{{ url('img/drinks-category/cooler.png') }}"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
-                        <h2 style="text-align: center!important"><a id="coolers" href="{{ url('drink-category-grid-full') }}">Coolers</a></h2>
+                        <h2 style="text-align: center!important"><a id="coolers" href="{{ url('drink-category-grid-full') }}">Ready-to-drink & Coolers</a></h2>
 
                     </div>
                 </div>
@@ -130,17 +130,17 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="categoryItem">
                         <img src="{{ url('img/drinks-category/nonalcoholic.png') }}"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
-                        <h2 style="text-align: center!important"><a id="nonalcoholic" href="{{ url('drink-category-grid-full') }}">Non-alcoholic</a></h2>
+                        <h2 style="text-align: center!important"><a id="ciders" href="{{ url('drink-category-grid-full') }}">Ciders</a></h2>
 
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+              {{--  <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="categoryItem">
                         <img src="{{ url('img/drinks-category/accessories.png') }}"  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
                         <h2 style="text-align: center!important"><a id="accessories" href="{{ url('drink-category-grid-full') }}">Accessories</a></h2>
 
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </section>

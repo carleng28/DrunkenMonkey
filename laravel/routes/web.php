@@ -66,6 +66,9 @@ Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->nam
 Route::post('/add-my-cocktail', '\CocktailsByUsersController@addCocktailByUser');
 
 
+Route::get('/password', 'Auth\ForgotPasswordController@create')->name('forgot');
+Route::post('/password','Auth\ForgotPasswordController@send')->name('forgot.submit');
+
 Route::get('ajax',function(){
     return view('cocktail/category');
 });

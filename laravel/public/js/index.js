@@ -351,12 +351,11 @@ function createMarkers(results){
     });
 }
 function setCategoryLink(storeId) {
-    $("#beersCiders").attr("href","drink-category-grid-full/"+storeId+"/"+$("#beersCiders").text());
+    $("#beers").attr("href","drink-category-grid-full/"+storeId+"/"+$("#beers").text());
     $("#coolers").attr("href","drink-category-grid-full/"+storeId+"/"+$("#coolers").text());
     $("#wine").attr("href","drink-category-grid-full/"+storeId+"/"+$("#wine").text());
     $("#spirits").attr("href","drink-category-grid-full/"+storeId+"/"+$("#spirits").text());
-    $("#accessories").attr("href","drink-category-grid-full/"+storeId+"/"+$("#accessories").text());
-    $("#nonalcoholic").attr("href","drink-category-grid-full/"+storeId+"/"+$("#nonalcoholic").text());
+    $("#ciders").attr("href","drink-category-grid-full/"+storeId+"/"+$("#ciders").text());
 
 }
 function setMapOnAll(map) {

@@ -36,7 +36,7 @@
                     </div>
                     <div class="checkbox">
                         <label><input type="checkbox"> Remember me</label>
-                        <a href="{{ route('password.request') }}" class="pull-right link">Forgot Password?</a>
+                        <a href="{{ route('forgot') }}" class="pull-right link">Forgot Password?</a>
                     </div>
 
                 </form>
