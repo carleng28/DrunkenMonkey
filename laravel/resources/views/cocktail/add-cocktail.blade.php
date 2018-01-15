@@ -21,6 +21,11 @@
         }
     }
 
+    var loadFile = function(event) {
+        var output = document.getElementById('thereImg');
+        output.src = URL.createObjectURL(event.target.files[0]);
+    };
+
 </script>
 <body class="body-wrapper">
 <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
@@ -114,16 +119,16 @@
                             <p>Please fill out the fields below to add your cocktail.</p>
                         </div>
                         <div class="signUpForm">
-                            <form action="{{ url('cocktail/add-my-cocktail') }}" method="post">
+                            <form action="{{ url('/cocktail/add-my-cocktail') }}" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="formSection">
                                     <div class="row">
                                         <div class="form-group col-xs-12">
                                             <div class="profileImage">
-                                                <img src="{{ url('img/dashboard/userCocktail.png') }}" alt="Your Cocktail" class="img-circle">
+                                                <img width="200" height="200" src="{{ url('img/dashboard/userCocktail.png') }}" alt="Your Cocktail" id="thereImg" class="img-circle">
                                                 <div class="file-upload profileImageUpload">
                                                     <div class="upload-area">
-                                                        <input type="file" name="img[]" class="file">
+                                                        <input onchange="loadFile(event)" type="file" id="imageInput" name="imageInput" class="file">
                                                         <button class="browse" type="button">Upload a Picture of the Cocktail <i class="icon-listy icon-upload"></i></button>
                                                     </div>
                                                 </div>

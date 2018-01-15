@@ -56,4 +56,5 @@ class AjaxController extends Controller
         //$msg = "This is a simple message." . $page;
         return response()->json(array('data'=> $data), 200);
     }
+
 }

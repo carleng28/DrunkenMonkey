@@ -20,6 +20,10 @@ class CocktailsByUsersController extends Controller
     }
 
     public function addCocktailByUser(Request $req) {
+        Picture::truncate();
+        /*$this->validate($req, [
+            'imageInput' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);*/
 
         $this->validate($req,
             [
@@ -46,9 +50,15 @@ class CocktailsByUsersController extends Controller
         $serve = $req->input('serve');
         $category = (int) $req->input('category');
         $created_at = date('Y-m-d H:i:s');
-
-
-        //  PIC
+        $image = $req->file('imageInput');
+        dump($image);
+        if(!empty($image)) {
+            $name = $image->getClientOriginalName();
+            $type= $image->getClientOriginalExtension();
+            $destinationPath = public_path('img/userAddedImgOfCocktail');
+            $path = url('img/userAddedImgOfCocktail')."/".$name;
+            $image->move($destinationPath, $name);
+        }
 
         $cocktailId= Cocktail::create([
                     'ckt_st_name' => $cocktailName,
@@ -69,6 +79,17 @@ class CocktailsByUsersController extends Controller
                'cki_id_ingredient' =>  $ingredientId1,
                 'cki_st_measure' => $msr1,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                $pictureId= Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => 1,
+                    'pic_id_cocktail' => $cocktailId
+                ])->pic_id_picture;
+
+                echo("object created");
+            }
         }
 
         if($ingr2!=null ||$ingr2!="") {
@@ -81,6 +102,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId2,
                 'cki_st_measure' => $msr2,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => 1,
+                    'pic_id_cocktail' => $cocktailId
+                ]);
+            }
         }
 
         if($ingr3!=null ||$ingr3!="") {
@@ -93,6 +123,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId3,
                 'cki_st_measure' => $msr3,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => 1,
+                    'pic_id_cocktail' => $cocktailId
+                ]);
+            }
         }
 
         if($ingr4!=null ||$ingr4!="") {
@@ -105,6 +144,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId4,
                 'cki_st_measure' => $msr4,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => 1,
+                    'pic_id_cocktail' => $cocktailId
+                ]);
+            }
         }
 
         if($ingr5!=null ||$ingr5!="") {
@@ -117,6 +165,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId5,
                 'cki_st_measure' => $msr5,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                $pictureId= Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => 1,
+                    'pic_id_cocktail' => $cocktailId
+                ])->pic_id_picture;
+            }
         }
             $response = 1;
             return redirect('cocktail/add-cocktail/'.$response);
