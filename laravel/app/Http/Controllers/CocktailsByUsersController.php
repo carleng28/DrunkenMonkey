@@ -8,6 +8,7 @@ use App\Category;
 use App\CocktailIngredient;
 use App\Ingredient;
 use App\Picture;
+use Session;
 
 class CocktailsByUsersController extends Controller
 {
@@ -25,6 +26,7 @@ class CocktailsByUsersController extends Controller
             'imageInput' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);*/
 
+        //dump(Session::get('id'));
         $this->validate($req,
             [
                 'cocktailName' => 'required',
@@ -51,7 +53,7 @@ class CocktailsByUsersController extends Controller
         $category = (int) $req->input('category');
         $created_at = date('Y-m-d H:i:s');
         $image = $req->file('imageInput');
-        dump($image);
+
         if(!empty($image)) {
             $name = $image->getClientOriginalName();
             $type= $image->getClientOriginalExtension();
@@ -64,10 +66,12 @@ class CocktailsByUsersController extends Controller
                     'ckt_st_name' => $cocktailName,
                     'ckt_st_recipe' => $recipe,
                     'ckt_st_serve' => $serve,
-                    'ckt_id_user' => 1,
+                    'ckt_id_user' => Session::get('id'),
                     'ckt_id_category' => $category,
                     'created_at' => $created_at
         ])->ckt_id_cocktail;
+
+        var_dump(Session::get('id'));
 
         if($ingr1!=null || $ingr1!="") {
             $ingredientId1 = Ingredient::create([
@@ -84,7 +88,7 @@ class CocktailsByUsersController extends Controller
                     'pic_st_picname' => $name,
                     'pic_st_type' => $type,
                     'pic_st_picture' => $path,
-                    'pic_id_user' => 1,
+                    'pic_id_user' => Session::get('id'),
                     'pic_id_cocktail' => $cocktailId
                 ])->pic_id_picture;
 
@@ -107,7 +111,7 @@ class CocktailsByUsersController extends Controller
                     'pic_st_picname' => $name,
                     'pic_st_type' => $type,
                     'pic_st_picture' => $path,
-                    'pic_id_user' => 1,
+                    'pic_id_user' => Session::get('id'),
                     'pic_id_cocktail' => $cocktailId
                 ]);
             }
@@ -128,7 +132,7 @@ class CocktailsByUsersController extends Controller
                     'pic_st_picname' => $name,
                     'pic_st_type' => $type,
                     'pic_st_picture' => $path,
-                    'pic_id_user' => 1,
+                    'pic_id_user' => Session::get('id'),
                     'pic_id_cocktail' => $cocktailId
                 ]);
             }
@@ -149,7 +153,7 @@ class CocktailsByUsersController extends Controller
                     'pic_st_picname' => $name,
                     'pic_st_type' => $type,
                     'pic_st_picture' => $path,
-                    'pic_id_user' => 1,
+                    'pic_id_user' => Session::get('id'),
                     'pic_id_cocktail' => $cocktailId
                 ]);
             }
@@ -170,7 +174,7 @@ class CocktailsByUsersController extends Controller
                     'pic_st_picname' => $name,
                     'pic_st_type' => $type,
                     'pic_st_picture' => $path,
-                    'pic_id_user' => 1,
+                    'pic_id_user' => Session::get('id'),
                     'pic_id_cocktail' => $cocktailId
                 ])->pic_id_picture;
             }

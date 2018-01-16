@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use App\Cocktail;
 use App\Category;
 use App\Ingredient;
+use App\Picture;
+use Session;
 
 class CocktailCategoryController extends Controller
 {
@@ -105,6 +107,7 @@ class CocktailCategoryController extends Controller
  * */
     public function ShowUserCocktailsByCategory($category=null){
 
+        $pictures=Array();
         //Default category if the URI does not have one
         if ($category==null) {
             $category = "Beer";
@@ -118,12 +121,22 @@ class CocktailCategoryController extends Controller
         if(count($categoryQuery)>0){
 
             $categoryId = $categoryQuery[0]->cgr_id_category;
-            $cocktails = Cocktail::where('ckt_id_category', $categoryId)->orderBy('ckt_st_name', 'desc')->get();
+            $cocktails = Cocktail::where([
+                ['ckt_id_category', '=', $categoryId],
+                    ])
+                    ->orderBy('ckt_st_name', 'desc')
+                    ->get();
 
+            foreach ($cocktails as $cocktail) {
+                $picture = Picture::where('pic_id_cocktail', $cocktail->ckt_id_cocktail)->first();
+                array_push($pictures,$picture);
+            }
         }else {
             $cocktails = Array();
         }
-        $data=array('cocktail'=>$cocktails, 'size'=>count($cocktails), 'categoryName' => $categoryName);
+
+        $data=array('cocktail'=>$cocktails, 'size'=>count($cocktails), 'categoryName' => $categoryName, 'picture' => $pictures);
+        //dd($data);
         return \View::make("cocktail/user-cocktails", ['category' => $categoryName])->with(compact('data'));
 
     }
@@ -137,7 +150,8 @@ class CocktailCategoryController extends Controller
 
         //get the uri from the request
         $cocktail= Cocktail::where('ckt_id_cocktail', $id)->first();
-        $data=array('cocktail'=>$cocktail);
+        $picture = Picture::where('pic_id_cocktail', $id)->first();
+        $data=array('cocktail'=>$cocktail, 'picture' => $picture);
         return \View::make("cocktail/user-cocktail-page", ['id' => $cocktail->ckt_id_cocktail])->with(compact('data'));
 
     }

@@ -71,7 +71,8 @@
             <div class="col-xs-4">
                 <div id="mainImage">
 
-                    <img src="{{ url('img/cocktail/img_not_available.png')}}" alt="Cocktail Image"
+
+                    <img src="{{ ($data['picture'] != null ? $data['picture'] -> pic_st_picture: url('img/cocktail/img_not_available.png'))}}" alt="Cocktail Image"
                          class="img-responsive" width="400" height="400">
                 </div>
             </div>

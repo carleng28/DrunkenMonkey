@@ -87,21 +87,21 @@
 
                     </div>
                     <div id="cocktailList" class="row">
-                        @foreach ($data['cocktail'] as $cocktail)
+                        @for ($i = 0; $i < $data['size']; $i++)
                             <div class="col-sm-4">
                                 <div class="thingsBox thinsSpace">
                                     <div class="thingsImage"><img
-                                                src="{{ ($cocktail->strDrinkThumb != null ? $cocktail->strDrinkThumb : url('img/cocktail/img_not_available.png'))}}"
+                                                src="{{ ($data['picture'][$i] != null ? $data['picture'][$i] -> pic_st_picture: url('img/cocktail/img_not_available.png'))}}"
                                                 width="280" height="270"/>
                                         <div class="thingsMask">
-                                            <a href="{{ url('cocktail/user-cocktail-page/'.$cocktail->ckt_id_cocktail) }}">
-                                                <h2> {{$cocktail->ckt_st_name }}</h2>
+                                            <a href="{{ url('cocktail/user-cocktail-page/'.$data['cocktail'][$i]->ckt_id_cocktail) }}">
+                                                <h2> {{$data['cocktail'][$i]->ckt_st_name }}</h2>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @endfor
 
                     </div>
                     <div class="paginationCommon blogPagination categoryPagination">

@@ -96,13 +96,10 @@
                             <img src="{{ url('img/CocktailCategoriesPics/plus.png')}}"
                                  class="img-fluid img-responsive"  style="margin-right: auto; margin-left:auto" width="100" height="100"/>
                             <h2 style="text-align: center!important">
-                                @if(Session::has('email'))
-                                    <a href="{{ url('cocktail/add-cocktail') }}">Add Your own Cocktail
-                                    </a>
-                                    @else
-                                        <a href="{{ url('/login/1') }}">Add Your own Cocktail
-                                        </a>
-                                @endif
+
+                                <a href="{{ url('cocktail/add-cocktail') }}">Add Your own Cocktail
+                                </a>
+
                             </h2>
                         </div>
                     </div>

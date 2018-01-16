@@ -53,14 +53,15 @@ Route::get('cocktail/view/{id}',[
 
 Route::get('cocktail/user-cocktails/{category?}',[
     'uses' => 'CocktailCategoryController@ShowUserCocktailsByCategory'
-]);
+])->middleware('session');
+
 Route::get('cocktail/add-cocktail/{response?}',[
     'uses' => 'CocktailsByUsersController@loadCocktailCategories'
-]);
+])->middleware('session');
 
 Route::get('cocktail/user-cocktail-page/{id}',[
     'uses' => 'CocktailCategoryController@showUserCocktailInformation'
-]);
+])->middleware('session');
 
 Route::get('/login/{response?}', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');

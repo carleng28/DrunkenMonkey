@@ -16,4 +16,16 @@ class Picture extends Model
         'pic_id_picture','pic_st_picname', 'pic_st_type','pic_st_picture', 'pic_id_user','pic_id_cocktail'
     ];
 
+    /**
+     * The picture has one user.
+     */
+    public function User()
+    {
+        $this->hasOne('App\User', 'pic_id_user', 'pic_id_picture');
+    }
+    public function Cocktail()
+    {
+        $this->hasOne('App\Cocktail', 'pic_id_cocktail', 'pic_id_picture');
+    }
+
 }
