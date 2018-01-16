@@ -70,15 +70,6 @@ class LoginController extends Controller
         Session::regenerate();
         return redirect()->home();
     }
-/*   public function login(Request $request){
-        if(! auth()->attempt(request(['email', 'password']))){
 
-            return redirect()->home();
-           return redirect()->route('login')->withInput($request->only('email'))->withErrors([
-                'email' => 'The email or the password is invalid. Please try again.',
-            ]);
-        };
-       return view('about-us');
-    }*/
 
 }

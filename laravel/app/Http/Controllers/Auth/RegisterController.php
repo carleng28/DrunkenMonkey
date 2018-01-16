@@ -36,8 +36,8 @@ class RegisterController extends Controller
             'email'=>'required|email|confirmed',
             'dateBirth'=>'required',
             'gender'=>'required',
-            'province'=>'required',
-            'city'=>'required',
+            'province'=>'required|string',
+            'city'=>'required|string',
             'password'=>'required|confirmed'
         ]);
 
@@ -65,7 +65,8 @@ class RegisterController extends Controller
         $checkEmail = DB::table('USR')->where(['usr_st_email'=>$email])->get();
 
         if (count($checkEmail) > 0) {
-            return redirect()->route('register');
+            return redirect()->route('register')->withErrors([
+                'email' => 'The email is already registered.']);
             //TODO include error messages
         }
 

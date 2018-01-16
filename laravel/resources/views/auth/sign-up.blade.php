@@ -85,18 +85,27 @@
 				<div class="signUpFormArea">
 					<div class="priceTableTitle">
 						<h2>Account Registration</h2>
-						<p>Please fill out the fields below to create your account. We will send your account information to the email address you enter. Your email address and information will NOT be sold or shared with any 3rd party. If you already have an account, please, <a href="{{ url('sign-in') }}">click here</a>.</p>
+						<p>Please fill out the fields below to create your account. We will send your account information
+                            to the email address you enter. Your email address and information will NOT be sold or shared
+                            with any 3rd party. If you already have an account, please, <a href="{{ route('login') }}">click here</a>.</p>
 					</div>
 					<div class="signUpForm">
 						<form action="{{ route('register') }}" method="post">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 							<div class="formSection">
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
 								<h3>Contact Information</h3>
+                                @if(count($errors))
+                                    <div class="form-group">
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach($errors -> all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                @endif
+
 								<div class="row">
                                     <div class="form-group col-xs-12">
                                         <div class="profileImage">
@@ -121,6 +130,7 @@
                                         <label for="email" class="control-label">Email Address*</label>
                                         <input type="email" class="form-control" name="email" required>
                                     </div>
+
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="email_confirmation" class="control-label">Confirm Email Address*</label>
                                         <input type="email" class="form-control" name="email_confirmation" id="email_confirmation" placeholder="info@example.com" required>
@@ -174,20 +184,7 @@
 								</div>
 							</div>
 							<div class="formSection">
-								<h3>Security Control</h3>
 								<div class="row">
-									<div class="form-group col-xs-12">
-										<label for="usernames" class="control-label">Confirm that you are human*</label>
-										<img src="{{ url('img/business/recaptcha.jpg') }}" alt="Image captcha" class="img-responsive img-rtl">
-									</div>
-									<div class="form-group col-xs-12">
-										<div class="checkbox">
-											<label>
-												<input type="checkbox">
-												I agree to the <a href="terms-of-services.html">Terms of Use</a> & <a href="#">Privacy Policy</a>. Your business listing is fully backed by our 100% money back guarantee.
-											</label>
-										</div>
-									</div>
 									<div class="form-group col-xs-12 mb0">
 										<button type="submit" class="btn btn-primary">Create Account</button>
 									</div>
@@ -195,7 +192,6 @@
 
 								</div>
                                 <br/>
-                                @include('layouts.errors')
 							</div>
 						</form>
 					</div>

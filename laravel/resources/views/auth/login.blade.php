@@ -15,21 +15,12 @@
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <input type="email" class="form-control" name="email" placeholder="Email"  value="{{ old('email') }}">
                         {{--Check comment--}}
-                        @if ($errors->has('email'))
-                            <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                        @endif
+
                     </div>
-                    <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                    <div class="form-group ">
                         <i class="fa fa-lock" aria-hidden="true"></i>
                         <input type="password" class="form-control" name="password" placeholder="Password">
-                        {{--Check comment--}}
-                        @if ($errors->has('password'))
-                            <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                        @endif
+
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Log In</button>

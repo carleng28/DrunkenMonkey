@@ -91,7 +91,7 @@
                     <div class="howWorksInfo text-left">
                       <h3>Drunken Monkey Project</h3>
                       <p>This is a project for Open Source course, ITS program, for Humber College.</p>
-                      <p>The technologies used are HTML, CSS, Bootstrap, PHP. Framework used is Laravel.</p>
+                      <p>The technologies used are HTML, CSS, PHP. Framework used are Laravel and Boostrap.</p>
                       <p>The APIs used are LCBO, Google Maps, and TheCocktailDB . </p>
                     </div>
                   </div>

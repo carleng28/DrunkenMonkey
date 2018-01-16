@@ -21,10 +21,6 @@ class ProfileController extends Controller
 
     public function updateProfile(Request $req)
     {
-        /*   dd($req->input('firstName') , $req->input('lastName'),
-               $req->input('email'),$req->input('dateBirth'),
-               $req->input('gender'), $req->input('province'),
-               $req->input('city'));*/
 
         //Validate the form
         $this->validate(request(), [

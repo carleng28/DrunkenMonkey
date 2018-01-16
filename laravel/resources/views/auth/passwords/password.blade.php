@@ -65,8 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
-                    <div class="signUpFormArea">
-                        <div class="priceTableTitle">
+                    <div class="signUpFormArea">                        <div class="priceTableTitle">
                             <h2>Account Recovery</h2>
                             <p>Please fill out the field below in order to receive a e-mail with the instructions to
                                 create a new password.</p>
@@ -76,9 +75,14 @@
                                 {{ csrf_field() }}
                                 <div class="formSection">
                                     <div class="row">
-                                        <div class="form-group col-xs-12">
-                                            <label for="email" class="control-label">Email Address*</label>
-                                        </div>
+                                        @if ($errors->has('email'))
+                                        <span class="form-group col-sm-8 col-xs-12 alert alert-danger">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                        @endif
+                                            <div class="form-group col-xs-12">
+                                                <label for="email" class="control-label">Email Address*</label>
+                                            </div>
                                         <div class="form-group col-sm-6 col-xs-12">
                                             <input type="email" class="form-control" name="email" id="email">
                                         </div>
