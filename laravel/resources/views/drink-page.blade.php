@@ -1,8 +1,7 @@
 @include('header')
 
 <head>
-
-    <!-- SITE TITTLE -->
+        <!-- SITE TITTLE -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -106,7 +105,7 @@
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="false"></i></li>
                             </ul>
                             <span>( 5 Reviews )</span>
                             <ul class="list-inline captionItem">

@@ -30,7 +30,7 @@ Route::get('about-us', function () {
 
 
 
-Route::get('drink-category-grid-full/{id}/{category}/{page?}', [
+Route::get('drink-category-grid-full/{id}/{category}/{page}', [
     'uses'=>'DrinkCategoryGridFullController@showSubCategories'
 ]);
 
@@ -39,7 +39,7 @@ Route::get('drink-page/{idproduct}',[
 ]);
 
 Route::get('test',[
-    'uses'=>'DrinkCategoryGridFullController@showCategories'
+    'uses'=>'test@test'
 ]);
 
 

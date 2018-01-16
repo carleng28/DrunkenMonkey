@@ -14,7 +14,13 @@ class DrinkCategoryGridFullController extends Controller
     {
         //$id=$request['id'];
         //$category=$request['category'];
-       echo  $categorybeforecurl=$category;
+
+        $categorycurl=$category;
+
+        if(starts_with($category, "Ready")){
+            $categorycurl='Ready-to-Drink/Coolers';
+        }
+
         $category_secondary = Array();
         //$page=$request['page'];
         if ($page == null) {
@@ -36,22 +42,20 @@ class DrinkCategoryGridFullController extends Controller
         echo "Total of record is : " . $total_record_count . "<br>";
         echo "Total pages : " . $total_pages . "<br>";
         echo "Current store id is : " . $id . "<br>";
-
-        echo $categoryaftercurl=$obj2["result"][0]["primary_category"];
+        echo "category before CURL " . $category . "<br>";
+        echo "category after CURL ". $categorycurl . "<br>";
 
 
         foreach ($obj2["result"] as $drink) {
-
-
-                if ($drink['primary_category'] == $category & !in_array($drink['secondary_category'], $category_secondary)) {
+                if ($drink['primary_category'] == $categorycurl & !in_array($drink['secondary_category'], $category_secondary)) {
                     array_push($category_secondary, $drink['secondary_category']);
                 };
             };
-
+        $product = Array();
 
         foreach ($obj2["result"] as $drink) {
-            if ($drink['primary_category'] == $category) {
-                $product = Array();
+            if ($drink['primary_category'] == $categorycurl) {
+
                 $product["id"] = $drink["id"];
                 $product["name"] = ($drink["name"] == null ? "" : $drink["name"]);
                 $product["primary_category"] = $drink["primary_category"];
@@ -73,12 +77,13 @@ class DrinkCategoryGridFullController extends Controller
         array_unique($category_secondary);
 
 
-//var_dump($category_secondary);
+        //var_dump($category_secondary);
         //var_dump($greatjason);
-        echo $current_page = $obj2["pager"]["current_page"];
-        "Current Page is : " . $current_page . "<br>";
 
-        $data = array('drinks' => $greatjason, 'size' => count($greatjason), 'category' => $category, 'total_pages' => $total_pages, 'current_page' => $current_page,'category_before_curl'=>$categorybeforecurl,'category_after_curl'=>$categorybeforecurl);
+        $current_page = $obj2["pager"]["current_page"];
+        echo "the Current Page is : " . $current_page . "<br>";
+
+        $data = array('drinks' => $greatjason, 'size' => count($greatjason), 'category' => $category, 'total_pages' => $total_pages, 'current_page' => $current_page);
 
         return \View::make('drink-category-grid-full', ['id' => $id, 'category' => $category, 'page' => $page])->with(compact('data'));
 

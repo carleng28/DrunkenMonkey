@@ -165,14 +165,18 @@
 									<span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
 								</a>
 							</li>
+@php
+$pages=$data['total_pages'];
+$blocks=round($pages/15);
+$rest=$data['total_pages']%15;
+$limit=$pages<15?$pages:15;
+@endphp
 
-
-							@for($i=1;$i<=$data['total_pages'];$i++)
-									<li id="active"><a href="{{$category}}/{{$i}}">{{$i}}</a></li>
-							@endfor
-
+						@for($i=1;$i<$limit;$i++)
+							<li @if($i==$page) @echo Class='active' @endif><a href="{{$i}}">{{$i}}</a></li>
+						@endfor
 							<li>
-								<a href="#" aria-label="Next">
+								<a href="{{$page+1}}" aria-label="Next">
 									<span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
 								</a>
 							</li>
