@@ -34,7 +34,7 @@ class CocktailsByUsersController extends Controller
 
             ]
         );
-
+//commetn dummy
         $cocktailName = $req->input('cocktailName');
         $ingr1 = $req->input('ingr1');
         $ingr2 = $req->input('ingr2');
