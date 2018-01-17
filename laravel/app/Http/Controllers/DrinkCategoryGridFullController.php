@@ -38,12 +38,12 @@ class DrinkCategoryGridFullController extends Controller
         $total_record_count = $obj2["pager"]["total_record_count"];
 
 
-        echo "The current Category is : " . $category . "<br>";
-        echo "Total of record is : " . $total_record_count . "<br>";
-        echo "Total pages : " . $total_pages . "<br>";
-        echo "Current store id is : " . $id . "<br>";
-        echo "category before CURL " . $category . "<br>";
-        echo "category after CURL ". $categorycurl . "<br>";
+//        echo "The current Category is : " . $category . "<br>";
+//        echo "Total of record is : " . $total_record_count . "<br>";
+//        echo "Total pages : " . $total_pages . "<br>";
+//        echo "Current store id is : " . $id . "<br>";
+//        echo "category before CURL " . $category . "<br>";
+//        echo "category after CURL ". $categorycurl . "<br>";
 
 
         foreach ($obj2["result"] as $drink) {
