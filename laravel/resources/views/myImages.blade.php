@@ -139,27 +139,59 @@
             </div>
         </div>
     </section>
+    @if(!empty($pictures[2]))
 
-        <div class="row is-table-row" align="center">
-            <div class="col-lg-6" id="ii" >
-                <div class="dashboardBoxBg mb30" id="iiii">
-                <div id="photos">
-            @if(!empty($pictures[2]))
-                @foreach ($pictures as $pic)
-                    @if(!in_array($pic, $ignore))
-                                <div class="thumbnail">
-                                    <img src="{{ url($dirname.$pic) }}" alt="Images" onclick="showImg(this)"></img>
-                                </div>
-                    @endif
-                @endforeach
-            @endif
+        @php $i = count($pictures); $i = $i-2; @endphp
+
+        @if($i >= 3)
+            @php $i = 3; @endphp
+            <div class="row is-table-row" align="center">
+                <div class="col-lg-6" id="ii" style="padding-right:0!important;" >
+                    <div class="dashboardBoxBg mb30" id="iiii" >
+
+        @else
+             <div class="row is-table-row" align="center" style=" padding-left: 10%!important;
+             padding-right: 10%!important;">
+             <div class="col-lg-6" id="ii">
+                 <div class="dashboardBoxBg mb30" id="iiii">
+        @endif
+             <div id="photos" style=" -webkit-column-count: <?php echo $i?>;">
+
+        @foreach ($pictures as $pic)
+            @if(!in_array($pic, $ignore))
+                <div class="thumbnail">
+                     <img src="{{ url($dirname.$pic) }}" alt="Images" onclick="showImg(this)"></img>
                 </div>
+            @endif
+        @endforeach
+            </div>
+    @endif
+
             </div>
             </div>
-            <div class="col-md-6" id="iii">
+                    @if($i>2)
+            <div class="col-md-6" id="iii"style="
+                padding-left: 0!important;
+                padding-top: 0!important;
+                margin-top: 0!important;">
                 @if(!empty($pictures[2]))
-                    <img src="{{ url($dirname.$pic) }}" id="bigImg">
-                    @endif
+                    <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
+                padding-left: 0!important;
+                padding-top: 0!important;
+                margin-top: 0!important;">
+                @endif
+                @else
+                    <div class="col-md-6" id="iii" style="
+
+                margin-right: 10%!important;
+                margin-top: 0!important;">
+                        @if(!empty($pictures[2]))
+                            <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
+                                    /*margin-left: 8%!important;
+                                    margin-right: 8%!important;*/">
+                        @endif
+                        @endif
+
 
             </div>
         </div>

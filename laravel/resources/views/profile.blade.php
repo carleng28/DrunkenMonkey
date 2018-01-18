@@ -100,8 +100,8 @@
                     <div class="row">
                         <div class="col-md-12" align="center">
                             <div class="dashboardBoxBg mb30">
-                                <div id="photos1">
                                 @if(!empty($pictures[2]))
+                                    <div id="photos1">
                                 @foreach ($pictures as $pic)
                                     @if(!in_array($pic, $ignore))
                                         <div class="thumbnail1">
@@ -109,18 +109,26 @@
                                         </div>
                                     @endif
                                 @endforeach
+                                    </div><div class="row">
+                                        <div class="col-md-12" align="center">
+                                            <br>
+                                            <form action="{{url('/myImages')}}">
+                                                <input type="submit" id="wish1" value="View images">
+                                            </form>
+                                        </div>
+                                    </div>
                                 @else
                                         <p>You have not yet added images to your profile</p>
-                                @endif
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12" align="center">
-                                        <br>
-                                        <form action="{{url('/myImages')}}">
-                                        <input type="submit" id="wish1" value="View images">
-                                        </form>
+                                    <div class="row">
+                                        <div class="col-md-12" align="center">
+                                            <br>
+                                            <form action="{{url('/myImages')}}">
+                                                <input type="submit" id="wish1" value="Add images">
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
+                                @endif
+
                             </div>
                     </div>
                 </div>
