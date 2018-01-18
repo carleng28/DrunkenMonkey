@@ -122,7 +122,7 @@
                         </div>
                     @endif
                         <div class="profileImage">
-                            <form method="post" action="{{url('myImages-add')}}">
+                            <form method="post" action="{{url('myImages-add')}}" enctype="multipart/form-data">
                                 {{csrf_field()}}
                             <img width="200" height="200" src="{{ url('img/dashboard/no-image.svg') }}" alt="Your Photos" id="thereImg">
                             <div class="file-upload profileImageUpload">
@@ -148,7 +148,7 @@
                 @foreach ($pictures as $pic)
                     @if(!in_array($pic, $ignore))
                                 <div class="thumbnail">
-                                    <img src="{{ url($dirname.$pic) }}" alt="Images" onclick="showImg(this)">
+                                    <img src="{{ url($dirname.$pic) }}" alt="Images" onclick="showImg(this)"></img>
                                 </div>
                     @endif
                 @endforeach
@@ -157,7 +157,9 @@
             </div>
             </div>
             <div class="col-md-6" id="iii">
+                @if(!empty($pictures[2]))
                     <img src="{{ url($dirname.$pic) }}" id="bigImg">
+                    @endif
 
             </div>
         </div>

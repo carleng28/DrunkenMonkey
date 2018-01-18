@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\View;
+use File;
 use Session;
 use DB;
 use App\User;
@@ -21,7 +22,10 @@ class ProfileController extends Controller
 //the name you get it in profile is 'user', so i renamed it to $user, because in the current case 'user'->$userArray was not possible
         $user = json_decode($newUser, true);
 
-        $dirname = "img/userAddedImgOfCocktail/".$id."/";
+        $dirname = "img\\userAddedImgOfCocktail\\".$id."\\";
+        if(!File::exists($dirname)) {
+            $dirname = File::makeDirectory("img\\userAddedImgOfCocktail\\".$id."\\");
+        }
         $pictures = scandir($dirname);
         $ignore = Array(".", "..");
 
@@ -75,6 +79,9 @@ class ProfileController extends Controller
         $id = Session::get('id');
 
         $dirname = "img/userAddedImgOfCocktail/".$id."/";
+        if(!File::exists($dirname)) {
+            $dirname = File::makeDirectory("img/userAddedImgOfCocktail/".$id."/");
+        }
         $pictures = scandir($dirname);
         $ignore = Array(".", "..");
 
@@ -84,32 +91,28 @@ class ProfileController extends Controller
     public function addPhoto(Request $req)
     {
         $id = Session::get('id');
-        /*$this->validate($req,
+        $this->validate($req,
             [
                 'imageInput' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]
-        );*/
-        $image = $req->file('imageInput');
-        var_dump($image);/*
-        if (!empty($image)) {
+        );
+        if ($req->hasFile('imageInput')) {
+            $image = $req->file('imageInput');
             $name = $image->getClientOriginalName();
             $type = $image->getClientOriginalExtension();
             $destinationPath = public_path("img/userAddedImgOfCocktail" . "/" . $id . "/");
             $path = url('img/userAddedImgOfCocktail') . "/" . $id . "/" . $name;
             $image->move($destinationPath, $name);
-        }
 
-        if (!empty($image) || $image != null || $image = "") {
             Picture::create([
                 'pic_st_picname' => $name,
                 'pic_st_type' => $type,
                 'pic_st_picture' => $path,
                 'pic_id_user' => $id,
-                'pic_id_cocktail' => -1
+                'pic_id_cocktail' => 0
             ]);
-
+            return back()->with('success', 'Image Upload successfully');
         }
-        return redirect('myImages/');*/
     }
 
 }
