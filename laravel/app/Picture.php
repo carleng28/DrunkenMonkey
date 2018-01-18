@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Picture extends Model
 {
+    protected $primaryKey = 'pic_id_picture';
     protected $table = 'pic';
     /**
      * The attributes that are mass assignable.
@@ -17,15 +18,20 @@ class Picture extends Model
     ];
 
     /**
-     * The picture has one user.
+     * The picture belongs to a user.
      */
-    public function User()
-    {
-        $this->hasOne('App\User', 'pic_id_user', 'pic_id_picture');
+    public function user() {
+        return $this->belongsTo('App\User');
     }
-    public function Cocktail()
-    {
-        $this->hasOne('App\Cocktail', 'pic_id_cocktail', 'pic_id_picture');
+
+    /**
+     * The picture belongs to a cocktail.
+     */
+    public function cocktail() {
+        return $this->belongsTo('App\Cocktail');
     }
+
+
+
 
 }

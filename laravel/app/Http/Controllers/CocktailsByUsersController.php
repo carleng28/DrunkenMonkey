@@ -21,12 +21,6 @@ class CocktailsByUsersController extends Controller
     }
 
     public function addCocktailByUser(Request $req) {
-        Picture::truncate();
-        /*$this->validate($req, [
-            'imageInput' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);*/
-
-        //dump(Session::get('id'));
         $this->validate($req,
             [
                 'cocktailName' => 'required',
@@ -36,7 +30,6 @@ class CocktailsByUsersController extends Controller
 
             ]
         );
-//commetn dummy
         $cocktailName = $req->input('cocktailName');
         $ingr1 = $req->input('ingr1');
         $ingr2 = $req->input('ingr2');
@@ -71,7 +64,7 @@ class CocktailsByUsersController extends Controller
                     'created_at' => $created_at
         ])->ckt_id_cocktail;
 
-        var_dump(Session::get('id'));
+        //var_dump(Session::get('id'));
 
         if($ingr1!=null || $ingr1!="") {
             $ingredientId1 = Ingredient::create([
@@ -83,17 +76,6 @@ class CocktailsByUsersController extends Controller
                'cki_id_ingredient' =>  $ingredientId1,
                 'cki_st_measure' => $msr1,
             ]);
-            if(!empty($image)||$image!=null||$image=""){
-                $pictureId= Picture::create([
-                    'pic_st_picname' => $name,
-                    'pic_st_type' => $type,
-                    'pic_st_picture' => $path,
-                    'pic_id_user' => Session::get('id'),
-                    'pic_id_cocktail' => $cocktailId
-                ])->pic_id_picture;
-
-                echo("object created");
-            }
         }
 
         if($ingr2!=null ||$ingr2!="") {
@@ -106,15 +88,6 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId2,
                 'cki_st_measure' => $msr2,
             ]);
-            if(!empty($image)||$image!=null||$image=""){
-                Picture::create([
-                    'pic_st_picname' => $name,
-                    'pic_st_type' => $type,
-                    'pic_st_picture' => $path,
-                    'pic_id_user' => Session::get('id'),
-                    'pic_id_cocktail' => $cocktailId
-                ]);
-            }
         }
 
         if($ingr3!=null ||$ingr3!="") {
@@ -127,15 +100,6 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId3,
                 'cki_st_measure' => $msr3,
             ]);
-            if(!empty($image)||$image!=null||$image=""){
-                Picture::create([
-                    'pic_st_picname' => $name,
-                    'pic_st_type' => $type,
-                    'pic_st_picture' => $path,
-                    'pic_id_user' => Session::get('id'),
-                    'pic_id_cocktail' => $cocktailId
-                ]);
-            }
         }
 
         if($ingr4!=null ||$ingr4!="") {
@@ -148,15 +112,6 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId4,
                 'cki_st_measure' => $msr4,
             ]);
-            if(!empty($image)||$image!=null||$image=""){
-                Picture::create([
-                    'pic_st_picname' => $name,
-                    'pic_st_type' => $type,
-                    'pic_st_picture' => $path,
-                    'pic_id_user' => Session::get('id'),
-                    'pic_id_cocktail' => $cocktailId
-                ]);
-            }
         }
 
         if($ingr5!=null ||$ingr5!="") {
@@ -169,15 +124,16 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId5,
                 'cki_st_measure' => $msr5,
             ]);
-            if(!empty($image)||$image!=null||$image=""){
-                $pictureId= Picture::create([
-                    'pic_st_picname' => $name,
-                    'pic_st_type' => $type,
-                    'pic_st_picture' => $path,
-                    'pic_id_user' => Session::get('id'),
-                    'pic_id_cocktail' => $cocktailId
-                ])->pic_id_picture;
-            }
+        }
+        if(!empty($image)&&$image!=null&&$image!=""){
+            Picture::create([
+                'pic_st_picname' => $name,
+                'pic_st_type' => $type,
+                'pic_st_picture' => $path,
+                'pic_id_user' => Session::get('id'),
+                'pic_id_cocktail' => $cocktailId
+            ]);
+
         }
             $response = 1;
             return redirect('cocktail/add-cocktail/'.$response);

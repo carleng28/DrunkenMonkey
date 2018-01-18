@@ -108,36 +108,32 @@ class CocktailCategoryController extends Controller
     public function ShowUserCocktailsByCategory($category=null){
 
         $pictures=Array();
+        $cocktails = Array();
         //Default category if the URI does not have one
         if ($category==null) {
             $category = "Beer";
         }
-        //for categories that have /, it is reestructured to do the search
-        $categoryName= str_replace("%20%20","/", $category);
-        //fix the issue with the other/unknown category
-        $categoryName= str_replace("/Unk","-Unk", $categoryName);
-        $categoryName= str_replace("-Drink"," Drink", $categoryName);
-        $categoryQuery=$categoryId = Category::where('cgr_st_name', $categoryName)->get();
+        $category=explode("/",$category)[0];
+        $categoryQuery=$categoryId = Category::where('cgr_st_name', 'like', '%'. $category. '%')->get();
         if(count($categoryQuery)>0){
 
             $categoryId = $categoryQuery[0]->cgr_id_category;
-            $cocktails = Cocktail::where([
+            $cocktailsCol = Cocktail::where([
                 ['ckt_id_category', '=', $categoryId],
                     ])
                     ->orderBy('ckt_st_name', 'desc')
                     ->get();
 
-            foreach ($cocktails as $cocktail) {
+            foreach ($cocktailsCol as $cocktail) {
                 $picture = Picture::where('pic_id_cocktail', $cocktail->ckt_id_cocktail)->first();
                 array_push($pictures,$picture);
+                array_push($cocktails,$cocktail);
             }
-        }else {
-            $cocktails = Array();
         }
-
-        $data=array('cocktail'=>$cocktails, 'size'=>count($cocktails), 'categoryName' => $categoryName, 'picture' => $pictures);
-        //dd($data);
-        return \View::make("cocktail/user-cocktails", ['category' => $categoryName])->with(compact('data'));
+        //dd(Cocktail::find(1)->picture());
+        $data=array('cocktail'=>array_slice($cocktails,0,9), 'size'=>count($cocktails), 'categoryName' => $category, 'picture' => $pictures, "originalCategory" => $category);
+        //dd(Picture::all());
+        return \View::make("cocktail/user-cocktails", ['category' => $category])->with(compact('data'));
 
     }
 

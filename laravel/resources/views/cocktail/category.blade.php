@@ -84,7 +84,7 @@
 
 					<span class="pull-right">
 						Still want more? &nbsp;
-						<a href="{{ url('cocktail/user-cocktails/'.implode("-",explode("/",str_replace(' ','',$data['categoryName'])))) }}" >
+						<a href="{{ url('cocktail/user-cocktails/'.explode("/",explode(" ",$data['categoryName'])[0])[0]) }}" >
 						Check other user-created cocktails in this category
 						</a>
 					</span>

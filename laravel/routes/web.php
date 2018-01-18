@@ -80,9 +80,9 @@ Route::post('cocktail/add-my-cocktail', 'CocktailsByUsersController@addCocktailB
 Route::get('/password', 'Auth\ForgotPasswordController@create')->name('forgot');
 Route::post('/password','Auth\ForgotPasswordController@send')->name('forgot.submit');
 
-Route::get('ajax',function(){
-    return view('cocktail/category');
-});
-Route::get('/getpage/{category}/{page}','AjaxController@index');
+
+Route::get('/getpage/{category}/{page}/','AjaxController@cocktailPagination');
+
+Route::get('/getUserCocktails/{category}/{page}','AjaxController@userCocktailPagination');
 
 

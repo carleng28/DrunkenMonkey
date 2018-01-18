@@ -72,6 +72,7 @@
 
     </header>
 
+
     <!-- CATEGORY GRID SECTION -->
     <section class="clerfix categoryGrid" id="section">
         <div class="container">
@@ -84,10 +85,37 @@
                     <div class="resultBar">
                         <h2>We found <span>{{ $data['size'] }}</span> Results for you</h2>
 
+                        @if($data['size']> 9)
+                            <div class="paginationCommon blogPagination categoryPagination" style="text-align: center;">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="#" aria-label="Previous" onclick="onClickPrevious('{{$data['originalCategory']}}')" style="line-height: 32px !important;height: auto;">
+                                                <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <select id="selectPageBox" onchange="changePage('{{$data['originalCategory']}}');" class="form-control"
+                                                    style="width:auto;height:auto;display: inline;">
+                                                @for ($i = 1; $i <= ceil($data['size']/9); $i++)
+                                                    <option value="{{ $i }}">{{ $i }}</option>
+                                                @endfor
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next" onclick="onClickNext('{{$data['originalCategory']}}')" style="line-height: 32px !important;height: auto;">
+                                                <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                            </a>
+                                        </li>
+                                    </ul>
 
+                                </nav>
+                            </div>
+                        @endif
                     </div>
+
                     <div id="cocktailList" class="row">
-                        @for ($i = 0; $i < $data['size']; $i++)
+                        @for ($i = 0; $i < $data['size'] && $i < 9; $i++)
                             <div class="col-sm-4">
                                 <div class="thingsBox thinsSpace">
                                     <div class="thingsImage"><img
@@ -104,29 +132,7 @@
                         @endfor
 
                     </div>
-                    <div class="paginationCommon blogPagination categoryPagination">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true"><i class="fa fa-angle-left"
-                                                                    aria-hidden="true"></i></span>
-                                    </a>
-                                </li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true"><i class="fa fa-angle-right"
-                                                                    aria-hidden="true"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+
                 </div>
 
             </div>
@@ -139,6 +145,7 @@
 
 @include('auth.login')
 @include('js-load')
+@include('pagination', ['url' => "/getUserCocktails/", 'divElement' => "#cocktailList"]);
 
 
 </body>

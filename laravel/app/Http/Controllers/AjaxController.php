@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
+use App\Cocktail;
+use App\Picture;
 
 class AjaxController extends Controller
 {
     //
-    public function index($category, $page){
+    public function cocktailPagination($category, $page){
         $cocktails = Array();
         $categoryName= str_replace("%20%20","%20/%20", $category);
 
@@ -54,7 +57,45 @@ class AjaxController extends Controller
         //print_r($data);
 
         //$msg = "This is a simple message." . $page;
-        return response()->json(array('data'=> $data), 200);
+        //return response()->json(array('data'=> $data), 200);
+        //dd($data);
+        return \Response::json(array('data'=> $data), 200);
     }
+
+    public function userCocktailPagination($category, $page){
+        $pictures=Array();
+        $cocktails = Array();
+        //Default category if the URI does not have one
+        if ($category==null) {
+            $category = "Beer";
+        }
+        $category=explode("/",$category)[0];
+        $categoryQuery=$categoryId = Category::where('cgr_st_name', 'like', '%'. $category. '%')->get();
+        if(count($categoryQuery)>0){
+
+            $categoryId = $categoryQuery[0]->cgr_id_category;
+            $cocktailsCol = Cocktail::where([
+                ['ckt_id_category', '=', $categoryId],
+            ])
+                ->orderBy('ckt_st_name', 'desc')
+                ->get();
+
+            foreach ($cocktailsCol as $cocktail) {
+                $picture = Picture::where('pic_id_cocktail', $cocktail->ckt_id_cocktail)->first();
+                array_push($pictures,$picture);
+                array_push($cocktails,$cocktail);
+            }
+        }
+
+        $offset = ($page - 1)*9;
+        $length = 9;
+        $data=array('cocktails'=>array_slice($cocktails,$offset,$length), 'size'=>count($cocktails), 'categoryName' => $category, 'pictures' => $pictures, "originalCategory" => $category);
+
+        //$data = array('cocktails'=>$cocktails);
+        return \Response::json(array('data'=> $data), 200);
+
+        //return response()->json(array('data'=> $data), 200);
+    }
+
 
 }
