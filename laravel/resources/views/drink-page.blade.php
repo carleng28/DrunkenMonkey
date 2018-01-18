@@ -5,44 +5,51 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hitachino Nest Nipponia | DrunkenMonkey</title>
+    <title>{{$data['name']}} | DrunkenMonkey</title>
 
     <!-- PLUGINS CSS STYLE -->
-    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="plugins/listtyicons/style.css" rel="stylesheet">
-    <link href="plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet">
-    <link href="plugins/datepicker/datepicker.min.css" rel="stylesheet">
-    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
-    <link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
-    <link href="plugins/isotope/isotope.min.css" rel="stylesheet">
-    <link href="plugins/map/css/map.css" rel="stylesheet">
+    <link href="/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/plugins/listtyicons/style.css" rel="stylesheet">
+    <link href="/plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet">
+    <link href="/plugins/datepicker/datepicker.min.css" rel="stylesheet">
+    <link href="/plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link href="/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="/plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
+    <link href="/plugins/isotope/isotope.min.css" rel="stylesheet">
+    <link href="/plugins/map/css/map.css" rel="stylesheet">
+    <link href="/css/star-rating.css" media="all" rel="stylesheet" type="text/css">
+
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+
+
 
     <!-- CUSTOM CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- FAVICON -->
-    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="/img/favicon.png" rel="shortcut icon">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
 
-</head>
+    <![endif]-->
+    <script src="/js/star-rating.js" type="text/javascript"> </script>
+   </head>
 
 <body class="body-wrapper">
-<div class="page-loader" style="background: url(img/preloader.gif) center no-repeat #fff;"></div>
+<div class="page-loader" style="background: url(/img/preloader.gif) center no-repeat #fff;"></div>
 <div class="main-wrapper">
     <!-- HEADER -->
     <header id="pageTop" class="header">
@@ -64,27 +71,40 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.php"><img src="img/logo-drunkenmonkey.png" alt="logo"></a>
+                        <a class="navbar-brand" href="/index.php"><img src="/img/logo-drunkenmonkey.png" alt="logo"></a>
                     </div>
 
+                @if(Session::has('email'))
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-ex1-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active">
-                                <a href="#">home <!--<i class="fa fa-angle-down" aria-hidden="true"></i>--></a>
-                                <!--<ul class="dropdown-menu dropdown-menu-right">
-                                  <li><a href="index.php">Map Version</a></li>
-                                  <li><a href="index-2.html">Travel Version</a></li>
-                                  <li><a href="index-3.html">Automobile Version</a></li>
-                                </ul>-->
-                            </li>
-                            <li class=""><a href="cocktail-main.html">Cocktails </a></li>
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="{{ url('/') }}">home</a></li>
+                                <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
+                                <li class=""><a href="{{ url('about-us') }}">about us </a></li>
+                                <li class=" dropdown singleDrop">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
+                                       role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="{{ url('profile') }}">Profile</a></li>
+                                        <li><a href="#">Wish List</a></li>
+                                        <li><a href="{{route('logout')}}">Log out</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
+                @else
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#">home</a></li>
+                                <li class=""><a href="{{ url('cocktail/main') }}">Cocktails </a></li>
+                                <li class=""><a href="{{ url('about-us') }}">about us </a></li>
+                            </ul>
 
-                            <li class=""><a href="about-us.html">about us </a></li>
-
-                        </ul>
-                    </div>
-                    <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal"><span>Sign In</span></button>ton>
+                        </div>
+                        <button class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#loginModal">Sign In</button>
+                @endif
                 </div>
             </nav>
         </div>
@@ -100,19 +120,11 @@
                         <h2>{{$data['name']}}</h2>
                         <p>LCBO#: {{$data['id']}}  |  {{$data['package']}}</p>
                         <div class="listingReview">
-                            <ul class="list-inline rating">
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star-o" aria-hidden="false"></i></li>
-                            </ul>
-                            <span>( 5 Reviews )</span>
                             <ul class="list-inline captionItem">
                                 <li><i class="fa fa-heart-o" aria-hidden="true"></i> Add to Wish List</li>
                             </ul>
                             <ul>
-                                <a href="#" class="btn btn-primary">Write a review</a>
+                                <a href="" class="btn btn-primary" onclick="window.location.hash = 'txtcomment'; document.getElementById('txtcomment').focus(); return false;">Write a review</a>
                             </ul>
 
                         </div>
@@ -152,9 +164,6 @@
                             <p><b>Alcohol/Vol:</b>{{$data['alcohol_content']}}</p>
                             <p><b>Made in:</b>{{$data['origin']}}</p>
                             <p><b>Producer:</b>{{$data['producer_name']}}</p>
-
-
-
 
 
                         </div>
@@ -200,7 +209,7 @@
                             <h3>Reviews (3)</h3>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="img/listing/list-user-1.jpg" class="media-object img-circle" alt="Image User">
+                                    <img src="/img/listing/list-user-1.jpg" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Jessica Brown</h4>
@@ -217,7 +226,7 @@
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="img/listing/list-user-2.jpg" class="media-object img-circle" alt="Image User">
+                                    <img src="/img/listing/list-user-2.jpg" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Jessica Brown</h4>
@@ -234,7 +243,7 @@
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="img/listing/list-user-3.jpg" class="media-object img-circle" alt="Image User">
+                                    <img src="/img/listing/list-user-3.jpg" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Jessica Brown</h4>
@@ -252,43 +261,87 @@
                         </div>
                         <div class="detailsInfoBox">
                             <h3>Write A Review </h3>
-                            <div class="listingReview">
-                                <span>( 5 Reviews )</span>
-                                <ul class="list-inline rating rating-review">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
-                            </div>
-                            <form action="#">
+                            @if(Session::has('email'))
+                            <form action="{{ url('drink-page',$data['id'])}}" name="commentform" method="post">
+                                {{ csrf_field() }}
                                 <div class="formSection formSpace">
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
+                                        <div  class="ratings">
+                                            <label>
+                                                <input type="radio" name="ratings" value="5" title="5 stars" onclick="changeClass()">
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="ratings" value="4" title="4 stars" onclick="changeClass()">
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="ratings" value="3" title="3 stars" onclick="changeClass()">
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="ratings" value="2" title="2 stars" onclick="changeClass()">
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="ratings" value="1" title="1 star" onclick="changeClass()">
+                                            </label>
+                                            <input type="hidden" value="{{$data['id']}}" name="idProd">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="3" placeholder="Comment" id="txtcomment" name="drinkReview"></textarea>
                                     </div>
                                     <div class="form-group mb0">
                                         <button type="submit" class="btn btn-primary">Send Review</button>
                                     </div>
                                 </div>
                             </form>
+                            @else
+                                <form action="#" name="commentform">
+                                    <div class="formSection formSpace">
+                                        <div class="form-group listingReview">
+                                            <div  class="ratings">
+                                                <label>
+                                                    <input type="radio" name="ratings" value="5" title="5 stars" onclick="changeClass()" disabled="disabled">
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="ratings" value="4" title="4 stars"onclick="changeClass()" disabled="disabled">
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="ratings" value="3" title="3 stars" onclick="changeClass()" disabled="disabled">
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="ratings" value="2" title="2 stars" onclick="changeClass()" disabled="disabled">
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="ratings" value="1" title="1 star" onclick="changeClass()" disabled="disabled">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="3" placeholder="Sign In to Write a Review" id="txtcomment" readonly></textarea>
+                                        </div>
+                                        <div class="form-group mb0">
+                                            <button type="submit" class="btn btn-primary" disabled>Send Review</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
 
     <!-- FOOTER -->
-    <footer style="background-image: url(img/background/bg-footer.jpg);">
+    <footer style="background-image: url(/img/background/bg-footer.jpg);">
         <!-- FOOTER INFO -->
         <div class="clearfix footerInfo">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-10 col-xs-12">
                         <div class="footerText">
-                            <a href="index.php" class="footerLogo"><img src="img/logo-drunkenmonkey.png" alt="Footer Logo"></a>
+                            <a href="index.php" class="footerLogo"><img src="/img/logo-drunkenmonkey.png" alt="Footer Logo"></a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
                             <ul class="list-styled list-contact">
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>[88] 657 524 332</li>

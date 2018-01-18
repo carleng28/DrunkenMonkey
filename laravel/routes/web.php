@@ -35,7 +35,11 @@ Route::get('drink-category-grid-full/{id}/{category}/{page}', [
 ]);
 
 Route::get('drink-page/{idproduct}',[
-   'uses'=>'DrinkPageController@showProduct'
+    'uses'=>'DrinkPageController@showProduct'
+]);
+
+Route::post('drink-page/{idproduct}',[
+    'uses'=>'DrinkPageController@storeReview'
 ]);
 
 Route::get('test',[

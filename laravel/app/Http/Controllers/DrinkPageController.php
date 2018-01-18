@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Drink;
+use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Session;
 
 class DrinkPageController extends Controller
 {
@@ -52,5 +56,49 @@ class DrinkPageController extends Controller
 
         return \View::make('drink-page',['idproduct'=>$idproduct])->with(compact('data'));
     }
+public function storeReview(Request $req){
+    $reviewSt = $req->input('drinkReview');
+    $reviewRt = $req->input('ratings');
+    $drinkId = $req->Input('idProd');
+    $drink = Drink::find($drinkId);
+    $usrId = Session::get('id');
+    //dd($drinkId);
+        if($drink == null){
+            Drink::insert(
+                ['drk_id_drink'=>$drinkId]
+            );
 
+            //dd($usrId);
+            $this->validate($req,
+                ['ratings'=>'required']);
+            //dd($usrId);
+
+
+            Review::insert([
+                ['rvw_st_review'=>$reviewSt,
+                    'rvw_dc_rate'=>$reviewRt,
+                    'rvw_id_user'=>$usrId,
+                    'rvw_id_drink'=>$drinkId]
+            ]);
+            dd(Review::all());
+        }else{
+            //dd($usrId);
+            $this->validate($req,
+                ['ratings'=>'required']);
+            //dd($usrId);
+            $reviewSt = $req->input('drinkReview');
+            $reviewRt = $req->input('ratings');
+            $drinkId = $req->Input('idProd');
+
+            Review::insert([
+                ['rvw_st_review'=>$reviewSt,
+                    'rvw_dc_rate'=>$reviewRt,
+                    'rvw_id_user'=>$usrId,
+                    'rvw_id_drink'=>$drinkId]
+            ]);
+            dd(Review::all());
+        }
+
+    return Redirect('drink-page',['idProd'=>$drinkId])->with(compact('data'));
+}
 }
