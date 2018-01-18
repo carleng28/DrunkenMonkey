@@ -21,11 +21,8 @@ class ProfileController extends Controller
 //I need to pass two arrays
 //the name you get it in profile is 'user', so i renamed it to $user, because in the current case 'user'->$userArray was not possible
         $user = json_decode($newUser, true);
-
         $dirname = "img\\userAddedImgOfCocktail\\".$id."\\";
-        if(!File::exists($dirname)) {
-            $dirname = File::makeDirectory("img\\userAddedImgOfCocktail\\".$id."\\");
-        }
+
         $pictures = scandir($dirname);
         $ignore = Array(".", "..");
 

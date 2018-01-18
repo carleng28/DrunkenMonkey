@@ -4,16 +4,8 @@
     <list id="ff1e7912-9554-4d23-9d2b-f0b38b510230" name="Revert: " comment="" />
     <list default="true" id="a8520aae-4e9b-4970-ae00-9aa491f19c47" name="Default" comment="Search autocomplete - nearLocation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/css/cocktailstyle.css" afterPath="$PROJECT_DIR$/laravel/public/css/cocktailstyle.css" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/2/download (1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/2/download(2).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/2/download.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/2/hub_classic_cocktail_bloodymary.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/2/images(1).jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/2/images.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/img/userAddedImgOfCocktail/3/paper.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/myImages.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/myImages.blade.php" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="myImages.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myImages.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/myImages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="169" column="18" lean-forward="true" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
+            <state relative-caret-position="285">
+              <caret line="151" column="13" lean-forward="false" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -103,10 +95,43 @@
       <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="111" column="38" lean-forward="false" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
+            <state relative-caret-position="163">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign-up.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/sign-up.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1413">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1516198116148" expanded="true" signature="9:17" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="1036:1046" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="1062:1097" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="1155:1176" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="1462:1472" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="1540:1562" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="1636:1653" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="2089:2105" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="2244:2259" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="2875:2885" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="2957:2979" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="3057:3074" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="4204:4220" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="4308:4327" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="4418:4432" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="4543:4557" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="4799:4825" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="4885:4893" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="5361:5393" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="11250:11262" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="11283:11295" ph="..." />
+                <marker date="1516198116148" expanded="true" signature="11308:11317" ph="..." />
               </folding>
             </state>
           </provider>
@@ -125,10 +150,22 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
+            <state relative-caret-position="116">
               <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="14" />
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+              <folding>
+                <element signature="e#46#82#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -302,7 +339,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/xml and js/progs/XAMPP/htdocs/php.proj/practicalTest1/index.php" />
         <option value="$PROJECT_DIR$/../php.proj/practicalTest1/database_error.php" />
         <option value="$PROJECT_DIR$/../php.proj/practicalTest1/main.css" />
         <option value="$PROJECT_DIR$/../php.proj/practicalTest1/request.php" />
@@ -349,10 +385,11 @@
         <option value="$PROJECT_DIR$/laravel/app/Cocktail.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailCategoryController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/cocktail/user-cocktail-page.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/laravel/public/css/cocktailstyle.css" />
         <option value="$PROJECT_DIR$/laravel/resources/views/myImages.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" />
       </list>
     </option>
   </component>
@@ -422,6 +459,15 @@
               <item name="DrunkenMonkey" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrunkenMonkey" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DrunkenMonkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DrunkenMonkey" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -458,6 +504,14 @@
               <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="DrunkenMonkey" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DrunkenMonkey" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="DrunkenMonkey" type="b2602c69:ProjectViewProjectNode" />
@@ -625,7 +679,7 @@
       <workItem from="1515438980321" duration="3002000" />
       <workItem from="1515510435738" duration="3860000" />
       <workItem from="1515876171465" duration="21857000" />
-      <workItem from="1516297136256" duration="4770000" />
+      <workItem from="1516297136256" duration="6286000" />
     </task>
     <task id="LOCAL-00001" summary="Search autocomplete - nearLocation">
       <created>1508970502628</created>
@@ -638,7 +692,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302237000" />
+    <option name="totallyTimeSpent" value="303753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -704,20 +758,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Auth/Middleware/AuthenticateWithBasicAuth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-561">
@@ -985,16 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="14" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Cocktail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="777">
@@ -1059,24 +1089,6 @@
             <marker date="1516296835409" expanded="true" signature="5692:5704" ph="..." />
             <marker date="1516296835409" expanded="true" signature="5728:5740" ph="..." />
             <marker date="1516296835409" expanded="true" signature="5753:5762" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="111" column="38" lean-forward="false" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1198,8 +1210,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/myImages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="169" column="18" lean-forward="true" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
+        <state relative-caret-position="285">
+          <caret line="151" column="13" lean-forward="false" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -1256,6 +1268,75 @@
             <marker date="1516301827413" expanded="true" signature="10951:10968" ph="..." />
             <marker date="1516301827413" expanded="true" signature="11041:11057" ph="..." />
             <marker date="1516301827413" expanded="true" signature="11129:11148" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="14" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/auth/sign-up.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1413">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1516198116148" expanded="true" signature="9:17" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="1036:1046" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="1062:1097" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="1155:1176" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="1462:1472" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="1540:1562" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="1636:1653" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="2089:2105" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="2244:2259" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="2875:2885" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="2957:2979" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="3057:3074" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="4204:4220" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="4308:4327" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="4418:4432" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="4543:4557" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="4799:4825" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="4885:4893" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="5361:5393" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="11250:11262" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="11283:11295" ph="..." />
+            <marker date="1516198116148" expanded="true" signature="11308:11317" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/CocktailsByUsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

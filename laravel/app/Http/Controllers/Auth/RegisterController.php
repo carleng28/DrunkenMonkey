@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 use App\User;
+use File;
 
 class RegisterController extends Controller
 {
@@ -93,6 +94,11 @@ class RegisterController extends Controller
             Session::put('email', $email);
             Session::put('fname',$userArray[0]['usr_st_fname']);
             Session::put('lname',$userArray[0]['usr_st_lname']);
+
+            $idForFolder = Session::get('id');
+            if(!File::exists("img\\userAddedImgOfCocktail\\".$idForFolder."\\")) {
+                File::makeDirectory("img\\userAddedImgOfCocktail\\".$idForFolder."\\");
+            }
             return Redirect('/');
 
         }
