@@ -3,6 +3,17 @@
     <title>Profile | DrunkenMonkey</title>
     <link rel="stylesheet" type="text/css" href="{{ url('/css/cocktailstyle.css') }}">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function showImg(a){
+        document.getElementById('bigImg').src = a.src;
+    }
+
+    function loadFile(event) {
+        var output = document.getElementById('thereImg');
+        output.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
 <body>
 <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
 <div class="main-wrapper">
@@ -72,7 +83,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pageTitle">
-                        <h2>Profile</h2>
+                        <h2>My Images</h2>
                     </div>
 
                 </div>
@@ -84,48 +95,8 @@
     <section class="clearfix bg-light profileSection">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-5 col-xs-12">
-                    <div class="dashboardBoxBg mb30">
-                        <div class="profileImage">
-                            <img src="img/dashboard/blank.jpg" alt="Image User" class="img-circle">
-                            <div class="file-upload profileImageUpload">
-                                <div class="upload-area">
-                                    <input type="file" name="img[]" class="file">
-                                    <button class="browse" type="button">Upload a Picture <i
-                                                class="icon-listy icon-upload"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" align="center">
-                            <div class="dashboardBoxBg mb30">
-                                <div id="photos1">
-                                @if(!empty($pictures[2]))
-                                @foreach ($pictures as $pic)
-                                    @if(!in_array($pic, $ignore))
-                                        <div class="thumbnail1">
-                                        <img src="{{url($dirname.$pic)}}" alt="Profile Images" class="img-circle">
-                                        </div>
-                                    @endif
-                                @endforeach
-                                @else
-                                        <p>You have not yet added images to your profile</p>
-                                @endif
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12" align="center">
-                                        <br>
-                                        <form action="{{url('/myImages')}}">
-                                        <input type="submit" id="wish1" value="View images">
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-8 col-sm-7 col-xs-12">
+
+                <div class="col-md-12">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -150,101 +121,46 @@
 
                         </div>
                     @endif
-                    <form method="post" action="{{ route('profile.update') }}">
-                        {{ csrf_field() }}
-                        <div class="dashboardBoxBg mb30">
-                            <div class="profileIntro">
-                                <h3>About You </h3>
-                                <div class="row">
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="firstName">Fast Name</label>
-                                        <input type="text" value="{{$user[0]['usr_st_fname']}}" class="form-control" id="firstName" name="firstName" required>
-                                    </div>
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="lastName">Last Name</label>
-                                        <input type="text"  value="{{$user[0]['usr_st_lname']}}" class="form-control" id="lastName" name="lastName" required>
-                                    </div>
-                                    <div class="form-group col-sm-12 col-xs-12">
-                                        <label for="email">Email</label>
-                                        <input type="email" value="{{$user[0]['usr_st_email']}}" class="form-control" id="email" name="email" required>
-                                    </div>
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="dateBirth" class="control-label">Date of Birth*</label>
-                                        <input type="date" value="{{$user[0]['usr_dt_birth']}}" class="form-control" id="dateBirth" name="dateBirth" required>
-                                    </div>
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="gender" class="control-label">Gender</label>
-                                        <select class="form-control" name="gender" required>
-                                            <option></option>
-                                            <option  {{$user[0]['usr_st_gender']=="M" ? 'selected':''}} value="M">Male</option>
-                                            <option {{$user[0]['usr_st_gender']=="F" ? 'selected':''}} value="F">Female</option>
-                                            <option {{$user[0]['usr_st_gender']=="N" ? 'selected':''}} value="N">Prefer to not inform</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="province" class="control-label">Province*</label>
-                                        <select class="form-control" name="province" id="province" required>
-                                            <option></option>
-                                            <option {{$user[0]['usr_st_province']=="AB" ? 'selected':''}} value="AB">Alberta</option>
-                                            <option {{$user[0]['usr_st_province']=="BC" ? 'selected':''}} value="BC">British Columbia</option>
-                                            <option {{$user[0]['usr_st_province']=="MB" ? 'selected':''}} value="MB">Manitoba</option>
-                                            <option {{$user[0]['usr_st_province']=="NB" ? 'selected':''}} value="NB">New Brunswick</option>
-                                            <option {{$user[0]['usr_st_province']=="NL" ? 'selected':''}} value="NL">Newfoundland and Labrador</option>
-                                            <option {{$user[0]['usr_st_province']=="NS" ? 'selected':''}} value="NS">Nova Scotia</option>
-                                            <option {{$user[0]['usr_st_province']=="ON" ? 'selected':''}} value="ON">Ontario</option>
-                                            <option {{$user[0]['usr_st_province']=="PE" ? 'selected':''}} value="PE">Prince Edward Island</option>
-                                            <option {{$user[0]['usr_st_province']=="QC" ? 'selected':''}} value="QC">Quebec</option>
-                                            <option {{$user[0]['usr_st_province']=="SK" ? 'selected':''}} value="SK">Saskatchewan</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="city" class="control-label">City*</label>
-                                        <input type="text" value="{{$user[0]['usr_st_city']}}" class="form-control" name="city" id="city">
-                                    </div>
-
-                                </div>
-                                <div class="btn-area mt30">
-                                    <button class="btn btn-primary" type="submit">Save Change</button>
+                        <div class="profileImage">
+                            <form method="post" action="{{url('myImages-add')}}">
+                                {{csrf_field()}}
+                            <img width="200" height="200" src="{{ url('img/dashboard/no-image.svg') }}" alt="Your Photos" id="thereImg">
+                            <div class="file-upload profileImageUpload">
+                                <div class="upload-area">
+                                    <input onchange="loadFile(event)" type="file" id="imageInput" name="imageInput" class="file">
+                                    <button class="browse" type="button">You can upload photos in your profile <i class="icon-listy icon-upload"></i></button>
                                 </div>
 
+                                    <button type="submit" class="btn" id="tasted" >Add Photo</button>
+                                </div>
+                            </form>
                             </div>
                         </div>
-                    </form>
-
-                    <form method="post" action="{{ route('password.reset') }}">
-                        {{ csrf_field() }}
-                            <div class="dashboardBoxBg mt30">
-                                <div class="profileIntro">
-                                    <h3>Update password</h3>
-                                    <div class="row">
-                                        <div class="form-group col-xs-12">
-                                            <label for="currentPassword">Current Password</label>
-                                            <input type="password" class="form-control" id="currentPassword" name="currentPassword"
-                                                   placeholder="********">
-                                        </div>
-                                        <div class="form-group col-xs-12">
-                                            <label for="password">New Password</label>
-                                            <input type="password" class="form-control" id="password" name="password"
-                                                   placeholder="New Password">
-                                        </div>
-                                        <div class="form-group col-xs-12">
-                                            <label for="password_confirmation">Confirm Password</label>
-                                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
-                                                   placeholder="Confirm Password">
-                                        </div>
-                                        <div class="form-group col-xs-12">
-                                            <button class="btn btn-primary" type="submit">Change Password</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </form>
-                </div>
-
             </div>
         </div>
     </section>
 
+        <div class="row is-table-row" align="center">
+            <div class="col-lg-6" id="ii" >
+                <div class="dashboardBoxBg mb30" id="iiii">
+                <div id="photos">
+            @if(!empty($pictures[2]))
+                @foreach ($pictures as $pic)
+                    @if(!in_array($pic, $ignore))
+                                <div class="thumbnail">
+                                    <img src="{{ url($dirname.$pic) }}" alt="Images" onclick="showImg(this)">
+                                </div>
+                    @endif
+                @endforeach
+            @endif
+                </div>
+            </div>
+            </div>
+            <div class="col-md-6" id="iii">
+                    <img src="{{ url($dirname.$pic) }}" id="bigImg">
+
+            </div>
+        </div>
     <!-- FOOTER -->
     <footer class="footerWhite">
         <!-- FOOTER INFO -->

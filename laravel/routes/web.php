@@ -75,11 +75,15 @@ Route::get('/register','Auth\RegisterController@showRegistrationForm')->name('re
 Route::post('/register','Auth\RegisterController@register')->name('register.submit');
 
 Route::get('/profile', 'ProfileController@create');
+
+
+Route::get('/myImages', 'ProfileController@loadPics')->middleware('session');
+Route::post('myImages-add', 'ProfileController@addPhoto');
+
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
 Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
 
 Route::post('cocktail/add-my-cocktail', 'CocktailsByUsersController@addCocktailByUser');
-
 
 Route::get('/password', 'Auth\ForgotPasswordController@create')->name('forgot');
 Route::post('/password','Auth\ForgotPasswordController@send')->name('forgot.submit');

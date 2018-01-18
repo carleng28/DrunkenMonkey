@@ -27,7 +27,7 @@ class CocktailsByUsersController extends Controller
                 'recipe' => 'required',
                 'serve' =>'required',
                 'category' =>'required',
-
+                'imageInput' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]
         );
         $cocktailName = $req->input('cocktailName');
@@ -76,6 +76,16 @@ class CocktailsByUsersController extends Controller
                'cki_id_ingredient' =>  $ingredientId1,
                 'cki_st_measure' => $msr1,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                $pictureId= Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => Session::get('id'),
+                    'pic_id_cocktail' => $cocktailId
+                ])->pic_id_picture;
+
+            }
         }
 
         if($ingr2!=null ||$ingr2!="") {
@@ -88,6 +98,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId2,
                 'cki_st_measure' => $msr2,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => Session::get('id'),
+                    'pic_id_cocktail' => $cocktailId
+                ]);
+            }
         }
 
         if($ingr3!=null ||$ingr3!="") {
@@ -100,6 +119,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId3,
                 'cki_st_measure' => $msr3,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => Session::get('id'),
+                    'pic_id_cocktail' => $cocktailId
+                ]);
+            }
         }
 
         if($ingr4!=null ||$ingr4!="") {
@@ -112,6 +140,15 @@ class CocktailsByUsersController extends Controller
                 'cki_id_ingredient' =>  $ingredientId4,
                 'cki_st_measure' => $msr4,
             ]);
+            if(!empty($image)||$image!=null||$image=""){
+                Picture::create([
+                    'pic_st_picname' => $name,
+                    'pic_st_type' => $type,
+                    'pic_st_picture' => $path,
+                    'pic_id_user' => Session::get('id'),
+                    'pic_id_cocktail' => $cocktailId
+                ]);
+            }
         }
 
         if($ingr5!=null ||$ingr5!="") {

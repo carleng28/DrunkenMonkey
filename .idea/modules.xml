@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\lab6(MVC.classes)\.idea\21-11.iml" filepath="C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\lab6(MVC.classes)\.idea\21-11.iml" />
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\xml and js\progs\XAMPP\htdocs\php.proj\CreateCocktail\.idea\CreateCocktail.iml" filepath="C:\Users\Erika Pepe\Desktop\xml and js\progs\XAMPP\htdocs\php.proj\CreateCocktail\.idea\CreateCocktail.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/lab6(MVC.classes)/.idea/21-11.iml" filepath="C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/lab6(MVC.classes)/.idea/21-11.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/xml and js/progs/XAMPP/htdocs/php.proj/CreateCocktail/.idea/CreateCocktail.iml" filepath="C:/Users/Erika Pepe/Desktop/xml and js/progs/XAMPP/htdocs/php.proj/CreateCocktail/.idea/CreateCocktail.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DrunkenMonkey.iml" filepath="$PROJECT_DIR$/.idea/DrunkenMonkey.iml" />
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\Valyusha\.idea\Valyusha.iml" filepath="C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\Valyusha\.idea\Valyusha.iml" />
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\laravelcds\.idea\blogtest.iml" filepath="C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\laravelcds\.idea\blogtest.iml" />
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\phpPDO\.idea\phpPDO.iml" filepath="C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\phpPDO\.idea\phpPDO.iml" />
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\phpmail\.idea\phpmail.iml" filepath="C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\phpmail\.idea\phpmail.iml" />
-      <module fileurl="file://C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\sessioncookieupload\.idea\sessioncookieupload.iml" filepath="C:\Users\Erika Pepe\Desktop\XAMPP\htdocs\php.proj\sessioncookieupload\.idea\sessioncookieupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Valyusha/.idea/Valyusha.iml" filepath="$PROJECT_DIR$/../Valyusha/.idea/Valyusha.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/Valyusha/.idea/Valyusha.iml" filepath="C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/Valyusha/.idea/Valyusha.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/laravelcds/.idea/blogtest.iml" filepath="C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/laravelcds/.idea/blogtest.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/phpPDO/.idea/phpPDO.iml" filepath="C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/phpPDO/.idea/phpPDO.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/phpmail/.idea/phpmail.iml" filepath="C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/phpmail/.idea/phpmail.iml" />
+      <module fileurl="file://C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/sessioncookieupload/.idea/sessioncookieupload.iml" filepath="C:/Users/Erika Pepe/Desktop/XAMPP/htdocs/php.proj/sessioncookieupload/.idea/sessioncookieupload.iml" />
     </modules>
   </component>
 </project>
