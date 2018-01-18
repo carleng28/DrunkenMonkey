@@ -165,36 +165,36 @@
             @endif
         @endforeach
             </div>
-    @endif
-
-            </div>
-            </div>
-                    @if($i>2)
-            <div class="col-md-6" id="iii"style="
+                 </div>
+             </div>
+                 @if($i>2)
+                     <div class="col-md-6" id="iii"style="
                 padding-left: 0!important;
                 padding-top: 0!important;
                 margin-top: 0!important;">
-                @if(!empty($pictures[2]))
-                    <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
+                         @if(!empty($pictures[2]))
+                             <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
                 padding-left: 0!important;
                 padding-top: 0!important;
                 margin-top: 0!important;">
-                @endif
-                @else
-                    <div class="col-md-6" id="iii" style="
+                         @endif
+                         @else
+                             <div class="col-md-6" id="iii" style="
 
                 margin-right: 10%!important;
                 margin-top: 0!important;">
-                        @if(!empty($pictures[2]))
-                            <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
+                                 @if(!empty($pictures[2]))
+                                     <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
                                     /*margin-left: 8%!important;
                                     margin-right: 8%!important;*/">
-                        @endif
-                        @endif
+                                 @endif
+                                 @endif
 
 
-            </div>
-        </div>
+                             </div>
+                     </div>
+    @endif
+
     <!-- FOOTER -->
     <footer class="footerWhite">
         <!-- FOOTER INFO -->
