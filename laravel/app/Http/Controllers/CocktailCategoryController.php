@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -10,6 +11,7 @@ use App\Category;
 use App\Ingredient;
 use App\Picture;
 use Session;
+
 
 class CocktailCategoryController extends Controller
 {
@@ -147,7 +149,8 @@ class CocktailCategoryController extends Controller
         //get the uri from the request
         $cocktail= Cocktail::where('ckt_id_cocktail', $id)->first();
         $picture = Picture::where('pic_id_cocktail', $id)->first();
-        $data=array('cocktail'=>$cocktail, 'picture' => $picture);
+        $creator = User::where('usr_id_user', $cocktail->ckt_id_user)-> first();
+        $data=array('cocktail'=>$cocktail, 'picture' => $picture, 'creator'=>$creator);
         return \View::make("cocktail/user-cocktail-page", ['id' => $cocktail->ckt_id_cocktail])->with(compact('data'));
 
     }

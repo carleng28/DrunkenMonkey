@@ -90,6 +90,11 @@
                         <p>{{ $data['cocktail']->ckt_st_serve }}</p>
 
                     </div>
+                    <div class="createdGlass">
+                        <h3>Created by: </h3>
+                        <p>{{ $data['creator']->usr_st_fname }}&nbsp;{{ $data['creator']->usr_st_lname }}</p>
+
+                    </div>
 				</div>
             </div>
             <div class="col-xs-4">
@@ -102,96 +107,6 @@
                     @foreach ($data['cocktail']->ingredients as $ingredient)
                         <h6>{{$ingredient->pivot->cki_st_measure}} of {{$ingredient->igr_st_name}}</h6>
                     @endforeach
-
-                    {{--@if($data['cocktail']->strIngredient1 != "" && $data['cocktail']->strIngredient1 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure1) != "" ? $data['cocktail']->strMeasure1. " of" : '')  }} {{$data['cocktail']->strIngredient1}}--}}
-                        {{--</h6>--}}
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient2 != "" && $data['cocktail']->strIngredient2 != null)--}}
-
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure2) != "" ? $data['cocktail']->strMeasure2. " of" : '')  }} {{$data['cocktail']->strIngredient2}}--}}
-                        {{--</h6>--}}
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient3 != "" && $data['cocktail']->strIngredient3 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure3) != "" ? $data['cocktail']->strMeasure3. " of" : '')  }} {{$data['cocktail']->strIngredient3}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient4 != "" && $data['cocktail']->strIngredient4 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure4) != "" ? $data['cocktail']->strMeasure4. " of" : '')  }} {{$data['cocktail']->strIngredient4}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient5 != "" && $data['cocktail']->strIngredient5 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure5) != "" ? $data['cocktail']->strMeasure5. " of" : '')  }} {{$data['cocktail']->strIngredient5}}--}}
-                        {{--</h6>--}}
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient6 != "" && $data['cocktail']->strIngredient6 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure6) != "" ? $data['cocktail']->strMeasure6. " of" : '')  }} {{$data['cocktail']->strIngredient6}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient7 != "" && $data['cocktail']->strIngredient7 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure7) != "" ? $data['cocktail']->strMeasure7. " of" : '')  }} {{$data['cocktail']->strIngredient7}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient8 != "" && $data['cocktail']->strIngredient8 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure8) != "" ? $data['cocktail']->strMeasure8. " of" : '')  }} {{$data['cocktail']->strIngredient8}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient9 != "" && $data['cocktail']->strIngredient9 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure9) != "" ? $data['cocktail']->strMeasure9. " of" : '')  }} {{$data['cocktail']->strIngredient9}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient10 != "" && $data['cocktail']->strIngredient10 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure10) != "" ? $data['cocktail']->strMeasure10. " of" : '')  }} {{$data['cocktail']->strIngredient10}}--}}
-                        {{--</h6>--}}
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient11 != "" && $data['cocktail']->strIngredient11 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure11) != "" ? $data['cocktail']->strMeasure11. " of" : '')  }} {{$data['cocktail']->strIngredient11}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient12 != "" && $data['cocktail']->strIngredient12 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{(trim($data['cocktail']->strMeasure12) != "" ? $data['cocktail']->strMeasure12. " of" : '')  }} {{$data['cocktail']->strIngredient12}}--}}
-                        {{--</h6>--}}
-
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient13 != "" && $data['cocktail']->strIngredient13 != null)--}}
-
-                        {{--<h6>--}}
-                            {{--{{ $data['cocktail']->strMeasure13 }} of {{$data['cocktail']->strIngredient13}}--}}
-                        {{--</h6>--}}
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient14 != "" && $data['cocktail']->strIngredient14 != null)--}}
-
-                        {{--<h6>--}}
-                            {{--{{ $data['cocktail']->strMeasure14 }} of {{$data['cocktail']->strIngredient14}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
-                    {{--@if($data['cocktail']->strIngredient15 != "" && $data['cocktail']->strIngredient15 != null)--}}
-                        {{--<h6>--}}
-                            {{--{{ $data['cocktail']->strMeasure15 }} of {{$data['cocktail']->strIngredient15}}--}}
-                        {{--</h6>--}}
-
-                    {{--@endif--}}
 
                 </div>
 		    </div>

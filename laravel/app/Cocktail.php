@@ -32,4 +32,11 @@ class Cocktail extends Model
     {
         $this->hasOne('App\Category', 'ckt_id_category', 'ckt_id_cocktail');
     }
+    /**
+     * Get the user for the cocktail.
+     */
+    public function user()
+    {
+        $this->hasOne('App\User', 'ckt_id_user', 'ckt_id_cocktail');
+    }
 }
