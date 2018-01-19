@@ -106,7 +106,7 @@ class ProfileController extends Controller
                 'pic_st_type' => $type,
                 'pic_st_picture' => $path,
                 'pic_id_user' => $id,
-                'pic_id_cocktail' => 0
+                'pic_id_cocktail' => null
             ]);
             return back()->with('success', 'Image Upload successfully');
         }
