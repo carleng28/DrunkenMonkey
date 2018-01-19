@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Drink;
 use App\Review;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use PhpParser\Node\Expr\Array_;
 use Session;
 
 class DrinkPageController extends Controller
@@ -14,6 +16,7 @@ class DrinkPageController extends Controller
     public function showProduct($idproduct){
 
         $data=Array();
+        $review=Array();
 
         $url ='http://lcboapi.com/products/'.$idproduct;
         $curl = curl_init($url);
@@ -53,6 +56,21 @@ class DrinkPageController extends Controller
         $data['clearance_sale_savings_in_cents']=($obj["result"]["clearance_sale_savings_in_cents"]==null?"ND":"$ ".($obj["result"]["clearance_sale_savings_in_cents"]*100)." CAD");
         $data['has_clearance_sale']=($obj["result"]["has_clearance_sale"]==null?"ND":$obj["result"]["has_clearance_sale"]);
 
+        $review = Review::where('rvw_id_drink', $idproduct)->get()->toArray();
+        //dd($review);
+        for($i = 0; $i < sizeof($review); $i++){
+            $usrid = $review[$i]['rvw_id_user'];
+            $user = User::where('usr_id_user','=',$usrid)
+                ->first();
+            $review[$i]['fname'] = $user->usr_st_fname;
+            $review[$i]['lname'] = $user->usr_st_lname;
+        }
+
+        //dd($review);
+        $data['review'] = $review;
+
+
+
 
         return \View::make('drink-page',['idproduct'=>$idproduct])->with(compact('data'));
     }
@@ -80,7 +98,7 @@ public function storeReview(Request $req){
                     'rvw_id_user'=>$usrId,
                     'rvw_id_drink'=>$drinkId]
             ]);
-            dd(Review::all());
+            //dd(Review::all());
         }else{
             //dd($usrId);
             $this->validate($req,
@@ -96,9 +114,9 @@ public function storeReview(Request $req){
                     'rvw_id_user'=>$usrId,
                     'rvw_id_drink'=>$drinkId]
             ]);
-            dd(Review::all());
+            //dd(Review::all());
         }
 
-    return Redirect('drink-page',['idProd'=>$drinkId])->with(compact('data'));
+    return redirect('drink-page/'.$drinkId);
 }
 }

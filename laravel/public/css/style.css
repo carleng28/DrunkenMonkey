@@ -5781,4 +5781,9 @@ body.rtl .main-slider {
 .brandSection {
   direction: ltr; }
 
+#reviews{
+  width: 800px;
+  height: 400px;
+  overflow: scroll;
+}
 /*# sourceMappingURL=style.css.map */

@@ -47,8 +47,11 @@
     <![endif]-->
     <script src="/js/star-rating.js" type="text/javascript"> </script>
    </head>
-
+@php
+//dd($data);
+@endphp
 <body class="body-wrapper">
+
 <div class="page-loader" style="background: url(/img/preloader.gif) center no-repeat #fff;"></div>
 <div class="main-wrapper">
     <!-- HEADER -->
@@ -205,25 +208,27 @@
                                 <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Accept Credit Card</li>
                             </ul>
                         </div>-->
-                        <div class="detailsInfoBox">
-                            <h3>Reviews (3)</h3>
+                        <div class="detailsInfoBox" data-spy="scroll" data-offset="0" id="reviews">
+                            <h3>Reviews ({{sizeof($data['review'])}})</h3>
+                            @for($i = 0; $i < sizeof($data['review']); $i++)
                             <div class="media media-comment">
                                 <div class="media-left">
                                     <img src="/img/listing/list-user-1.jpg" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="media-heading">Jessica Brown</h4>
+                                    <h4 class="media-heading">{{$data['review'][$i]['fname']}} {{$data['review'][$i]['lname']}}</h4>
                                     <ul class="list-inline rating">
+                                        @for($j = 0; $j < $data['review'][$i]['rvw_dc_rate']; $j++)
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                     @endfor
+                                            @for($k = 0; $k < (5 - $data['review'][$i]['rvw_dc_rate']); $k++)
+                                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                            @endfor
                                     </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
-                                        totam rem ape riam,</p>
+                                    <p>{{$data['review'][$i]['rvw_st_review']}} </p>
                                 </div>
                             </div>
+                            @endfor <!--
                             <div class="media media-comment">
                                 <div class="media-left">
                                     <img src="/img/listing/list-user-2.jpg" class="media-object img-circle" alt="Image User">
@@ -257,7 +262,7 @@
                                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
                                         totam rem ape riam,</p>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="detailsInfoBox">
                             <h3>Write A Review </h3>
