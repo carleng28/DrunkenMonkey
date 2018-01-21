@@ -79,73 +79,36 @@
 					<thead>
 						<tr class="rowItem">
 							<th data-priority="">Drinks</th>
-							<th data-priority="2"></th>
+							<th data-priority="2">Category</th>
 							<th data-priority="6"></th>
-							<th data-priority="1">Reviews</th>
-							<th data-priority="3">Liked On</th>
+							<th data-priority="1">Price</th>
+							<th data-priority="3"></th>
 							<th data-priority="4"></th>
 							<th data-priority="5">Remove</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="rowItem">
-							<td>
-								<ul class="list-inline listingsInfo">
-									<li><a href="#"><img src="img/dashboard/listing.jpg" alt="Image Listings"></a></li>
-									<li>
-										<h3>Glory Hole Doughnuts</h3>
-										<h5>1569 Queen Street West <span class="cityName">Toronto</span></h5>
-										<span class="cityName">Category: </span><span class="category">Restaurant</span>
-										<p>From $50.00 /Night</p>
-									</li>
-								</ul>
-							</td>
-							<td></td>
-							<td></td>
-							<td>
-								<ul class="list-inline rating">
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-									<li>(9)</li>
-								</ul>
-
-							</td>
-							<td>15/12/2016 <br>9.15am</td>
-							<td></td>
-							<td><span class="label label-warning">Pending</span></td>
-						</tr>
-						<tr class="rowItem">
-							<td>
-								<ul class="list-inline listingsInfo">
-									<li><a href="#"><img src="img/dashboard/listing.jpg" alt="Image Listings"></a></li>
-									<li>
-										<h3>Glory Hole Doughnuts</h3>
-										<h5>1569 Queen Street West <span class="cityName">Toronto</span></h5>
-										<span class="cityName">Category: </span><span class="category">Restaurant</span>
-										<p>From $50.00 /Night </p>
-									</li>
-								</ul>
-							</td>
-							<td></td>
-							<td></td>
-							<td>
-								<ul class="list-inline rating">
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-									<li>(9)</li>
-								</ul>
-
-							</td>
-							<td>15/12/2016 <br>9.15am</td>
-							<td></td>
-							<td><span class="label label-success">Active</span></td>
-						</tr>
+						@foreach ($data['drinks'] as $drink)
+							<tr class="rowItem">
+								<td>
+									<ul class="list-inline listingsInfo">
+										<li><a href={{url('drink-page/'.$drink['id'])}}><img height="135" width="200" src="{{ url($drink['image_thumb_url']) }}" alt="Image Listings"></a></li>
+										<li>
+											<h3><a href={{url('drink-page/'.$drink['id'])}}>{{$drink['name']}}</a></h3>
+											<span class="cityName">Description: </span><span class="category">{{ $drink['package_unit_volume_in_milliliters']}} mL {{$drink['package_unit_type']}}</span><br>
+											<span class="cityName">Alcohol/Vol: </span><span class="category">{{ $drink['alcohol_content']}}</span><br>
+											<span class="cityName">Made in: </span><span class="category">{{ $drink['origin']}}</span><br>
+										</li>
+									</ul>
+								</td>
+								<td><a href="{{ url('drink-category-grid-full/'.$drink['primary_category']) }}">{{ $drink['primary_category']}}</a></td>
+								<td></td>
+								<td>{{ $drink['price_in_cents']}} {{$drink['package_unit_type']}} / {{$drink['total_package_units']}}. units</td>
+								<td></td>
+								<td></td>
+								<td><a class="label btn-primary" width="63" height="21" href="{{ url('wishlist/deleteDrink',$drink['id']) }}" role="button">Remove</a></td>
+							</tr>
+						@endforeach
 					</tbody>
 				</table>
 				<div class="paginationCommon blogPagination text-center">
@@ -160,7 +123,6 @@
 							<li><a href="#">2</a></li>
 							<li><a href="#">3</a></li>
 							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
 							<li>
 								<a href="#" aria-label="Next">
 									<span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>

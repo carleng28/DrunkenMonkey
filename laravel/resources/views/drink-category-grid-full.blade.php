@@ -99,8 +99,6 @@
 							</div>
 							<div class="thingsCaption ">
 								<ul class="list-inline captionItem">
-									<!--<li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>-->
-									<!--<li><a href="category-list-left.html">Hotel, Restaurant</a></li>-->
 								</ul>
 							</div>
 						</div>

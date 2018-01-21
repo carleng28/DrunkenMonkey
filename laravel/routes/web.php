@@ -93,6 +93,8 @@ Route::get('wishlist/add-wishlist/{idproduct}',[
     'uses' => 'WishListController@addToWishList'
 ])->middleware('session');
 
+Route::get('/wishlist/deleteDrink/{idproduct}', 'WishListController@deleteDrink');
+
 Route::get('/getpage/{category}/{page}/','AjaxController@cocktailPagination');
 
 Route::get('/getUserCocktails/{category}/{page}','AjaxController@userCocktailPagination');
