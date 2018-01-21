@@ -26,7 +26,7 @@
                         <button type="submit" class="btn btn-primary btn-block">Log In</button>
                     </div>
                     <div class="checkbox">
-                        <label><input type="checkbox"> Remember me</label>
+                        <label style="visibility: hidden"><input type="checkbox"> Remember me</label>
                         <a href="{{ route('forgot') }}" class="pull-right link">Forgot Password?</a>
                     </div>
 

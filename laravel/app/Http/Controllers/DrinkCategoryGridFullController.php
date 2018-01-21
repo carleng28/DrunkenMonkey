@@ -81,7 +81,7 @@ class DrinkCategoryGridFullController extends Controller
         //var_dump($greatjason);
 
         $current_page = $obj2["pager"]["current_page"];
-        echo "the Current Page is : " . $current_page . "<br>";
+        //echo "the Current Page is : " . $current_page . "<br>";
 
         $data = array('drinks' => $greatjason, 'size' => count($greatjason), 'category' => $category, 'total_pages' => $total_pages, 'current_page' => $current_page);
 
