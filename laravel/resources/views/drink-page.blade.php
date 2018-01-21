@@ -50,6 +50,11 @@
 @php
 //dd($data);
 @endphp
+@if (session('insert'))
+    <div class="alert alert-success text-center">
+        {{ session('insert') }}
+    </div>
+@endif
 <body class="body-wrapper">
 
 <div class="page-loader" style="background: url(/img/preloader.gif) center no-repeat #fff;"></div>
@@ -89,7 +94,7 @@
                                        role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li><a href="{{ url('profile') }}">Profile</a></li>
-                                        <li><a href="#">Wish List</a></li>
+                                        <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                                         <li><a href="{{route('logout')}}">Log out</a></li>
                                     </ul>
                                 </li>
@@ -122,14 +127,11 @@
                     <div class="listingTitleArea">
                         <h2>{{$data['name']}}</h2>
                         <p>LCBO#: {{$data['id']}}  |  {{$data['package']}}</p>
+                        <a href="{{ url('wishlist/add-wishlist',$data['id']) }}"><i class="fa fa-heart" aria-hidden="true"></i> Add to Wish List</a>
                         <div class="listingReview">
-                            <ul class="list-inline captionItem">
-                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> Add to Wish List</li>
-                            </ul>
                             <ul>
                                 <a href="" class="btn btn-primary" onclick="window.location.hash = 'txtcomment'; document.getElementById('txtcomment').focus(); return false;">Write a review</a>
                             </ul>
-
                         </div>
                     </div>
                 </div>

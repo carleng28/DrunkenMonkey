@@ -40,7 +40,7 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right active">
                                         <li><a href="{{ url('profile') }}">Profile</a></li>
-                                        <li><a href="#">Wish List</a></li>
+                                        <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                                         <li><a href="{{route('logout')}}">Log out</a></li>
                                     </ul>
                                 </li>
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="pageTitle">
+                    <div class="page-header text-center">
                         <h2>Profile</h2>
                     </div>
 
@@ -281,7 +281,7 @@
                                     <li><a href="{{ url('cocktail/main') }}">Cocktails</a></li>
                                     <li><a href="{{ url('about-us') }}">About us</a></li>
                                     <li><a href="{{ url('profile') }}">Profile</a></li>
-                                    <li><a href="{{ url('profile') }}">Wish List</a></li>
+                                    <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                                     <li><a href="{{route('logout')}}">Logout</a></li>
                                 @else
                                     <li><a href="{{ url('/') }}">Home</a></li>

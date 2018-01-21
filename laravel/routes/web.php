@@ -76,7 +76,6 @@ Route::post('/register','Auth\RegisterController@register')->name('register.subm
 
 Route::get('/profile', 'ProfileController@create');
 
-
 Route::get('/myImages', 'ProfileController@loadPics')->middleware('session');
 Route::post('myImages-add', 'ProfileController@addPhoto')->middleware('session');
 
@@ -88,6 +87,11 @@ Route::post('cocktail/add-my-cocktail', 'CocktailsByUsersController@addCocktailB
 Route::get('/password', 'Auth\ForgotPasswordController@create')->name('forgot');
 Route::post('/password','Auth\ForgotPasswordController@send')->name('forgot.submit');
 
+Route::get('/wishlist', 'WishListController@load');
+
+Route::get('wishlist/add-wishlist/{idproduct}',[
+    'uses' => 'WishListController@addToWishList'
+])->middleware('session');
 
 Route::get('/getpage/{category}/{page}/','AjaxController@cocktailPagination');
 

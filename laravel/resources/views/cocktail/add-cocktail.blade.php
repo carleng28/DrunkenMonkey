@@ -1,7 +1,7 @@
 @include('header')
 <head>
     <title>Add Cocktail | DrukenMonkey</title>
-<link rel="stylesheet" type="text/css" href="{{ url('/css/cocktailstyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/cocktailstyle.css') }}">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -20,12 +20,10 @@
             counter++;
         }
     }
-
     var loadFile = function(event) {
         var output = document.getElementById('thereImg');
         output.src = URL.createObjectURL(event.target.files[0]);
     };
-
 </script>
 <body class="body-wrapper">
 <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
@@ -63,7 +61,7 @@
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li><a href="{{ url('profile') }}">Profile</a></li>
-                                        <li><a href="#">Wish List</a></li>
+                                        <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                                         <li><a href="{{route('logout')}}">Log out</a></li>
                                     </ul>
                                 </li>
@@ -106,11 +104,11 @@
                     <strong>Your cocktail has been created successfully!</strong>
                 </div>
             @endif
-                @foreach ($errors->all() as $error)
-                    <div class="alert alert-danger" style="text-align:center;">
-                        <strong>{{ $error }}</strong>
-                    </div>
-                @endforeach
+            @foreach ($errors->all() as $error)
+                <div class="alert alert-danger" style="text-align:center;">
+                    <strong>{{ $error }}</strong>
+                </div>
+            @endforeach
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <div class="signUpFormArea">
@@ -136,28 +134,28 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-xs-2"></div>
-                                        <div class="form-group col-xs-8">
-                                            <label for="cocktailName" class="control-label">Cocktail Name*</label>
-                                            <input type="text" class="form-control" name="cocktailName">
+                                            <div class="form-group col-xs-8">
+                                                <label for="cocktailName" class="control-label">Cocktail Name*</label>
+                                                <input type="text" class="form-control" name="cocktailName">
 
-                                            <form method="post">
-                                            <div id="dynamicInput">
-                                            Ingredient 1<br><input type="text" name="ingr1"  class="form-control">
-                                            Measure 1<br><input type="text" name="msr1"  class="form-control">
-                                            </div>
-                                            <button class="btn" id="wish" type="button" onclick="showIngredient('dynamicInput')"  data-target="#"><span>More Ingredients</span></button>
-                                            </form>
+                                                <form method="post">
+                                                    <div id="dynamicInput">
+                                                        Ingredient 1<br><input type="text" name="ingr1"  class="form-control">
+                                                        Measure 1<br><input type="text" name="msr1"  class="form-control">
+                                                    </div>
+                                                    <button class="btn" id="wish" type="button" onclick="showIngredient('dynamicInput')"  data-target="#"><span>More Ingredients</span></button>
+                                                </form>
                                                 <label for="lastName" class="control-label">Recipe*</label>
-                                            <input type="text" class="form-control" name="recipe">
-                                            <label for="emailAdress" class="control-label">Serve*</label>
-                                            <input type="text" class="form-control" name="serve">
-                                           <label for="gender" class="control-label">Category*</label>
-                                            <select class="form-control" name="category">
-                                                <?php foreach ($categories as $category) {?>
-                                                <option value="{{$category->cgr_id_category}}">{{$category->cgr_st_name}}</option>
-                                                <?php } ?>
-                                            </select>
-                                    </div>
+                                                <input type="text" class="form-control" name="recipe">
+                                                <label for="emailAdress" class="control-label">Serve*</label>
+                                                <input type="text" class="form-control" name="serve">
+                                                <label for="gender" class="control-label">Category*</label>
+                                                <select class="form-control" name="category">
+                                                    <?php foreach ($categories as $category) {?>
+                                                    <option value="{{$category->cgr_id_category}}">{{$category->cgr_st_name}}</option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
                                             <div class="form-group col-xs-2"></div>
                                         </div>
                                         <div class="form-group col-xs-12 mb0">

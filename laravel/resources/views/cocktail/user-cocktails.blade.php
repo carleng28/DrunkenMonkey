@@ -46,13 +46,13 @@
                                                 class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li><a href="{{ url('profile') }}">Profile</a></li>
-                                        <li><a href="#">Wish List</a></li>
+                                        <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                                         <li><a href="{{route('logout')}}">Log out</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
+                    {{--<button class="btn btn-default navbar-btn" type="button" ><a href="{{ url('/profile') }}">{{  Session::get('email') }}</a></button>--}}
                 @else
                     <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -65,8 +65,8 @@
                         </div>
                         <button class="btn btn-default navbar-btn" type="button" data-toggle="modal"
                                 data-target="#loginModal">Sign In</button>
-                @endif
-                        </div>
+                    @endif
+                </div>
             </nav>
         </div>
 

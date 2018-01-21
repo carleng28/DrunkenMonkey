@@ -26,7 +26,7 @@
                                 <li><a href="{{ url('cocktail/main') }}">Cocktails</a></li>
                                 <li><a href="{{ url('about-us') }}">About us</a></li>
                                 <li><a href="{{ url('profile') }}">Profile</a></li>
-                                <li><a href="{{ url('profile') }}">Wish List</a></li>
+                                <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                                 <li><a href="{{route('logout')}}">Logout</a></li>
                             @else
                                 <li><a href="{{ url('/') }}">Home</a></li>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                                 <div class="copyRightText">
-                                    <p>Copyright &copy; 2017. All Rights Reserved by <a href="http://www.iamabdus.com/" target="_blank">Abdus Salam</a></p>
+                                    <p>Copyright &copy; 2017. All Rights Reserved by Code4Life</p>
                                 </div>
                             </div>
                         </div>

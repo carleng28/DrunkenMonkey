@@ -76,13 +76,13 @@
                                 <div class="formSection">
                                     <div class="row">
                                         @if ($errors->has('email'))
-                                        <span class="form-group col-sm-8 col-xs-12 alert alert-danger">
+                                            <span class="form-group col-sm-8 col-xs-12 alert alert-danger">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                         @endif
-                                            <div class="form-group col-xs-12">
-                                                <label for="email" class="control-label">Email Address*</label>
-                                            </div>
+                                        <div class="form-group col-xs-12">
+                                            <label for="email" class="control-label">Email Address*</label>
+                                        </div>
                                         <div class="form-group col-sm-6 col-xs-12">
                                             <input type="email" class="form-control" name="email" id="email">
                                         </div>

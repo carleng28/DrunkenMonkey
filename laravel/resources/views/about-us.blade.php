@@ -39,7 +39,7 @@
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{Session::get('fname')}} {{Session::get('lname')}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu dropdown-menu-right">
                       <li><a href="{{ url('profile/')}}">Profile</a></li>
-                      <li><a href="#">Wish List</a></li>
+                      <li><a href="{{ url('wishlist') }}">Wish List</a></li>
                       <li><a href="{{route('logout')}}">Log out</a></li>
                     </ul>
                   </li>
