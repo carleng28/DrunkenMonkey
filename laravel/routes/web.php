@@ -79,6 +79,8 @@ Route::get('/profile', 'ProfileController@create');
 Route::get('/myImages', 'ProfileController@loadPics')->middleware('session');
 Route::post('myImages-add', 'ProfileController@addPhoto')->middleware('session');
 
+Route::post('shareImage', 'ProfileController@shareImage')->middleware('session');
+
 Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
 Route::post('/profile/reset', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
 

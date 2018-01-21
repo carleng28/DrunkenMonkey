@@ -5,6 +5,7 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+    var pathImageToShare;
     function showImg(a){
         document.getElementById('bigImg').src = a.src;
     }
@@ -13,6 +14,13 @@
         var output = document.getElementById('thereImg');
         output.src = URL.createObjectURL(event.target.files[0]);
     };
+
+    function sharePicture(){
+
+        pathImageToShare=$("#bigImg").attr("src").replace("http://localhost:8000/", "");
+        document.getElementById('pathToImage').setAttribute('value', pathImageToShare);
+    }
+
 </script>
 <body>
 <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
@@ -176,13 +184,13 @@
                              <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
                 padding-left: 0!important;
                 padding-top: 0!important;
-                margin-top: 0!important;">
+                margin-top: 0!important;cursor:pointer;" onclick = "sharePicture()" data-toggle="modal" data-target="#shareModal">
                          @endif
                          @else
                              <div class="col-md-6" id="iii" style="
 
                 margin-right: 10%!important;
-                margin-top: 0!important;">
+                margin-top: 0!important;cursor:pointer;" onclick = "sharePicture()" data-toggle="modal" data-target="#shareModal">
                                  @if(!empty($pictures[2]))
                                      <img src="{{ url($dirname.$pic) }}" id="bigImg" style="
                                     /*margin-left: 8%!important;
@@ -266,38 +274,29 @@
     </footer>
 </div>
 
-<!-- LOGIN  MODAL -->
-<div id="loginModal" tabindex="-1" class="modal fade" role="dialog">
+<!-- share  MODAL -->
+<div id="shareModal" tabindex="-1" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Log In to your Account</h4>
+                <h4 class="modal-title">Share this image with a friend</h4>
             </div>
             <div class="modal-body">
-                <form class="loginForm">
+                <form class="loginForm" method="post" action="{{url('shareImage')}}">
+                    {{csrf_field()}}
+                    <input id="pathToImage" type="hidden" name="imagePath" value="">
                     <div class="form-group">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                        <input type="password" class="form-control" id="pwd" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Log In</button>
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox"> Remember me</label>
-                        <a href="password.html" class="pull-right link">Forgot Password?</a>
+                        <button type="submit" class="btn btn-primary btn-block">Share</button>
                     </div>
 
                 </form>
-            </div>
-            <div class="modal-footer">
-                <p>Don’t have an Account? <a href="sign-up.html" class="link">Sign up</a></p>
             </div>
         </div>
 

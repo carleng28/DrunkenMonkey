@@ -9,6 +9,10 @@ use Session;
 use DB;
 use App\User;
 use App\Picture;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\OAuth;
+// Alias the League Google OAuth2 provider class
+use League\OAuth2\Client\Provider\Google;
 
 class ProfileController extends Controller
 {
@@ -110,6 +114,94 @@ class ProfileController extends Controller
             ]);
             return back()->with('success', 'Image Upload successfully');
         }
+    }
+
+    public function shareImage(Request $req){
+
+        $this->validate(request(),[
+            'email'=>'required|email'
+        ]);
+
+        $emailTo = $req->input('email');
+
+        date_default_timezone_set('Etc/UTC');
+
+        $mail = new PHPMailer;
+        $mail->isSMTP();
+        //$mail->SMTPDebug = 4;
+        $mail->Host = 'smtp.gmail.com';
+        $mail->Port = 587;
+        $mail->SMTPSecure = 'tls';
+        $mail->SMTPAuth = true;
+        $mail->AuthType = 'XOAUTH2';
+
+        $email = 'drunkenmonkeyservice@gmail.com';
+        $clientId = '697505958617-t8tnbrlvgbjann16ro7jnidmanhfv9tp.apps.googleusercontent.com';
+        $clientSecret = 'eliey2YpsG90o3aglhie1f8_';
+        //Obtained by configuring and running get_oauth_token.php
+        //after setting up an app in Google Developer Console.
+        $refreshToken = '1/qXlmmXy1ZqGV1tImWIJo-ckDwLLVCZI3Zs7eljDrJug';
+        $mail -> SMTPOptions = array (
+
+            'ssl' => array(
+
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+        $provider = new Google(
+            [
+                'clientId' => $clientId,
+                'clientSecret' => $clientSecret,
+            ]
+        );
+        $mail->setOAuth(
+            new OAuth(
+                [
+                    'provider' => $provider,
+                    'clientId' => $clientId,
+                    'clientSecret' => $clientSecret,
+                    'refreshToken' => $refreshToken,
+                    'userName' => $email,
+                ]
+            )
+        );
+        $user = User::where('usr_id_user', '=', Session::get('id'))->first();
+
+        $mail->setFrom($email, 'DrunkenMonkey');
+        $mail->addAddress($emailTo, "John Doe");
+        $mail->Subject = $user->usr_st_fname. " ". $user->usr_st_lname . ' has send you a new picture!';
+        $mail->CharSet = 'utf-8';
+        $mail->AddEmbeddedImage($req->input('imagePath'), 'image_dm');
+
+        //dd(url($req->input('imagePath')));
+        $mail->Body    =
+            '<h3>'.$user->usr_st_fname. ' '. $user->usr_st_lname.' shared a new picture!</h3> '.
+            '<img src="cid:image_dm"><br><br>';
+
+        $mail->AltBody = 'Shared an image';
+
+        if (!$mail->send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Message sent!";
+        }
+        /* $userArray = json_decode($checkEmail, true);
+         $userName = $userArray[0]['usr_st_fname'];
+//            dd($userName);
+         Mail::to($email)->send(new ForgotPassword($userName));*/
+        $success="1";
+        return redirect('myImages')->with('success', 'Image sent');
+
+//        else{
+//
+//            $errorEmail = 'There is no user registered with this email.';
+//
+//            return redirect()->route('forgot')->withErrors([
+//                'email' => 'There is no user registered with this email.']);
+//
+//        }
     }
 
 }
