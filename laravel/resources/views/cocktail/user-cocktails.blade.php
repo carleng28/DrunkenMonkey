@@ -114,24 +114,34 @@
                         @endif
                     </div>
 
-                    <div id="cocktailList" class="row">
-                        @for ($i = 0; $i < $data['size'] && $i < 9; $i++)
-                            <div class="col-sm-4">
-                                <div class="thingsBox thinsSpace">
-                                    <div class="thingsImage"><img
-                                                src="{{ ($data['picture'][$i] != null ? $data['picture'][$i] -> pic_st_picture: url('img/cocktail/img_not_available.png'))}}"
-                                                width="280" height="270"/>
-                                        <div class="thingsMask">
-                                            <a href="{{ url('cocktail/user-cocktail-page/'.$data['cocktail'][$i]->ckt_id_cocktail) }}">
-                                                <h2> {{$data['cocktail'][$i]->ckt_st_name }}</h2>
-                                            </a>
+                    @if($data['size']> 0)
+                        <div id="cocktailList" class="row">
+                            @for ($i = 0; $i < $data['size'] && $i < 9; $i++)
+                                <div class="col-sm-4">
+                                    <div class="thingsBox thinsSpace">
+                                        <div class="thingsImage"><img
+                                                    src="{{ ($data['picture'][$i] != null ? $data['picture'][$i] -> pic_st_picture: url('img/cocktail/img_not_available.png'))}}"
+                                                    width="280" height="270"/>
+                                            <div class="thingsMask">
+                                                <a href="{{ url('cocktail/user-cocktail-page/'.$data['cocktail'][$i]->ckt_id_cocktail) }}">
+                                                    <h2> {{$data['cocktail'][$i]->ckt_st_name }}</h2>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endfor
+                            @endfor
 
-                    </div>
+                        </div>
+                    @else
+                        <form method="get" action="{{ url('cocktail/add-cocktail') }}">
+                            <div id="cocktailList" class="row">
+                                <div class="btn-area mt30">
+                                    <button class="btn btn-primary" type="submit">Add a new cocktail</button>
+                                </div>
+                            </div>
+                        </form>
+                    @endif
 
                 </div>
 

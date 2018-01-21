@@ -113,25 +113,36 @@ class CocktailCategoryController extends Controller
         $cocktails = Array();
         //Default category if the URI does not have one
         if ($category==null) {
-            $category = "Beer";
-        }
-        $category=explode("/",$category)[0];
-        $categoryQuery=$categoryId = Category::where('cgr_st_name', 'like', '%'. $category. '%')->get();
-        if(count($categoryQuery)>0){
-
-            $categoryId = $categoryQuery[0]->cgr_id_category;
+            $category = "created cocktail";
             $cocktailsCol = Cocktail::where([
-                ['ckt_id_category', '=', $categoryId],
-                    ])
+                ['ckt_id_user', '=', Session::get('id')],
+            ])
+                ->orderBy('ckt_st_name', 'desc')
+                ->get();
+        }else {
+
+            $category=explode("/",$category)[0];
+            $categoryQuery=$categoryId = Category::where('cgr_st_name', 'like', '%'. $category. '%')->get();
+            if(count($categoryQuery)>0){
+
+
+                $categoryId = $categoryQuery[0]->cgr_id_category;
+                $cocktailsCol = Cocktail::where([
+                    ['ckt_id_category', '=', $categoryId],
+                ])
                     ->orderBy('ckt_st_name', 'desc')
                     ->get();
 
-            foreach ($cocktailsCol as $cocktail) {
-                $picture = Picture::where('pic_id_cocktail', $cocktail->ckt_id_cocktail)->first();
-                array_push($pictures,$picture);
-                array_push($cocktails,$cocktail);
             }
+
         }
+        foreach ($cocktailsCol as $cocktail) {
+            $picture = Picture::where('pic_id_cocktail', $cocktail->ckt_id_cocktail)->first();
+            array_push($pictures,$picture);
+            array_push($cocktails,$cocktail);
+        }
+
+
         //dd(Cocktail::find(1)->picture());
         $data=array('cocktail'=>array_slice($cocktails,0,9), 'size'=>count($cocktails), 'categoryName' => $category, 'picture' => $pictures, "originalCategory" => $category);
         //dd(Picture::all());

@@ -14,9 +14,6 @@ class AjaxController extends Controller
         $cocktails = Array();
         $categoryName= str_replace("%20%20","%20/%20", $category);
 
-        //fix the issue with the other/unknown category
-        $categoryName= str_replace("Unk","/Unk", $categoryName);
-
         if($categoryName=="Coffee"){
             $categoryName= "Coffee%20/%20Tea";
         }
@@ -34,6 +31,9 @@ class AjaxController extends Controller
         }
         if ($categoryName=="Soft"){
             $categoryName="Soft%20Drink%20/%20Soda";
+        }
+        if ($categoryName=="Other"){
+            $categoryName="Other/Unknown";
         }
 
         //echo $categoryName; USE CURL_EXEC

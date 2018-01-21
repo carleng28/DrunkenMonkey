@@ -132,6 +132,21 @@
                             </div>
                     </div>
                 </div>
+                    <div class="row">
+                        <div class="col-md-12" align="center">
+                            <div class="dashboardBoxBg mb30">
+                                    <h3>Your cocktails</h3>
+                                    <div class="row">
+                                        <div class="col-md-12" align="center">
+                                            <br>
+                                            <form action="{{url('cocktail/user-cocktails')}}">
+                                                <input type="submit" id="wish1" value="See all">
+                                            </form>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-8 col-sm-7 col-xs-12">
                     @if ($errors->any())
