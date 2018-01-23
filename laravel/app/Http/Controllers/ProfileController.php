@@ -25,14 +25,18 @@ class ProfileController extends Controller
 //I need to pass two arrays
 //the name you get it in profile is 'user', so i renamed it to $user, because in the current case 'user'->$userArray was not possible
         $user = json_decode($newUser, true);
-        $dirname = "img\\userAddedImgOfCocktail\\".$id."\\";
 
+        $dirname = "img\\userAddedImgOfCocktail\\".$id."\\";
         $pictures = scandir($dirname);
+
+        $profiledirname = "img\\userProfilePhoto\\".$id."\\";
+        $profilePic = scandir($profiledirname);
+
         $ignore = Array(".", "..");
 
 //just 'user'
 //so anyway in profile you get $user don't worry :)
-        return view('profile', compact('user', 'pictures', 'ignore', 'dirname'));
+        return view('profile', compact('user', 'pictures', 'ignore', 'dirname', 'profilePic', 'profiledirname'));
     }
 
     public function updateProfile(Request $req)
@@ -84,9 +88,16 @@ class ProfileController extends Controller
             $dirname = File::makeDirectory("img/userAddedImgOfCocktail/".$id."/");
         }
         $pictures = scandir($dirname);
+
+        $profiledirname = "img/userProfilePhoto/".$id."/";
+        if(!File::exists($profiledirname)) {
+            $profiledirname = File::makeDirectory("img/userProfilePhoto/".$id."/");
+        }
+        $profilePic = scandir($profiledirname);
+
         $ignore = Array(".", "..");
 
-        return view('myImages', compact( 'pictures', 'ignore', 'dirname'));
+        return view('myImages', compact( 'pictures', 'ignore', 'dirname', 'profilePic', 'profiledirname'));
     }
 
     public function addPhoto(Request $req)

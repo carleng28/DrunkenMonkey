@@ -4,13 +4,7 @@
     <list default="true" id="a8520aae-4e9b-4970-ae00-9aa491f19c47" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Picture.php" afterPath="$PROJECT_DIR$/laravel/app/Picture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143602_create_pic_table.php" afterPath="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143602_create_pic_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/drink-page.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/drink-page.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/drink-page.html" afterPath="$PROJECT_DIR$/laravel/resources/views/drink-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/myImages.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/myImages.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" afterPath="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/routes/web.php" afterPath="$PROJECT_DIR$/laravel/routes/web.php" />
     </list>
     <list id="ff1e7912-9554-4d23-9d2b-f0b38b510230" name="Revert: " comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +20,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+            <state relative-caret-position="229">
+              <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="21" />
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="false" />
               </folding>
@@ -35,21 +29,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Picture.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Picture.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/app/Picture.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="294">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="98" column="53" lean-forward="false" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
+            <state relative-caret-position="244">
+              <caret line="107" column="51" lean-forward="false" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -60,21 +54,9 @@
       <file leaf-file-name="myImages.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel/resources/views/myImages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="167" column="8" lean-forward="true" selection-start-line="167" selection-start-column="8" selection-end-line="173" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="119" column="39" lean-forward="true" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -92,9 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Ready-to-drink&amp;#47Coolers</find>
-      <find>t</find>
-      <find>the</find>
       <find>the current</find>
       <find>the current pa</find>
       <find>the current pag</find>
@@ -120,7 +99,10 @@
       <find>myImages-add</find>
       <find>sharePicture</find>
       <find>height</find>
+      <find>/myImages</find>
       <find>http://www.iamabdus.com/</find>
+      <find>myImages</find>
+      <find>loadPics</find>
       <find>$pictures</find>
     </findStrings>
     <replaceStrings>
@@ -187,11 +169,11 @@
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/DrinkCategoryGridFullController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/drink-page.html" />
         <option value="$PROJECT_DIR$/laravel/routes/web.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Picture.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143602_create_pic_table.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/myImages.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/profile.blade.php" />
       </list>
     </option>
   </component>
@@ -362,46 +344,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DrunkenMonkey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DrunkenMonkey" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DrunkenMonkey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DrunkenMonkey" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -34816,11 +34758,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508970502628</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update User Profile">
+      <created>1516671745921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1516671745921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322999000" />
+    <option name="totallyTimeSpent" value="325004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1718" height="928" extended-state="6" />
@@ -34887,7 +34836,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Search autocomplete - nearLocation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search autocomplete - nearLocation" />
+    <MESSAGE value="Update User Profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update User Profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -35072,6 +35022,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -35120,7 +35071,7 @@
         <state relative-caret-position="210">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#129#154#0#PHP" expanded="true" />
+            <element signature="e#129#154#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -35148,7 +35099,7 @@
         <state relative-caret-position="176">
           <caret line="171" column="15" lean-forward="true" selection-start-line="171" selection-start-column="15" selection-end-line="171" selection-end-column="15" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -35211,7 +35162,7 @@
         <state relative-caret-position="183">
           <caret line="325" column="0" lean-forward="true" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -35224,16 +35175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2017_12_08_143602_create_pic_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -35242,39 +35183,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel/app/Picture.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="98" column="53" lean-forward="false" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="294">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/myImages.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="229">
+          <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ProfileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="119" column="39" lean-forward="true" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+        <state relative-caret-position="42">
+          <caret line="38" column="109" lean-forward="false" selection-start-line="38" selection-start-column="109" selection-end-line="38" selection-end-column="109" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Picture.php">
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/myImages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="375">
+          <caret line="167" column="8" lean-forward="true" selection-start-line="167" selection-start-column="8" selection-end-line="173" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="107" column="51" lean-forward="false" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

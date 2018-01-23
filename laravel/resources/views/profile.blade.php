@@ -100,7 +100,15 @@
                         <div class="profileImage">
                             <form method="post" action="{{ url('profilepic') }}" enctype="multipart/form-data">
                                 {{ csrf_field() }}
-                                <img src="img/dashboard/blank.jpg" height="160" width="160" alt="Image User" class="img-circle" id="userPhoto">
+                                    @if(!empty($profilePic))
+                                        @foreach ($profilePic as $propic)
+                                            @if ($propic == end($profilePic))
+                                                <img src="{{url($profiledirname.$propic)}}" height="160" width="160" alt="Image User" class="img-circle" id="userPhoto">
+                                            @endif
+                                        @endforeach
+                                    @else
+                                        <img src="img/dashboard/blank.jpg" height="160" width="160" alt="Image User" class="img-circle" id="userPhoto">
+                                    @endif
                                 <input type="hidden" id="profilePic" name="profilePic" value="y">
                                 <div class="file-upload profileImageUpload">
                                     <div class="upload-area">
@@ -343,7 +351,7 @@
                                 <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                                     <div class="copyRightText">
                                         <p>Copyright &copy; 2017. All Rights Reserved by <a
-                                                    href="" target="_blank">Code4Life</a></p>
+                                                    href="http://www.iamabdus.com/" target="_blank">Code4Life</a></p>
                                     </div>
                                 </div>
                             </div>
