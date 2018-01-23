@@ -20,6 +20,7 @@ class CreatePicTable extends Migration
             $table->string('pic_st_picture');
             $table->unsignedInteger('pic_id_user')->nullable();
             $table->unsignedInteger('pic_id_cocktail')->nullable();
+            $table->boolean('pic_bo_profilepic');
             $table->foreign('pic_id_user')->references('usr_id_user')->on('usr');
             $table->foreign('pic_id_cocktail')->references('ckt_id_cocktail')->on('ckt')->nullable();
             $table->timestamps();

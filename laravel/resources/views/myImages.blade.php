@@ -129,9 +129,9 @@
 
                         </div>
                     @endif
-                        <div class="profileImage">
-                            <form method="post" action="{{url('myImages-add')}}" enctype="multipart/form-data">
-                                {{csrf_field()}}
+                    <div class="profileImage">
+                        <form method="post" action="{{url('myImages-add')}}" enctype="multipart/form-data">
+                            {{csrf_field()}}
                             <img width="200" height="200" src="{{ url('img/dashboard/no-image.svg') }}" alt="Your Photos" id="thereImg">
                             <div class="file-upload profileImageUpload">
                                 <div class="upload-area">
@@ -139,11 +139,11 @@
                                     <button class="browse" type="button">You can upload photos in your profile <i class="icon-listy icon-upload"></i></button>
                                 </div>
 
-                                    <button type="submit" class="btn" id="tasted" >Add Photo</button>
-                                </div>
-                            </form>
+                                <button type="submit" class="btn" id="tasted" >Add Photo</button>
                             </div>
+                        </form>
                         </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -261,7 +261,7 @@
                                 <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                                     <div class="copyRightText">
                                         <p>Copyright &copy; 2017. All Rights Reserved by <a
-                                                    href="http://www.iamabdus.com/" target="_blank">Code4Life</a></p>
+                                                    href="" target="_blank">Code4Life</a></p>
                                     </div>
                                 </div>
                             </div>

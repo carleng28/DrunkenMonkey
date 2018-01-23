@@ -76,6 +76,8 @@ Route::post('/register','Auth\RegisterController@register')->name('register.subm
 
 Route::get('/profile', 'ProfileController@create');
 
+Route::post('profilepic', 'ProfileController@addPhoto')->middleware('session');
+
 Route::get('/myImages', 'ProfileController@loadPics')->middleware('session');
 Route::post('myImages-add', 'ProfileController@addPhoto')->middleware('session');
 

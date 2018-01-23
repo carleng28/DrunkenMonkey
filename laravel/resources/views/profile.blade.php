@@ -3,6 +3,17 @@
     <title>Profile | DrunkenMonkey</title>
     <link rel="stylesheet" type="text/css" href="{{ url('/css/cocktailstyle.css') }}">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function showImg(a){
+        document.getElementById('bigImg').src = a.src;
+    }
+
+    function loadFile(event) {
+        var output = document.getElementById('userPhoto');
+        output.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
 <body>
 <div class="page-loader" style="background: url({{ url('/img/preloader.gif') }}) center no-repeat #fff;"></div>
 <div class="main-wrapper">
@@ -87,14 +98,19 @@
                 <div class="col-md-4 col-sm-5 col-xs-12">
                     <div class="dashboardBoxBg mb30">
                         <div class="profileImage">
-                            <img src="img/dashboard/blank.jpg" alt="Image User" class="img-circle">
-                            <div class="file-upload profileImageUpload">
-                                <div class="upload-area">
-                                    <input type="file" name="img[]" class="file">
-                                    <button class="browse" type="button">Upload a Picture <i
-                                                class="icon-listy icon-upload"></i></button>
+                            <form method="post" action="{{ url('profilepic') }}" enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                <img src="img/dashboard/blank.jpg" height="160" width="160" alt="Image User" class="img-circle" id="userPhoto">
+                                <input type="hidden" id="profilePic" name="profilePic" value="y">
+                                <div class="file-upload profileImageUpload">
+                                    <div class="upload-area">
+                                            <input onchange="loadFile(event)" type="file" id="imageInput" name="imageInput" class="file">
+                                            <button class="browse" type="button">Upload a Picture
+                                                <i class="icon-listy icon-upload"></i></button><br>
+                                    </div>
+                                    <button type="submit" class="btn" id="tasted" >Save</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div class="row">
@@ -102,14 +118,15 @@
                             <div class="dashboardBoxBg mb30">
                                 @if(!empty($pictures[2]))
                                     <div id="photos1">
-                                @foreach ($pictures as $pic)
-                                    @if(!in_array($pic, $ignore))
-                                        <div class="thumbnail1">
-                                        <img src="{{url($dirname.$pic)}}" alt="Profile Images" class="img-circle">
-                                        </div>
-                                    @endif
-                                @endforeach
-                                    </div><div class="row">
+                                        @foreach ($pictures as $pic)
+                                            @if(!in_array($pic, $ignore))
+                                                <div class="thumbnail1">
+                                                <img src="{{url($dirname.$pic)}}" alt="Profile Images" class="img-circle">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-12" align="center">
                                             <br>
                                             <form action="{{url('/myImages')}}">
@@ -118,7 +135,7 @@
                                         </div>
                                     </div>
                                 @else
-                                        <p>You have not yet added images to your profile</p>
+                                    <p>You have not yet added images to your profile</p>
                                     <div class="row">
                                         <div class="col-md-12" align="center">
                                             <br>
@@ -326,7 +343,7 @@
                                 <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                                     <div class="copyRightText">
                                         <p>Copyright &copy; 2017. All Rights Reserved by <a
-                                                    href="http://www.iamabdus.com/" target="_blank">Code4Life</a></p>
+                                                    href="" target="_blank">Code4Life</a></p>
                                     </div>
                                 </div>
                             </div>

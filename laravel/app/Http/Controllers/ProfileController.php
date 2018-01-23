@@ -97,12 +97,22 @@ class ProfileController extends Controller
                 'imageInput' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]
         );
+
         if ($req->hasFile('imageInput')) {
             $image = $req->file('imageInput');
             $name = $image->getClientOriginalName();
             $type = $image->getClientOriginalExtension();
-            $destinationPath = public_path("img/userAddedImgOfCocktail" . "/" . $id . "/");
-            $path = url('img/userAddedImgOfCocktail') . "/" . $id . "/" . $name;
+
+            if($req->has('profilePic')) {
+                $profilepic = true;
+                $destinationPath = public_path("img/userProfilePhoto" . "/" . $id . "/");
+                $path = url('img/userProfilePhoto') . "/" . $id . "/" . $name;
+            } else {
+                $profilepic = false;
+                $destinationPath = public_path("img/userAddedImgOfCocktail" . "/" . $id . "/");
+                $path = url('img/userAddedImgOfCocktail') . "/" . $id . "/" . $name;
+            }
+
             $image->move($destinationPath, $name);
 
             Picture::create([
@@ -110,7 +120,8 @@ class ProfileController extends Controller
                 'pic_st_type' => $type,
                 'pic_st_picture' => $path,
                 'pic_id_user' => $id,
-                'pic_id_cocktail' => null
+                'pic_id_cocktail' => null,
+                'pic_bo_profilepic' => $profilepic
             ]);
             return back()->with('success', 'Image Upload successfully');
         }

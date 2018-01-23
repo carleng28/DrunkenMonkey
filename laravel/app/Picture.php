@@ -14,7 +14,7 @@ class Picture extends Model
      * @var array
      */
     protected $fillable = [
-        'pic_id_picture','pic_st_picname', 'pic_st_type','pic_st_picture', 'pic_id_user','pic_id_cocktail'
+        'pic_id_picture','pic_st_picname', 'pic_st_type','pic_st_picture', 'pic_id_user','pic_id_cocktail', 'pic_bo_profilepic'
     ];
 
     /**
